@@ -45,7 +45,7 @@
 
 
 
-  | `DATASETS/`               | Raw datasets (not tracked in git — see below). |
+  | `DATASETS/`               | Raw datasets (not tracked in git — see below). 
 
 
 
