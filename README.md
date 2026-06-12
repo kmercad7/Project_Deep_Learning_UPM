@@ -29,11 +29,11 @@
   ## Repository structure
 
 
-  | `Mamba_Baseline_OPP/`     | Supervised Mamba classifier — **Opportunity** (LOSO 4-fold). |
+  | `Mamba_Baseline_OPP/`     | Supervised Mamba classifier — **Opportunity** (subject-wise 4-fold). |
 
 
 
-  | `Mamba_Baseline_PAM/`     | Supervised Mamba classifier — **PAMAP2** (subject-wise 4-fold). |
+  | `Mamba_Baseline_PAM/`     | Supervised Mamba classifier — **PAMAP2** (LOSO 4-fold). |
 
 
 
