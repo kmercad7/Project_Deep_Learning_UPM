@@ -29,10 +29,6 @@
   ## Repository structure
 
 
-  |--------|--------------|
-
-
-
   | `Mamba_Baseline_OPP/`     | Supervised Mamba classifier — **Opportunity** (LOSO 4-fold). |
 
 
@@ -138,10 +134,7 @@
 
 
 
-
-
-
-  The data loaders expect the raw datasets at `../../DATASETS/...`, i.e. a `DATASETS/`
+  The data loaders expect the raw datasets at "/DATASETS"
 
 
 
@@ -149,13 +142,7 @@
 
 
 
-
-
-
-
   ```
-
-
 
   DATASETS/
 
@@ -214,25 +201,14 @@
 
 
 
-
-
-
-  > Datasets are **not** committed (`.gitignore` excludes `DATASETS/`, `*.pt`, `*.npy`, …).
-
-
+  > Datasets are **not** committed.
 
   > Download them from the UCI ML Repository and unzip into `DATASETS/` as shown above.
 
 
 
 
-
-
-
   ---
-
-
-
 
 
 
