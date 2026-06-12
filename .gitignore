@@ -1,11 +1,7 @@
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
-data/
-datasets/
-models/
-checkpoints/
-*.pt
+DATASETS/
 *.pth
 *.ckpt
 *.npy
