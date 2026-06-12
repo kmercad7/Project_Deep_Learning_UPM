@@ -1,0 +1,310 @@
+Job started on gpu015.orc.gmu.edu
+CUDA_VISIBLE_DEVICES=0
+Wed Jun 10 12:19:36 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.05              Driver Version: 560.35.05      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:41:00.0 N/A |                  N/A |
+|ERR!   24C    P0             N/A /  N/A  |    1711MiB /  81920MiB |     N/A      Default |
+|                                         |                        |                 ERR! |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Mamba version: 2.3.0
+Path: /home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/modules/mamba2.py
+------------------------------------------------------------------------------------------
+Sensor subset training shape: (406737, 29)
+Sensor Validation training shape: (198521, 29)
+Sensor Test training shape: (201145, 29)
+----------------------------------------------------------------------
+Rows containing NaNs - training: 5497
+Rows containing NaNs - validation: 2391
+Rows containing NaNs - test: 2887
+------------------------------------------------------------------------------------------
+Reindexed training shape: (406737, 29)
+Reindexed validation shape: (198521, 29)
+Reindexed test shape: (201145, 29)
+------------------------------------------------------------------------------------------
+After Interpolation. Training shape: (406575, 29)
+After Interpolation. Validation shape: (198521, 29)
+After Interpolation. Test shape: (201145, 29)
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  406575.000000  406575.000000  406575.000000
+mean       -3.827294       3.636419       4.363521
+std         6.310787       3.263454       3.117056
+min       -46.595200     -29.776199     -27.224800
+25%        -8.983690       1.772125       2.437135
+50%        -3.405350       3.300490       4.341030
+75%         0.726166       6.130730       6.763865
+max        21.033199      44.433399      42.538799
+
+Descriptive statistics for GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  406575.000000  406575.000000  406575.000000
+mean       -0.013760      -0.011843      -0.014494
+std         1.073794       0.808793       1.230876
+min       -19.690500      -7.609010      -9.727150
+25%        -0.092129      -0.048373      -0.049837
+50%        -0.004342       0.004638      -0.005660
+75%         0.069167       0.057477       0.053066
+max        16.295200       9.949770       9.010740
+
+Descriptive statistics for MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  406575.000000  406575.000000  406575.000000
+mean       19.873219      -9.115096     -23.528975
+std        19.181040      19.477190      15.534224
+min       -35.888401    -200.042999    -100.803001
+25%         4.475440     -22.078800     -33.724998
+50%        17.971300     -13.155900     -23.655399
+75%        35.541401       6.443530     -12.927000
+max       102.622002      54.329498      91.020699
+------------------------------------------------------------------------------------------
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  406575.000000  406575.000000  406575.000000
+mean       -0.390142       0.370685       0.444803
+std         0.643301       0.332666       0.317743
+min        -4.749765      -3.035290      -2.775209
+25%        -0.915769       0.180645       0.248434
+50%        -0.347130       0.336441       0.442511
+75%         0.074023       0.624947       0.689487
+max         2.144057       4.529398       4.336269
+
+Descriptive statistics for scaled GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  406575.000000  406575.000000  406575.000000
+mean       -0.013760      -0.011843      -0.014494
+std         1.073794       0.808793       1.230876
+min       -19.690500      -7.609010      -9.727150
+25%        -0.092129      -0.048373      -0.049837
+50%        -0.004342       0.004638      -0.005660
+75%         0.069167       0.057477       0.053066
+max        16.295200       9.949770       9.010740
+
+Descriptive statistics for MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  406575.000000  406575.000000  406575.000000
+mean        0.421319      -0.232595      -0.552334
+std         0.402731       0.430319       0.340516
+min        -0.975326      -0.999992      -0.998618
+25%         0.134558      -0.592650      -0.822622
+50%         0.356876      -0.324671      -0.632820
+75%         0.803167       0.126091      -0.295326
+max         0.999999       0.999163       0.963648
+--------------------STRATIY VAL/TEST--------------------
+Validation GROUPS
+group_id
+101    94637
+107    97364
+Name: count, dtype: int64
+Test GROUPS
+group_id
+102    103884
+108    103781
+Name: count, dtype: int64 
+
+
+ Validation Split Label Proportion
+27
+1.0    0.274988
+2.0    0.186259
+3.0    0.247228
+4.0    0.291525
+Name: proportion, dtype: float64
+Test Split Label Proportion
+27
+1.0    0.229191
+2.0    0.217986
+3.0    0.244317
+4.0    0.308506
+Name: proportion, dtype: float64
+
+------------------------------ TRAIN ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.000000
+global std : 1.000000
+max |channel mean| : 0.000000
+median |channel mean| : 0.000000
+channel std range : [1.000000, 1.000000]
+
+------------------------------ VAL ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.043285
+global std : 1.095798
+max |channel mean| : 0.688987
+median |channel mean| : 0.026642
+channel std range : [0.523086, 1.645483]
+
+------------------------------ TEST ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.123235
+global std : 1.197249
+max |channel mean| : 0.962494
+median |channel mean| : 0.021656
+channel std range : [0.844463, 1.652085]
+
+TRAIN top channels by |mean|:
+channel 10 | mean=-0.000000 | std=1.000000
+channel 11 | mean=-0.000000 | std=1.000000
+channel 5 | mean=0.000000 | std=1.000000
+channel 1 | mean=0.000000 | std=1.000000
+channel 13 | mean=-0.000000 | std=1.000000
+channel 12 | mean=-0.000000 | std=1.000000
+channel 9 | mean=-0.000000 | std=1.000000
+channel 19 | mean=0.000000 | std=1.000000
+channel 0 | mean=-0.000000 | std=1.000000
+channel 22 | mean=0.000000 | std=1.000000
+
+TRAIN top channels by std deviation from 1:
+channel 23 | mean=-0.000000 | std=1.000000
+channel 18 | mean=0.000000 | std=1.000000
+channel 5 | mean=0.000000 | std=1.000000
+channel 11 | mean=-0.000000 | std=1.000000
+channel 20 | mean=-0.000000 | std=1.000000
+channel 1 | mean=0.000000 | std=1.000000
+channel 2 | mean=-0.000000 | std=1.000000
+channel 10 | mean=-0.000000 | std=1.000000
+channel 0 | mean=-0.000000 | std=1.000000
+channel 21 | mean=0.000000 | std=1.000000
+
+VAL top channels by |mean|:
+channel 20 | mean=-0.688987 | std=1.111634
+channel 9 | mean=0.353688 | std=1.489556
+channel 11 | mean=-0.234551 | std=1.157194
+channel 18 | mean=-0.204107 | std=1.208648
+channel 1 | mean=0.201215 | std=0.814287
+channel 2 | mean=-0.176226 | std=1.092600
+channel 0 | mean=-0.052132 | std=0.959261
+channel 4 | mean=0.041643 | std=0.523086
+channel 19 | mean=0.035349 | std=1.137477
+channel 13 | mean=-0.017936 | std=0.786109
+
+VAL top channels by std deviation from 1:
+channel 22 | mean=-0.008448 | std=1.645483
+channel 9 | mean=0.353688 | std=1.489556
+channel 4 | mean=0.041643 | std=0.523086
+channel 3 | mean=-0.005129 | std=0.683142
+channel 13 | mean=-0.017936 | std=0.786109
+channel 18 | mean=-0.204107 | std=1.208648
+channel 1 | mean=0.201215 | std=0.814287
+channel 11 | mean=-0.234551 | std=1.157194
+channel 19 | mean=0.035349 | std=1.137477
+channel 20 | mean=-0.688987 | std=1.111634
+
+TEST top channels by |mean|:
+channel 1 | mean=-0.962494 | std=1.452116
+channel 11 | mean=-0.495380 | std=1.271867
+channel 2 | mean=-0.411876 | std=0.923123
+channel 20 | mean=-0.362612 | std=1.006412
+channel 19 | mean=0.124184 | std=1.024717
+channel 0 | mean=-0.116793 | std=1.114406
+channel 18 | mean=-0.053677 | std=1.155525
+channel 4 | mean=0.048476 | std=0.917238
+channel 9 | mean=0.031376 | std=1.062461
+channel 10 | mean=-0.011936 | std=0.928542
+
+TEST top channels by std deviation from 1:
+channel 22 | mean=-0.010959 | std=1.652085
+channel 14 | mean=0.001063 | std=1.517971
+channel 1 | mean=-0.962494 | std=1.452116
+channel 5 | mean=-0.002011 | std=1.274950
+channel 11 | mean=-0.495380 | std=1.271867
+channel 3 | mean=0.000497 | std=1.164617
+channel 21 | mean=0.007627 | std=1.156787
+channel 13 | mean=-0.005194 | std=0.844463
+channel 18 | mean=-0.053677 | std=1.155525
+channel 12 | mean=0.011364 | std=1.136324
+
+TRAIN outlier rates |z|>5.0:
+channel 12 | rate=0.005423
+channel 3 | rate=0.004693
+channel 19 | rate=0.004690
+channel 21 | rate=0.004447
+channel 5 | rate=0.004176
+channel 20 | rate=0.003994
+channel 13 | rate=0.003084
+channel 22 | rate=0.003079
+channel 4 | rate=0.002236
+channel 14 | rate=0.000967
+
+VAL outlier rates |z|>5.0:
+channel 22 | rate=0.033864
+channel 9 | rate=0.025109
+channel 12 | rate=0.008818
+channel 19 | rate=0.008490
+channel 21 | rate=0.004089
+channel 20 | rate=0.004016
+channel 14 | rate=0.002198
+channel 13 | rate=0.001307
+channel 18 | rate=0.001057
+channel 5 | rate=0.000682
+
+TEST outlier rates |z|>5.0:
+channel 22 | rate=0.031243
+channel 14 | rate=0.017326
+channel 3 | rate=0.007998
+channel 12 | rate=0.007031
+channel 19 | rate=0.006265
+channel 20 | rate=0.003275
+channel 21 | rate=0.002937
+channel 13 | rate=0.002730
+channel 5 | rate=0.001883
+channel 1 | rate=0.001175
+
+------------------------------ TRAIN MAG after window demeaning ------------------------------
+max |window mean|  : 1.456588e-07
+mean |window mean| : 1.861353e-08
+channel global mean range : [-1.200617e-09, 5.383674e-10]
+channel std range         : [0.054501, 0.192207]
+
+------------------------------ VAL MAG after window demeaning ------------------------------
+max |window mean|  : 1.486391e-07
+mean |window mean| : 1.875210e-08
+channel global mean range : [-2.196354e-09, 7.915950e-10]
+channel std range         : [0.055690, 0.194879]
+
+------------------------------ TEST MAG after window demeaning ------------------------------
+max |window mean|  : 1.568347e-07
+mean |window mean| : 1.896361e-08
+channel global mean range : [-1.138559e-09, 1.584384e-09]
+channel std range         : [0.050416, 0.188828]
+
+TRAIN window label distribution
+label 1: 762 (0.2258)
+label 2: 867 (0.2570)
+label 3: 764 (0.2264)
+label 4: 981 (0.2908)
+
+VAL window label distribution
+label 1: 437 (0.2743)
+label 2: 298 (0.1871)
+label 3: 396 (0.2486)
+label 4: 462 (0.2900)
+
+TEST window label distribution
+label 1: 394 (0.2287)
+label 2: 377 (0.2188)
+label 3: 423 (0.2455)
+label 4: 529 (0.3070)
+------------------------------------------------------------------------------------------
+Training (windows): (3374, 160, 27). Training Labels (3374,)
+Validation (windows): (1593, 160, 27). Validation Labels (1593,)
+Test (windows): (1723, 160, 27). Test Labels (1723,)
+------------------------------------------------------------------------------------------
+Training set class distribution:--
+{'LIE': 762, 'SIT': 867, 'STAND': 764, 'WALK': 981}
+------------------------------------------------------------------------------------------
+SSL encoder loaded

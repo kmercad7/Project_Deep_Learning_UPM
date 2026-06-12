@@ -1,0 +1,172 @@
+nohup: ignoring input
+[I 2026-05-09 19:57:43.227 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-05-09 19:57:43.232 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-05-09 19:57:43.238 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-05-09 19:57:43.243 ServerApp] notebook | extension was successfully linked.
+[I 2026-05-09 19:57:44.701 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2026-05-09 19:57:44.701 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2026-05-09 19:57:44.701 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-05-09 19:57:44.804 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-05-09 19:57:44.807 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-05-09 19:57:44.808 ServerApp] [jupyter_nbextensions_configurator] enabled 0.6.4
+[I 2026-05-09 19:57:44.808 ServerApp] jupyter_nbextensions_configurator | extension was successfully loaded.
+[I 2026-05-09 19:57:44.811 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-05-09 19:57:44.853 LabApp] JupyterLab extension loaded from /home/kmercad/myenv/lib/python3.10/site-packages/jupyterlab
+[I 2026-05-09 19:57:44.853 LabApp] JupyterLab application directory is /home/kmercad/myenv/share/jupyter/lab
+[I 2026-05-09 19:57:44.854 LabApp] Extension Manager is 'pypi'.
+[I 2026-05-09 19:57:45.009 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-05-09 19:57:45.017 ServerApp] notebook | extension was successfully loaded.
+[I 2026-05-09 19:57:45.018 ServerApp] Serving notebooks from local directory: /home/kmercad/mamba_har/SELFSUPERVISED MAMBA
+[I 2026-05-09 19:57:45.018 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-05-09 19:57:45.018 ServerApp] http://localhost:8891/lab
+[I 2026-05-09 19:57:45.018 ServerApp]     http://127.0.0.1:8891/lab
+[I 2026-05-09 19:57:45.018 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2026-05-09 19:57:45.141 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2026-05-09 19:58:14.364 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371094115 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:14.364 ServerApp] wrote error: 'Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8'
+    Traceback (most recent call last):
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8)
+[W 2026-05-09 19:58:14.380 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371094115 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 17.12ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:15.157 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:15.200 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 43.75ms referer=None
+[W 2026-05-09 19:58:15.478 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371095354 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:15.479 ServerApp] wrote error: 'Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8'
+    Traceback (most recent call last):
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8)
+[W 2026-05-09 19:58:15.479 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371095354 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.89ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:18.506 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:18.507 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 2.28ms referer=None
+[W 2026-05-09 19:58:18.631 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371098508 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:18.631 ServerApp] wrote error: 'Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8'
+    Traceback (most recent call last):
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8)
+[W 2026-05-09 19:58:18.632 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371098508 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.74ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:19.131 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:19.132 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.86ms referer=None
+[W 2026-05-09 19:58:19.280 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371099155 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:19.280 ServerApp] wrote error: 'Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8'
+    Traceback (most recent call last):
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8)
+[W 2026-05-09 19:58:19.280 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371099155 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.85ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:22.181 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:22.182 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8/channels?session_id=aa401e7f-cc32-449e-afe9-fff7c1043350 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.29ms referer=None
+[W 2026-05-09 19:58:22.379 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371102255 (127.0.0.1): Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8
+[W 2026-05-09 19:58:22.379 ServerApp] wrote error: 'Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8'
+    Traceback (most recent call last):
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/kmercad/myenv/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: f7d02ea6-d057-4a79-9f78-3191731e6ca8)
+[W 2026-05-09 19:58:22.395 ServerApp] 404 GET /api/kernels/f7d02ea6-d057-4a79-9f78-3191731e6ca8?1778371102255 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 17.00ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:31.865 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2026-05-09 19:58:32.369 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA?content=0&hash=0&1778371112243 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.57ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.369 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA?content=0&hash=0&1778371112243 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA
+[W 2026-05-09 19:58:32.370 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.py?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.82ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.370 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.py?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/pretrain_OPP_mamba.py
+[W 2026-05-09 19:58:32.371 ServerApp] 404 GET /api/contents/mamba_har?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.12ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.371 ServerApp] 404 GET /api/contents/mamba_har?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har
+[W 2026-05-09 19:58:32.372 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.61ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.372 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.373 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.py?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.61ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.373 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.py?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/train_downstream_OPP_mamba.py
+[W 2026-05-09 19:58:32.472 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.slurm?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.68ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.472 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.slurm?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/train_downstream_OPP_mamba.slurm
+[W 2026-05-09 19:58:32.476 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.98ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.476 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/data
+[W 2026-05-09 19:58:32.477 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/OPPORTUNITY_data.py?content=0&hash=0&1778371112244 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.68ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.477 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/OPPORTUNITY_data.py?content=0&hash=0&1778371112244 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/data/OPPORTUNITY_data.py
+[W 2026-05-09 19:58:32.478 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/data_pipeline.py?content=0&hash=0&1778371112245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.62ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.478 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/data_pipeline.py?content=0&hash=0&1778371112245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/data/data_pipeline.py
+[W 2026-05-09 19:58:32.574 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.slurm?content=0&hash=0&1778371112245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.14ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.574 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.slurm?content=0&hash=0&1778371112245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/pretrain_OPP_mamba.slurm
+[W 2026-05-09 19:58:32.581 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/data_pipeline.py?content=0&hash=0&1778371112245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.00ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.581 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/data_pipeline.py?content=0&hash=0&1778371112245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/data/data_pipeline.py
+[W 2026-05-09 19:58:32.582 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/OPPORTUNITY_data.py?content=0&hash=0&1778371112245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.66ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.582 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/data/OPPORTUNITY_data.py?content=0&hash=0&1778371112245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/data/OPPORTUNITY_data.py
+[W 2026-05-09 19:58:32.673 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.py?content=0&hash=0&1778371112245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.65ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.673 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.py?content=0&hash=0&1778371112245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/pretrain_OPP_mamba.py
+[W 2026-05-09 19:58:32.674 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.py?content=0&hash=0&1778371112245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.60ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.674 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.py?content=0&hash=0&1778371112245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/train_downstream_OPP_mamba.py
+[W 2026-05-09 19:58:32.684 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.slurm?content=0&hash=0&1778371112246 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.73ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.685 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/train_downstream_OPP_mamba.slurm?content=0&hash=0&1778371112246 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/train_downstream_OPP_mamba.slurm
+[W 2026-05-09 19:58:32.686 ServerApp] 404 GET /api/contents/mamba_har/SUPERVISED%20MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/train_sup_mamba.py?content=0&hash=0&1778371112246 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.67ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.686 ServerApp] 404 GET /api/contents/mamba_har/SUPERVISED%20MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/train_sup_mamba.py?content=0&hash=0&1778371112246 (127.0.0.1): No such file or directory: mamba_har/SUPERVISED MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/train_sup_mamba.py
+[W 2026-05-09 19:58:32.773 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.slurm?content=0&hash=0&1778371112246 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.71ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.773 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA/pretrain_OPP_mamba.slurm?content=0&hash=0&1778371112246 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA/pretrain_OPP_mamba.slurm
+[W 2026-05-09 19:58:32.789 ServerApp] 404 GET /api/contents/mamba_har/SUPERVISED%20MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/RUN_1/logs/training_OPP_fold1.txt?content=0&hash=0&1778371112246 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.79ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.789 ServerApp] 404 GET /api/contents/mamba_har/SUPERVISED%20MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/RUN_1/logs/training_OPP_fold1.txt?content=0&hash=0&1778371112246 (127.0.0.1): No such file or directory: mamba_har/SUPERVISED MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/RUN_1/logs/training_OPP_fold1.txt
+[W 2026-05-09 19:58:32.806 ServerApp] 404 GET /api/contents/mamba_har/SUPERVISED%20MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/MambaClassificationModel.py?content=0&hash=0&1778371112246 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.62ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.806 ServerApp] 404 GET /api/contents/mamba_har/SUPERVISED%20MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/MambaClassificationModel.py?content=0&hash=0&1778371112246 (127.0.0.1): No such file or directory: mamba_har/SUPERVISED MAMBA/Mamba_Baseline_ScalarSTD_SB_STRF/MambaClassificationModel.py
+[W 2026-05-09 19:58:32.874 ServerApp] 404 GET /api/contents/mamba_har/notebooks/training_curves.ipynb?content=0&hash=0&1778371112246 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.77ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.874 ServerApp] 404 GET /api/contents/mamba_har/notebooks/training_curves.ipynb?content=0&hash=0&1778371112246 (127.0.0.1): No such file or directory: mamba_har/notebooks/training_curves.ipynb
+[W 2026-05-09 19:58:32.874 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371112248 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.55ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:32.874 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371112248 (127.0.0.1): No such file or directory: mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:34.212 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371114086 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.09ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:34.212 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371114086 (127.0.0.1): No such file or directory: mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:58:59.991 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2026-05-09 19:59:01.369 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA?1778371141245 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.81ms referer=http://localhost:8891/lab/workspaces/auto-v
+[W 2026-05-09 19:59:01.369 ServerApp] 404 GET /api/contents/mamba_har/SELFSUPERVISED%20MAMBA?1778371141245 (127.0.0.1): No such file or directory: mamba_har/SELFSUPERVISED MAMBA
+[W 2026-05-09 19:59:44.564 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2026-05-09 19:59:46.432 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371186308 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.19ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 19:59:46.432 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778371186308 (127.0.0.1): No such file or directory: mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 20:00:27.563 ServerApp] delete /logs/pretrain_mamba_OPP_7212442.err
+[W 2026-05-09 20:00:27.663 ServerApp] delete /logs/pretrain_mamba_OPP_7212442.out
+[I 2026-05-09 20:02:30.029 ServerApp] Saving file at /test_mamba.py
+[I 2026-05-09 20:06:31.290 ServerApp] Saving file at /pretrain_OPP_mamba.slurm
+[I 2026-05-09 20:08:56.174 ServerApp] Saving file at /train_downstream_OPP_mamba.py
+[W 2026-05-09 20:20:34.936 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2026-05-09 20:20:35.614 ServerApp] 404 GET /api/contents/logs/pretrain_mamba_OPP_7212442.err?content=0&hash=0&1778372435375 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 1.01ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/logs/SSL_training_lr3e4_OPP_fold1.txt
+[W 2026-05-09 20:20:35.615 ServerApp] 404 GET /api/contents/logs/pretrain_mamba_OPP_7212442.err?content=0&hash=0&1778372435375 (127.0.0.1): No such file or directory: logs/pretrain_mamba_OPP_7212442.err
+[W 2026-05-09 20:20:56.138 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2026-05-09 20:20:57.844 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778372457716 (67630985b68745419e5b29c61dc6f282@127.0.0.1) 0.94ms referer=http://localhost:8891/lab/workspaces/auto-v/tree/mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 20:20:57.844 ServerApp] 404 GET /api/contents/mamba_har/TEST_MAIN_SSL.ipynb?content=0&hash=0&1778372457716 (127.0.0.1): No such file or directory: mamba_har/TEST_MAIN_SSL.ipynb
+[W 2026-05-09 20:23:57.047 ServerApp] delete /logs/pretrain_mamba_OPP_7212447.err
+[W 2026-05-09 20:23:57.145 ServerApp] delete /logs/pretrain_mamba_OPP_7212447.out
+[W 2026-05-09 20:23:57.155 ServerApp] delete /logs/SSL_training_lr3e4_OPP_fold1.txt

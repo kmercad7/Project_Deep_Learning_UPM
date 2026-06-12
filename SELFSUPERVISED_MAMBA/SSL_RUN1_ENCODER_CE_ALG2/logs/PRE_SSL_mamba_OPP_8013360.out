@@ -1,0 +1,436 @@
+Job started on gpu032.orc.gmu.edu
+CUDA_VISIBLE_DEVICES=0
+Mon Jun  1 06:12:43 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.48.01              Driver Version: 590.48.01      CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:5F:00.0 Off |                    0 |
+| N/A   22C    P0             66W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Mamba version: 2.3.0
+Path: /home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/modules/mamba2.py
+------------------------------------------------------------------------------------------
+Raw training set shape: (385701, 251)
+Validation training set shape: (87149, 251)
+Raw test set shape: (171785, 251)
+------------------------------------------------------------------------------------------
+Sensor subset training shape: (297110, 47)
+Sensor Validation training shape: (66905, 47)
+Sensor Test training shape: (133181, 47)
+----------------------------------------------------------------------
+Rows containing NaNs - training: 0
+Rows containing NaNs - validation: 0
+Rows containing NaNs - test: 4953
+------------------------------------------------------------------------------------------
+Training shape after NaN removal: (297110, 47)
+Validation shape after NaN removal: (66905, 47)
+Test shape after NaN removal: (128228, 47)
+------------------------------------------------------------------------------------------
+Reindexed training shape: (297110, 47)
+Reindexed validation shape: (66905, 47)
+Reindexed test shape: (128228, 47)
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  297110.000000  297110.000000  297110.000000
+mean     -814.033203    -154.937286     309.518192
+std       265.114383     259.111819     316.387238
+min     -1896.000000   -1283.000000   -1198.000000
+25%      -967.000000    -271.000000     135.000000
+50%      -915.000000    -157.000000     294.000000
+75%      -767.000000     -44.000000     480.000000
+max       614.000000    1374.000000    1417.000000
+
+Descriptive statistics for GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  297110.000000  297110.000000  297110.000000
+mean      -53.720477     -18.435384       9.876753
+std       608.714994     316.133462     276.124779
+min     -4818.000000   -3081.000000   -2293.000000
+25%      -251.000000    -118.000000     -87.000000
+50%       -19.000000      -9.000000       2.000000
+75%       147.000000      80.000000     107.000000
+max      3537.000000    3370.000000    2029.000000
+
+Descriptive statistics for MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  297110.000000  297110.000000  297110.000000
+mean      409.335162      85.637447      31.823877
+std       373.936757     340.340809     511.346532
+min      -929.000000   -1011.000000   -1246.000000
+25%       301.000000    -152.000000    -478.000000
+50%       513.000000     102.000000      96.000000
+75%       603.000000     314.000000     475.000000
+max      1531.000000    1162.000000    1369.000000
+------------------------------------------------------------------------------------------
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  297110.000000  297110.000000  297110.000000
+mean       -0.814033      -0.154937       0.309518
+std         0.265114       0.259112       0.316387
+min        -1.896000      -1.283000      -1.198000
+25%        -0.967000      -0.271000       0.135000
+50%        -0.915000      -0.157000       0.294000
+75%        -0.767000      -0.044000       0.480000
+max         0.614000       1.374000       1.417000
+
+Descriptive statistics for scaled GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  297110.000000  297110.000000  297110.000000
+mean       -0.053720      -0.018435       0.009877
+std         0.608715       0.316133       0.276125
+min        -4.818000      -3.081000      -2.293000
+25%        -0.251000      -0.118000      -0.087000
+50%        -0.019000      -0.009000       0.002000
+75%         0.147000       0.080000       0.107000
+max         3.537000       3.370000       2.029000
+
+Descriptive statistics for normalized MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  297110.000000  297110.000000  297110.000000
+mean        0.515633       0.095613       0.026044
+std         0.417793       0.420340       0.610793
+min        -0.941527      -0.962388      -0.999993
+25%         0.403199      -0.200560      -0.582790
+50%         0.661352       0.122990       0.129253
+75%         0.777488       0.367910       0.622170
+max         0.999999       0.999708       0.999770
+--------------------STRATIY VAL/TEST--------------------
+Validation GROUPS
+group_id
+S2-ADL1    29975
+S2-ADL3    26659
+S3-ADL5    20648
+S4-ADL5    23817
+Name: count, dtype: int64
+Test GROUPS
+group_id
+S1-ADL5    22440
+S2-ADL2    23108
+S2-ADL4    25517
+S2-ADL5    22969
+Name: count, dtype: int64 
+
+
+ Validation Split Label Proportion
+45
+1    0.439886
+2    0.267203
+4    0.251021
+5    0.041890
+Name: proportion, dtype: float64
+Test Split Label Proportion
+45
+1    0.385712
+2    0.263543
+4    0.308867
+5    0.041878
+Name: proportion, dtype: float64
+
+------------------------------ TRAIN ACC/GYRO after StandardScaler ------------------------------
+global mean: 0.000000
+global std : 1.000000
+max |channel mean| : 0.000000
+median |channel mean| : 0.000000
+channel std range : [1.000000, 1.000000]
+
+------------------------------ VAL ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.016196
+global std : 1.019579
+max |channel mean| : 0.692293
+median |channel mean| : 0.017812
+channel std range : [0.857252, 1.191447]
+
+------------------------------ TEST ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.026198
+global std : 1.032089
+max |channel mean| : 1.067700
+median |channel mean| : 0.057583
+channel std range : [0.745667, 1.206436]
+------------------------------------------------------------------------------------------
+Training features: (297110, 46) | Training labels: (297110,)
+Validation features: (101099, 46) | Validation labels: (101099,)
+Test features: (94034, 46), Test labels: (94034,)
+
+------------------------------ TRAIN MAG after window demeaning ------------------------------
+max |window mean|  : 2.072917e-07
+mean |window mean| : 2.318182e-08
+channel global mean range : [-5.960800e-10, 4.066864e-10]
+channel std range         : [0.129758, 0.233506]
+
+------------------------------ VAL MAG after window demeaning ------------------------------
+max |window mean|  : 1.980199e-07
+mean |window mean| : 2.299261e-08
+channel global mean range : [-1.398659e-09, 1.231514e-09]
+channel std range         : [0.127750, 0.233662]
+
+------------------------------ TEST MAG after window demeaning ------------------------------
+max |window mean|  : 2.112654e-07
+mean |window mean| : 2.317931e-08
+channel global mean range : [-1.426697e-09, 6.857978e-10]
+channel std range         : [0.119883, 0.231613]
+
+TRAIN window label distribution
+label 1: 4630 (0.4689)
+label 2: 2563 (0.2595)
+label 4: 2120 (0.2147)
+label 5: 562 (0.0569)
+
+VAL window label distribution
+label 1: 1440 (0.4286)
+label 2: 932 (0.2774)
+label 4: 847 (0.2521)
+label 5: 141 (0.0420)
+
+TEST window label distribution
+label 1: 1173 (0.3754)
+label 2: 848 (0.2714)
+label 4: 972 (0.3110)
+label 5: 132 (0.0422)
+------------------------------------------------------------------------------------------
+Training (windows): (9875, 90, 45). Training Labels: (9875,)
+Validation (windows): (3360, 90, 45). Validation Labels: (3360,)
+Test (windows): (3125, 90, 45). Test Labels: (3125,)
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4630, 'WALK': 2563, 'SIT': 2120, 'LIE': 562}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/50 | tr_Loss: 0.3313 | val_loss: 0.3590 | epoch_time: 38.00s
+
+Epoch: 2/50 | tr_Loss: 0.2165 | val_loss: 0.3459 | epoch_time: 9.27s
+
+Epoch: 3/50 | tr_Loss: 0.1853 | val_loss: 0.3297 | epoch_time: 9.26s
+
+Epoch: 4/50 | tr_Loss: 0.1648 | val_loss: 0.3433 | epoch_time: 9.27s
+
+Epoch: 5/50 | tr_Loss: 0.1527 | val_loss: 0.3181 | epoch_time: 9.29s
+
+Epoch: 6/50 | tr_Loss: 0.1443 | val_loss: 0.3057 | epoch_time: 9.28s
+
+Epoch: 7/50 | tr_Loss: 0.1320 | val_loss: 0.3193 | epoch_time: 9.25s
+
+Epoch: 8/50 | tr_Loss: 0.1300 | val_loss: 0.2970 | epoch_time: 9.27s
+
+Epoch: 9/50 | tr_Loss: 0.1233 | val_loss: 0.2918 | epoch_time: 9.28s
+
+Epoch: 10/50 | tr_Loss: 0.1164 | val_loss: 0.3067 | epoch_time: 9.26s
+
+Epoch: 11/50 | tr_Loss: 0.1114 | val_loss: 0.3086 | epoch_time: 9.27s
+
+Epoch: 12/50 | tr_Loss: 0.1062 | val_loss: 0.2897 | epoch_time: 9.26s
+
+Epoch: 13/50 | tr_Loss: 0.1005 | val_loss: 0.2922 | epoch_time: 9.25s
+
+Epoch: 14/50 | tr_Loss: 0.0968 | val_loss: 0.2959 | epoch_time: 9.27s
+
+Epoch: 15/50 | tr_Loss: 0.0937 | val_loss: 0.2849 | epoch_time: 9.25s
+
+Epoch: 16/50 | tr_Loss: 0.0946 | val_loss: 0.2782 | epoch_time: 9.29s
+
+Epoch: 17/50 | tr_Loss: 0.0876 | val_loss: 0.3122 | epoch_time: 9.29s
+
+Epoch: 18/50 | tr_Loss: 0.0865 | val_loss: 0.2930 | epoch_time: 9.24s
+
+Epoch: 19/50 | tr_Loss: 0.0807 | val_loss: 0.2974 | epoch_time: 9.28s
+
+Epoch: 20/50 | tr_Loss: 0.0803 | val_loss: 0.3058 | epoch_time: 9.28s
+
+Epoch: 21/50 | tr_Loss: 0.0754 | val_loss: 0.3075 | epoch_time: 9.23s
+
+Early stopping at epoch 21 | Best Validation Loss: 0.2782
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4630, 'WALK': 2563, 'SIT': 2120, 'LIE': 562}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/50 | tr_Loss: 0.3336 | val_loss: 0.3825 | epoch_time: 9.34s
+
+Epoch: 2/50 | tr_Loss: 0.2187 | val_loss: 0.3340 | epoch_time: 9.25s
+
+Epoch: 3/50 | tr_Loss: 0.1840 | val_loss: 0.3439 | epoch_time: 9.26s
+
+Epoch: 4/50 | tr_Loss: 0.1697 | val_loss: 0.3205 | epoch_time: 9.28s
+
+Epoch: 5/50 | tr_Loss: 0.1551 | val_loss: 0.3119 | epoch_time: 9.29s
+
+Epoch: 6/50 | tr_Loss: 0.1442 | val_loss: 0.3356 | epoch_time: 9.27s
+
+Epoch: 7/50 | tr_Loss: 0.1370 | val_loss: 0.3214 | epoch_time: 9.26s
+
+Epoch: 8/50 | tr_Loss: 0.1286 | val_loss: 0.3052 | epoch_time: 9.27s
+
+Epoch: 9/50 | tr_Loss: 0.1256 | val_loss: 0.3040 | epoch_time: 9.26s
+
+Epoch: 10/50 | tr_Loss: 0.1150 | val_loss: 0.3091 | epoch_time: 9.26s
+
+Epoch: 11/50 | tr_Loss: 0.1141 | val_loss: 0.3119 | epoch_time: 9.25s
+
+Epoch: 12/50 | tr_Loss: 0.1055 | val_loss: 0.2932 | epoch_time: 9.26s
+
+Epoch: 13/50 | tr_Loss: 0.1027 | val_loss: 0.3007 | epoch_time: 9.28s
+
+Epoch: 14/50 | tr_Loss: 0.0966 | val_loss: 0.2923 | epoch_time: 9.26s
+
+Epoch: 15/50 | tr_Loss: 0.0968 | val_loss: 0.2996 | epoch_time: 9.26s
+
+Epoch: 16/50 | tr_Loss: 0.0916 | val_loss: 0.2994 | epoch_time: 9.31s
+
+Epoch: 17/50 | tr_Loss: 0.0912 | val_loss: 0.3157 | epoch_time: 9.28s
+
+Epoch: 18/50 | tr_Loss: 0.0850 | val_loss: 0.2986 | epoch_time: 9.26s
+
+Epoch: 19/50 | tr_Loss: 0.0832 | val_loss: 0.2881 | epoch_time: 9.29s
+
+Epoch: 20/50 | tr_Loss: 0.0802 | val_loss: 0.3059 | epoch_time: 9.28s
+
+Epoch: 21/50 | tr_Loss: 0.0756 | val_loss: 0.2942 | epoch_time: 9.27s
+
+Epoch: 22/50 | tr_Loss: 0.0729 | val_loss: 0.2801 | epoch_time: 9.26s
+
+Epoch: 23/50 | tr_Loss: 0.0716 | val_loss: 0.2964 | epoch_time: 9.27s
+
+Epoch: 24/50 | tr_Loss: 0.0700 | val_loss: 0.3134 | epoch_time: 9.29s
+
+Epoch: 25/50 | tr_Loss: 0.0682 | val_loss: 0.3023 | epoch_time: 9.26s
+
+Epoch: 26/50 | tr_Loss: 0.0646 | val_loss: 0.2868 | epoch_time: 9.26s
+
+Epoch: 27/50 | tr_Loss: 0.0636 | val_loss: 0.2952 | epoch_time: 9.25s
+
+Early stopping at epoch 27 | Best Validation Loss: 0.2801
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4630, 'WALK': 2563, 'SIT': 2120, 'LIE': 562}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/50 | tr_Loss: 0.3304 | val_loss: 0.3558 | epoch_time: 9.37s
+
+Epoch: 2/50 | tr_Loss: 0.2199 | val_loss: 0.3314 | epoch_time: 9.28s
+
+Epoch: 3/50 | tr_Loss: 0.1860 | val_loss: 0.3326 | epoch_time: 9.26s
+
+Epoch: 4/50 | tr_Loss: 0.1661 | val_loss: 0.3209 | epoch_time: 9.26s
+
+Epoch: 5/50 | tr_Loss: 0.1539 | val_loss: 0.3085 | epoch_time: 9.25s
+
+Epoch: 6/50 | tr_Loss: 0.1446 | val_loss: 0.3162 | epoch_time: 9.25s
+
+Epoch: 7/50 | tr_Loss: 0.1372 | val_loss: 0.3141 | epoch_time: 9.25s
+
+Epoch: 8/50 | tr_Loss: 0.1348 | val_loss: 0.3232 | epoch_time: 9.27s
+
+Epoch: 9/50 | tr_Loss: 0.1248 | val_loss: 0.3065 | epoch_time: 9.26s
+
+Epoch: 10/50 | tr_Loss: 0.1169 | val_loss: 0.3066 | epoch_time: 9.26s
+
+Epoch: 11/50 | tr_Loss: 0.1111 | val_loss: 0.3127 | epoch_time: 9.28s
+
+Epoch: 12/50 | tr_Loss: 0.1077 | val_loss: 0.3114 | epoch_time: 9.28s
+
+Epoch: 13/50 | tr_Loss: 0.1023 | val_loss: 0.2956 | epoch_time: 9.27s
+
+Epoch: 14/50 | tr_Loss: 0.0972 | val_loss: 0.3203 | epoch_time: 9.25s
+
+Epoch: 15/50 | tr_Loss: 0.0949 | val_loss: 0.2974 | epoch_time: 9.28s
+
+Epoch: 16/50 | tr_Loss: 0.0928 | val_loss: 0.3036 | epoch_time: 9.25s
+
+Epoch: 17/50 | tr_Loss: 0.0880 | val_loss: 0.3028 | epoch_time: 9.25s
+
+Epoch: 18/50 | tr_Loss: 0.0856 | val_loss: 0.3058 | epoch_time: 9.27s
+
+Early stopping at epoch 18 | Best Validation Loss: 0.2956
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4630, 'WALK': 2563, 'SIT': 2120, 'LIE': 562}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/50 | tr_Loss: 0.3314 | val_loss: 0.3690 | epoch_time: 9.34s
+
+Epoch: 2/50 | tr_Loss: 0.2162 | val_loss: 0.3456 | epoch_time: 9.26s
+
+Epoch: 3/50 | tr_Loss: 0.1843 | val_loss: 0.3254 | epoch_time: 9.26s
+
+Epoch: 4/50 | tr_Loss: 0.1648 | val_loss: 0.3149 | epoch_time: 9.28s
+
+Epoch: 5/50 | tr_Loss: 0.1544 | val_loss: 0.3162 | epoch_time: 9.27s
+
+Epoch: 6/50 | tr_Loss: 0.1427 | val_loss: 0.3111 | epoch_time: 9.26s
+
+Epoch: 7/50 | tr_Loss: 0.1379 | val_loss: 0.3154 | epoch_time: 9.29s
+
+Epoch: 8/50 | tr_Loss: 0.1320 | val_loss: 0.3133 | epoch_time: 9.27s
+
+Epoch: 9/50 | tr_Loss: 0.1275 | val_loss: 0.3127 | epoch_time: 9.27s
+
+Epoch: 10/50 | tr_Loss: 0.1203 | val_loss: 0.3008 | epoch_time: 9.27s
+
+Epoch: 11/50 | tr_Loss: 0.1084 | val_loss: 0.3127 | epoch_time: 9.28s
+
+Epoch: 12/50 | tr_Loss: 0.1057 | val_loss: 0.3038 | epoch_time: 9.28s
+
+Epoch: 13/50 | tr_Loss: 0.1040 | val_loss: 0.3011 | epoch_time: 9.26s
+
+Epoch: 14/50 | tr_Loss: 0.0996 | val_loss: 0.3174 | epoch_time: 9.26s
+
+Epoch: 15/50 | tr_Loss: 0.0970 | val_loss: 0.3211 | epoch_time: 9.27s
+
+Early stopping at epoch 15 | Best Validation Loss: 0.3008
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4630, 'WALK': 2563, 'SIT': 2120, 'LIE': 562}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/50 | tr_Loss: 0.3305 | val_loss: 0.3537 | epoch_time: 9.40s
+
+Epoch: 2/50 | tr_Loss: 0.2144 | val_loss: 0.3554 | epoch_time: 9.28s
+
+Epoch: 3/50 | tr_Loss: 0.1817 | val_loss: 0.3164 | epoch_time: 9.30s
+
+Epoch: 4/50 | tr_Loss: 0.1712 | val_loss: 0.3282 | epoch_time: 9.28s
+
+Epoch: 5/50 | tr_Loss: 0.1566 | val_loss: 0.3186 | epoch_time: 9.30s
+
+Epoch: 6/50 | tr_Loss: 0.1454 | val_loss: 0.3183 | epoch_time: 9.29s
+
+Epoch: 7/50 | tr_Loss: 0.1375 | val_loss: 0.3188 | epoch_time: 9.28s
+
+Epoch: 8/50 | tr_Loss: 0.1288 | val_loss: 0.3099 | epoch_time: 9.28s
+
+Epoch: 9/50 | tr_Loss: 0.1221 | val_loss: 0.2982 | epoch_time: 9.28s
+
+Epoch: 10/50 | tr_Loss: 0.1154 | val_loss: 0.3099 | epoch_time: 9.29s
+
+Epoch: 11/50 | tr_Loss: 0.1125 | val_loss: 0.3174 | epoch_time: 9.29s
+
+Epoch: 12/50 | tr_Loss: 0.1058 | val_loss: 0.2923 | epoch_time: 9.28s
+
+Epoch: 13/50 | tr_Loss: 0.1029 | val_loss: 0.3142 | epoch_time: 9.25s
+
+Epoch: 14/50 | tr_Loss: 0.0983 | val_loss: 0.2957 | epoch_time: 9.26s
+
+Epoch: 15/50 | tr_Loss: 0.0939 | val_loss: 0.3229 | epoch_time: 9.27s
+
+Epoch: 16/50 | tr_Loss: 0.0905 | val_loss: 0.3164 | epoch_time: 9.28s
+
+Epoch: 17/50 | tr_Loss: 0.0896 | val_loss: 0.3041 | epoch_time: 9.26s
+
+Early stopping at epoch 17 | Best Validation Loss: 0.2923
+Total wall time:18min 22s

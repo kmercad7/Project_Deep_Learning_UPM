@@ -1,0 +1,78 @@
+
+TRAINING STARTING AT: 2026-06-09 20:46:14.684202
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold3_seed42.pt | SEED: 42
+Epoch: 1/50 | tr_loss: 0.3113 | val_loss: 0.3704 | epoch_time: 27.83s
+Epoch: 2/50 | tr_loss: 0.1765 | val_loss: 0.3770 | epoch_time: 3.24s
+Epoch: 3/50 | tr_loss: 0.1666 | val_loss: 0.3650 | epoch_time: 3.21s
+Epoch: 4/50 | tr_loss: 0.1503 | val_loss: 0.3503 | epoch_time: 3.23s
+Epoch: 5/50 | tr_loss: 0.1421 | val_loss: 0.3471 | epoch_time: 3.22s
+Epoch: 6/50 | tr_loss: 0.1351 | val_loss: 0.3424 | epoch_time: 3.22s
+Epoch: 7/50 | tr_loss: 0.1286 | val_loss: 0.3792 | epoch_time: 3.22s
+Epoch: 8/50 | tr_loss: 0.1215 | val_loss: 0.3419 | epoch_time: 3.24s
+Epoch: 9/50 | tr_loss: 0.1198 | val_loss: 0.3535 | epoch_time: 3.22s
+Epoch: 10/50 | tr_loss: 0.1144 | val_loss: 0.3652 | epoch_time: 3.25s
+Epoch: 11/50 | tr_loss: 0.1074 | val_loss: 0.3421 | epoch_time: 3.26s
+Epoch: 12/50 | tr_loss: 0.1066 | val_loss: 0.3494 | epoch_time: 3.30s
+Epoch: 13/50 | tr_loss: 0.0999 | val_loss: 0.3504 | epoch_time: 3.29s
+TRAINING ENDING AT: 2026-06-09 20:47:22.455659
+
+TRAINING STARTING AT: 2026-06-09 20:47:22.801181
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold3_seed58.pt | SEED: 58
+Epoch: 1/50 | tr_loss: 0.3018 | val_loss: 0.3677 | epoch_time: 3.46s
+Epoch: 2/50 | tr_loss: 0.1813 | val_loss: 0.3857 | epoch_time: 3.31s
+Epoch: 3/50 | tr_loss: 0.1589 | val_loss: 0.3858 | epoch_time: 3.29s
+Epoch: 4/50 | tr_loss: 0.1520 | val_loss: 0.3385 | epoch_time: 3.29s
+Epoch: 5/50 | tr_loss: 0.1369 | val_loss: 0.3190 | epoch_time: 3.29s
+Epoch: 6/50 | tr_loss: 0.1407 | val_loss: 0.3458 | epoch_time: 3.22s
+Epoch: 7/50 | tr_loss: 0.1282 | val_loss: 0.3459 | epoch_time: 3.23s
+Epoch: 8/50 | tr_loss: 0.1172 | val_loss: 0.3068 | epoch_time: 3.22s
+Epoch: 9/50 | tr_loss: 0.1165 | val_loss: 0.3411 | epoch_time: 3.22s
+Epoch: 10/50 | tr_loss: 0.1181 | val_loss: 0.3273 | epoch_time: 3.22s
+Epoch: 11/50 | tr_loss: 0.1086 | val_loss: 0.3648 | epoch_time: 3.23s
+Epoch: 12/50 | tr_loss: 0.1027 | val_loss: 0.3261 | epoch_time: 3.22s
+Epoch: 13/50 | tr_loss: 0.0991 | val_loss: 0.3273 | epoch_time: 3.22s
+TRAINING ENDING AT: 2026-06-09 20:48:05.346320
+
+TRAINING STARTING AT: 2026-06-09 20:48:05.647686
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold3_seed7.pt | SEED: 7
+Epoch: 1/50 | tr_loss: 0.3041 | val_loss: 0.3736 | epoch_time: 3.36s
+Epoch: 2/50 | tr_loss: 0.1877 | val_loss: 0.3351 | epoch_time: 3.30s
+Epoch: 3/50 | tr_loss: 0.1647 | val_loss: 0.3335 | epoch_time: 3.30s
+Epoch: 4/50 | tr_loss: 0.1452 | val_loss: 0.3214 | epoch_time: 3.30s
+Epoch: 5/50 | tr_loss: 0.1375 | val_loss: 0.3404 | epoch_time: 3.30s
+Epoch: 6/50 | tr_loss: 0.1278 | val_loss: 0.3616 | epoch_time: 3.28s
+Epoch: 7/50 | tr_loss: 0.1291 | val_loss: 0.3504 | epoch_time: 3.27s
+Epoch: 8/50 | tr_loss: 0.1208 | val_loss: 0.3401 | epoch_time: 3.20s
+Epoch: 9/50 | tr_loss: 0.1142 | val_loss: 0.3780 | epoch_time: 3.21s
+TRAINING ENDING AT: 2026-06-09 20:48:35.329303
+
+TRAINING STARTING AT: 2026-06-09 20:48:35.613919
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold3_seed128.pt | SEED: 128
+Epoch: 1/50 | tr_loss: 0.3080 | val_loss: 0.3608 | epoch_time: 3.41s
+Epoch: 2/50 | tr_loss: 0.1797 | val_loss: 0.3770 | epoch_time: 3.22s
+Epoch: 3/50 | tr_loss: 0.1534 | val_loss: 0.3667 | epoch_time: 3.22s
+Epoch: 4/50 | tr_loss: 0.1527 | val_loss: 0.3586 | epoch_time: 3.21s
+Epoch: 5/50 | tr_loss: 0.1417 | val_loss: 0.3481 | epoch_time: 3.21s
+Epoch: 6/50 | tr_loss: 0.1394 | val_loss: 0.3255 | epoch_time: 3.22s
+Epoch: 7/50 | tr_loss: 0.1276 | val_loss: 0.3361 | epoch_time: 3.21s
+Epoch: 8/50 | tr_loss: 0.1233 | val_loss: 0.3406 | epoch_time: 3.22s
+Epoch: 9/50 | tr_loss: 0.1164 | val_loss: 0.3334 | epoch_time: 3.22s
+Epoch: 10/50 | tr_loss: 0.1107 | val_loss: 0.3289 | epoch_time: 3.21s
+Epoch: 11/50 | tr_loss: 0.1112 | val_loss: 0.3524 | epoch_time: 3.20s
+TRAINING ENDING AT: 2026-06-09 20:49:11.253268
+
+TRAINING STARTING AT: 2026-06-09 20:49:11.557690
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold3_seed92.pt | SEED: 92
+Epoch: 1/50 | tr_loss: 0.2945 | val_loss: 0.3709 | epoch_time: 3.45s
+Epoch: 2/50 | tr_loss: 0.1821 | val_loss: 0.3544 | epoch_time: 3.23s
+Epoch: 3/50 | tr_loss: 0.1649 | val_loss: 0.3539 | epoch_time: 3.21s
+Epoch: 4/50 | tr_loss: 0.1484 | val_loss: 0.3466 | epoch_time: 3.22s
+Epoch: 5/50 | tr_loss: 0.1389 | val_loss: 0.3655 | epoch_time: 3.22s
+Epoch: 6/50 | tr_loss: 0.1304 | val_loss: 0.3508 | epoch_time: 3.21s
+Epoch: 7/50 | tr_loss: 0.1283 | val_loss: 0.3392 | epoch_time: 3.21s
+Epoch: 8/50 | tr_loss: 0.1233 | val_loss: 0.3507 | epoch_time: 3.21s
+Epoch: 9/50 | tr_loss: 0.1112 | val_loss: 0.3475 | epoch_time: 3.21s
+Epoch: 10/50 | tr_loss: 0.1132 | val_loss: 0.3489 | epoch_time: 3.22s
+Epoch: 11/50 | tr_loss: 0.1126 | val_loss: 0.3437 | epoch_time: 3.22s
+Epoch: 12/50 | tr_loss: 0.1090 | val_loss: 0.3409 | epoch_time: 3.23s
+TRAINING ENDING AT: 2026-06-09 20:49:50.784973

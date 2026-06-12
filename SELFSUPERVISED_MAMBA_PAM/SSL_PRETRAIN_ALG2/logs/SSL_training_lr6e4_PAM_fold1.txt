@@ -1,0 +1,70 @@
+
+TRAINING STARTING AT: 2026-06-09 20:46:14.425648
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold1_seed42.pt | SEED: 42
+Epoch: 1/50 | tr_loss: 0.2932 | val_loss: 0.5321 | epoch_time: 27.99s
+Epoch: 2/50 | tr_loss: 0.1630 | val_loss: 0.5222 | epoch_time: 3.36s
+Epoch: 3/50 | tr_loss: 0.1379 | val_loss: 0.4694 | epoch_time: 3.35s
+Epoch: 4/50 | tr_loss: 0.1308 | val_loss: 0.5024 | epoch_time: 3.35s
+Epoch: 5/50 | tr_loss: 0.1165 | val_loss: 0.4869 | epoch_time: 3.34s
+Epoch: 6/50 | tr_loss: 0.1129 | val_loss: 0.4848 | epoch_time: 3.34s
+Epoch: 7/50 | tr_loss: 0.1158 | val_loss: 0.5028 | epoch_time: 3.34s
+Epoch: 8/50 | tr_loss: 0.1122 | val_loss: 0.5078 | epoch_time: 3.36s
+TRAINING ENDING AT: 2026-06-09 20:47:06.868822
+
+TRAINING STARTING AT: 2026-06-09 20:47:07.241146
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold1_seed58.pt | SEED: 58
+Epoch: 1/50 | tr_loss: 0.2975 | val_loss: 0.5633 | epoch_time: 3.49s
+Epoch: 2/50 | tr_loss: 0.1657 | val_loss: 0.5072 | epoch_time: 3.32s
+Epoch: 3/50 | tr_loss: 0.1419 | val_loss: 0.5168 | epoch_time: 3.41s
+Epoch: 4/50 | tr_loss: 0.1318 | val_loss: 0.4830 | epoch_time: 3.47s
+Epoch: 5/50 | tr_loss: 0.1250 | val_loss: 0.4879 | epoch_time: 3.41s
+Epoch: 6/50 | tr_loss: 0.1298 | val_loss: 0.5156 | epoch_time: 3.33s
+Epoch: 7/50 | tr_loss: 0.1144 | val_loss: 0.4917 | epoch_time: 3.35s
+Epoch: 8/50 | tr_loss: 0.1103 | val_loss: 0.5033 | epoch_time: 3.33s
+Epoch: 9/50 | tr_loss: 0.1115 | val_loss: 0.5156 | epoch_time: 3.33s
+TRAINING ENDING AT: 2026-06-09 20:47:38.732213
+
+TRAINING STARTING AT: 2026-06-09 20:47:39.163519
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold1_seed7.pt | SEED: 7
+Epoch: 1/50 | tr_loss: 0.2994 | val_loss: 0.5219 | epoch_time: 3.56s
+Epoch: 2/50 | tr_loss: 0.1686 | val_loss: 0.4985 | epoch_time: 3.46s
+Epoch: 3/50 | tr_loss: 0.1388 | val_loss: 0.4957 | epoch_time: 3.47s
+Epoch: 4/50 | tr_loss: 0.1323 | val_loss: 0.5018 | epoch_time: 3.44s
+Epoch: 5/50 | tr_loss: 0.1260 | val_loss: 0.5025 | epoch_time: 3.44s
+Epoch: 6/50 | tr_loss: 0.1139 | val_loss: 0.5130 | epoch_time: 3.46s
+Epoch: 7/50 | tr_loss: 0.1115 | val_loss: 0.4799 | epoch_time: 3.42s
+Epoch: 8/50 | tr_loss: 0.1080 | val_loss: 0.5152 | epoch_time: 3.44s
+Epoch: 9/50 | tr_loss: 0.1080 | val_loss: 0.5430 | epoch_time: 3.39s
+Epoch: 10/50 | tr_loss: 0.1009 | val_loss: 0.5182 | epoch_time: 3.40s
+Epoch: 11/50 | tr_loss: 0.0879 | val_loss: 0.4928 | epoch_time: 3.42s
+Epoch: 12/50 | tr_loss: 0.0873 | val_loss: 0.5298 | epoch_time: 3.41s
+TRAINING ENDING AT: 2026-06-09 20:48:21.312849
+
+TRAINING STARTING AT: 2026-06-09 20:48:21.743987
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold1_seed128.pt | SEED: 128
+Epoch: 1/50 | tr_loss: 0.2976 | val_loss: 0.5506 | epoch_time: 3.63s
+Epoch: 2/50 | tr_loss: 0.1739 | val_loss: 0.5257 | epoch_time: 3.45s
+Epoch: 3/50 | tr_loss: 0.1434 | val_loss: 0.5280 | epoch_time: 3.45s
+Epoch: 4/50 | tr_loss: 0.1318 | val_loss: 0.4985 | epoch_time: 3.44s
+Epoch: 5/50 | tr_loss: 0.1245 | val_loss: 0.5041 | epoch_time: 3.43s
+Epoch: 6/50 | tr_loss: 0.1174 | val_loss: 0.5284 | epoch_time: 3.43s
+Epoch: 7/50 | tr_loss: 0.1110 | val_loss: 0.5245 | epoch_time: 3.45s
+Epoch: 8/50 | tr_loss: 0.1191 | val_loss: 0.5124 | epoch_time: 3.42s
+Epoch: 9/50 | tr_loss: 0.1066 | val_loss: 0.5250 | epoch_time: 3.43s
+TRAINING ENDING AT: 2026-06-09 20:48:53.353907
+
+TRAINING STARTING AT: 2026-06-09 20:48:53.814424
+Model: SSL_models_pt/SSL_model_lr6e4_PAM_fold1_seed92.pt | SEED: 92
+Epoch: 1/50 | tr_loss: 0.2932 | val_loss: 0.5204 | epoch_time: 3.59s
+Epoch: 2/50 | tr_loss: 0.1600 | val_loss: 0.5314 | epoch_time: 3.43s
+Epoch: 3/50 | tr_loss: 0.1467 | val_loss: 0.4878 | epoch_time: 3.43s
+Epoch: 4/50 | tr_loss: 0.1317 | val_loss: 0.4994 | epoch_time: 3.44s
+Epoch: 5/50 | tr_loss: 0.1304 | val_loss: 0.5070 | epoch_time: 3.44s
+Epoch: 6/50 | tr_loss: 0.1191 | val_loss: 0.5097 | epoch_time: 3.43s
+Epoch: 7/50 | tr_loss: 0.1156 | val_loss: 0.4804 | epoch_time: 3.47s
+Epoch: 8/50 | tr_loss: 0.1081 | val_loss: 0.5002 | epoch_time: 3.45s
+Epoch: 9/50 | tr_loss: 0.1006 | val_loss: 0.5080 | epoch_time: 3.44s
+Epoch: 10/50 | tr_loss: 0.0973 | val_loss: 0.4990 | epoch_time: 3.42s
+Epoch: 11/50 | tr_loss: 0.1039 | val_loss: 0.5158 | epoch_time: 3.42s
+Epoch: 12/50 | tr_loss: 0.0938 | val_loss: 0.4922 | epoch_time: 3.42s
+TRAINING ENDING AT: 2026-06-09 20:49:35.959429

@@ -1,0 +1,161 @@
+
+TRAINING STARTING AT: 2026-06-10 15:43:26.278347
+Model: SSL_models_pt/model_PTC_lr3e4_PAM_fold4_seed42.pt | SEED: 42
+Epoch: 1/40 | tr_loss: 0.6365 | tr_acc: 0.8019 | val_loss: 0.2979 | val_acc: 0.9145 | epoch_time: 26.72s
+Epoch: 2/40 | tr_loss: 0.1901 | tr_acc: 0.9505 | val_loss: 0.3336 | val_acc: 0.9097 | epoch_time: 2.64s
+Epoch: 3/40 | tr_loss: 0.1364 | tr_acc: 0.9575 | val_loss: 0.3454 | val_acc: 0.9091 | epoch_time: 2.62s
+Epoch: 4/40 | tr_loss: 0.1077 | tr_acc: 0.9698 | val_loss: 0.3618 | val_acc: 0.9115 | epoch_time: 2.63s
+Epoch: 5/40 | tr_loss: 0.0914 | tr_acc: 0.9720 | val_loss: 0.4331 | val_acc: 0.8947 | epoch_time: 2.62s
+Epoch: 6/40 | tr_loss: 0.0772 | tr_acc: 0.9747 | val_loss: 0.4315 | val_acc: 0.9055 | epoch_time: 2.63s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+         LIE       1.00      0.94      0.97       384
+         SIT       0.80      0.96      0.88       403
+       STAND       0.88      0.77      0.82       409
+        WALK       0.99      0.98      0.98       476
+
+    accuracy                           0.91      1672
+   macro avg       0.92      0.91      0.91      1672
+weighted avg       0.92      0.91      0.91      1672
+TRAINING ENDING AT: 2026-06-10 15:44:06.702446
+
+Test Results:
+ Accuracy: 0.8907168037602821
+ Report:
+ {'LIE': {'precision': 0.958904109589041, 'recall': 0.9259259259259259, 'f1-score': 0.9421265141318977, 'support': 378.0}, 'SIT': {'precision': 0.8126272912423625, 'recall': 0.8599137931034483, 'f1-score': 0.8356020942408376, 'support': 464.0}, 'STAND': {'precision': 0.7840909090909091, 'recall': 0.7774647887323943, 'f1-score': 0.7807637906647807, 'support': 355.0}, 'WALK': {'precision': 0.9939271255060729, 'recall': 0.9722772277227723, 'f1-score': 0.982982982982983, 'support': 505.0}, 'accuracy': 0.8907168037602821, 'macro avg': {'precision': 0.8873873588570964, 'recall': 0.8838954338711352, 'f1-score': 0.8853688455051247, 'support': 1702.0}, 'weighted avg': {'precision': 0.8929555156691853, 'recall': 0.8907168037602821, 'f1-score': 0.8915515547367859, 'support': 1702.0}}
+ F1: 0.8853688455051247
+ Confusion Matrix:
+ [[350   9  19   0]
+ [ 15 399  49   1]
+ [  0  77 276   2]
+ [  0   6   8 491]]
+TRAINING STARTING AT: 2026-06-10 15:44:07.543948
+Model: SSL_models_pt/model_PTC_lr3e4_PAM_fold4_seed58.pt | SEED: 58
+Epoch: 1/40 | tr_loss: 0.6325 | tr_acc: 0.8166 | val_loss: 0.3182 | val_acc: 0.9055 | epoch_time: 2.79s
+Epoch: 2/40 | tr_loss: 0.1888 | tr_acc: 0.9502 | val_loss: 0.3386 | val_acc: 0.9031 | epoch_time: 2.65s
+Epoch: 3/40 | tr_loss: 0.1317 | tr_acc: 0.9638 | val_loss: 0.3982 | val_acc: 0.8816 | epoch_time: 2.65s
+Epoch: 4/40 | tr_loss: 0.1033 | tr_acc: 0.9683 | val_loss: 0.4016 | val_acc: 0.8852 | epoch_time: 2.66s
+Epoch: 5/40 | tr_loss: 0.0848 | tr_acc: 0.9732 | val_loss: 0.4035 | val_acc: 0.8923 | epoch_time: 2.65s
+Epoch: 6/40 | tr_loss: 0.0763 | tr_acc: 0.9771 | val_loss: 0.4190 | val_acc: 0.8935 | epoch_time: 2.67s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+         LIE       1.00      0.94      0.97       384
+         SIT       0.78      0.96      0.86       403
+       STAND       0.87      0.73      0.80       409
+        WALK       0.99      0.97      0.98       476
+
+    accuracy                           0.91      1672
+   macro avg       0.91      0.90      0.90      1672
+weighted avg       0.91      0.91      0.91      1672
+TRAINING ENDING AT: 2026-06-10 15:44:24.055452
+
+Test Results:
+ Accuracy: 0.9030552291421856
+ Report:
+ {'LIE': {'precision': 0.997134670487106, 'recall': 0.9206349206349206, 'f1-score': 0.9573590096286108, 'support': 378.0}, 'SIT': {'precision': 0.7934782608695652, 'recall': 0.9439655172413793, 'f1-score': 0.8622047244094488, 'support': 464.0}, 'STAND': {'precision': 0.8501628664495114, 'recall': 0.7352112676056338, 'f1-score': 0.7885196374622356, 'support': 355.0}, 'WALK': {'precision': 0.9919028340080972, 'recall': 0.9702970297029703, 'f1-score': 0.980980980980981, 'support': 505.0}, 'accuracy': 0.9030552291421856, 'macro avg': {'precision': 0.90816965795357, 'recall': 0.892527183796226, 'f1-score': 0.897266088120319, 'support': 1702.0}, 'weighted avg': {'precision': 0.9094063262345887, 'recall': 0.9030552291421856, 'f1-score': 0.9032106724207334, 'support': 1702.0}}
+ F1: 0.897266088120319
+ Confusion Matrix:
+ [[348  17  13   0]
+ [  1 438  25   0]
+ [  0  90 261   4]
+ [  0   7   8 490]]
+TRAINING STARTING AT: 2026-06-10 15:44:24.903187
+Model: SSL_models_pt/model_PTC_lr3e4_PAM_fold4_seed7.pt | SEED: 7
+Epoch: 1/40 | tr_loss: 0.5918 | tr_acc: 0.8417 | val_loss: 0.3033 | val_acc: 0.9073 | epoch_time: 2.81s
+Epoch: 2/40 | tr_loss: 0.1804 | tr_acc: 0.9478 | val_loss: 0.3442 | val_acc: 0.9019 | epoch_time: 2.67s
+Epoch: 3/40 | tr_loss: 0.1336 | tr_acc: 0.9599 | val_loss: 0.3692 | val_acc: 0.8941 | epoch_time: 2.65s
+Epoch: 4/40 | tr_loss: 0.1079 | tr_acc: 0.9680 | val_loss: 0.3752 | val_acc: 0.8953 | epoch_time: 2.65s
+Epoch: 5/40 | tr_loss: 0.0927 | tr_acc: 0.9707 | val_loss: 0.3677 | val_acc: 0.8959 | epoch_time: 2.66s
+Epoch: 6/40 | tr_loss: 0.0789 | tr_acc: 0.9768 | val_loss: 0.4020 | val_acc: 0.8971 | epoch_time: 2.64s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+         LIE       1.00      0.94      0.97       384
+         SIT       0.79      0.96      0.87       403
+       STAND       0.88      0.74      0.80       409
+        WALK       0.99      0.97      0.98       476
+
+    accuracy                           0.91      1672
+   macro avg       0.91      0.91      0.90      1672
+weighted avg       0.91      0.91      0.91      1672
+TRAINING ENDING AT: 2026-06-10 15:44:41.445585
+
+Test Results:
+ Accuracy: 0.899529964747356
+ Report:
+ {'LIE': {'precision': 1.0, 'recall': 0.9259259259259259, 'f1-score': 0.9615384615384616, 'support': 378.0}, 'SIT': {'precision': 0.7977941176470589, 'recall': 0.9353448275862069, 'f1-score': 0.8611111111111112, 'support': 464.0}, 'STAND': {'precision': 0.8317152103559871, 'recall': 0.723943661971831, 'f1-score': 0.7740963855421686, 'support': 355.0}, 'WALK': {'precision': 0.9819639278557114, 'recall': 0.9702970297029703, 'f1-score': 0.9760956175298805, 'support': 505.0}, 'accuracy': 0.899529964747356, 'macro avg': {'precision': 0.9028683139646893, 'recall': 0.8888778612967335, 'f1-score': 0.8932103939304055, 'support': 1702.0}, 'weighted avg': {'precision': 0.9044225345662428, 'recall': 0.899529964747356, 'f1-score': 0.8993828423837565, 'support': 1702.0}}
+ F1: 0.8932103939304055
+ Confusion Matrix:
+ [[350  10  16   2]
+ [  0 434  29   1]
+ [  0  92 257   6]
+ [  0   8   7 490]]
+TRAINING STARTING AT: 2026-06-10 15:44:42.302920
+Model: SSL_models_pt/model_PTC_lr3e4_PAM_fold4_seed128.pt | SEED: 128
+Epoch: 1/40 | tr_loss: 0.6400 | tr_acc: 0.7949 | val_loss: 0.3035 | val_acc: 0.9181 | epoch_time: 2.80s
+Epoch: 2/40 | tr_loss: 0.2024 | tr_acc: 0.9472 | val_loss: 0.3203 | val_acc: 0.9019 | epoch_time: 2.65s
+Epoch: 3/40 | tr_loss: 0.1342 | tr_acc: 0.9605 | val_loss: 0.3618 | val_acc: 0.8947 | epoch_time: 2.64s
+Epoch: 4/40 | tr_loss: 0.1039 | tr_acc: 0.9692 | val_loss: 0.3831 | val_acc: 0.8870 | epoch_time: 2.65s
+Epoch: 5/40 | tr_loss: 0.0830 | tr_acc: 0.9741 | val_loss: 0.4038 | val_acc: 0.8840 | epoch_time: 2.64s
+Epoch: 6/40 | tr_loss: 0.0708 | tr_acc: 0.9768 | val_loss: 0.4266 | val_acc: 0.8810 | epoch_time: 2.66s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+         LIE       1.00      0.94      0.97       384
+         SIT       0.82      0.96      0.89       403
+       STAND       0.88      0.80      0.83       409
+        WALK       0.98      0.97      0.98       476
+
+    accuracy                           0.92      1672
+   macro avg       0.92      0.92      0.92      1672
+weighted avg       0.92      0.92      0.92      1672
+TRAINING ENDING AT: 2026-06-10 15:44:58.794505
+
+Test Results:
+ Accuracy: 0.8918918918918919
+ Report:
+ {'LIE': {'precision': 0.9915014164305949, 'recall': 0.9259259259259259, 'f1-score': 0.957592339261286, 'support': 378.0}, 'SIT': {'precision': 0.8219461697722568, 'recall': 0.8556034482758621, 'f1-score': 0.8384371700105596, 'support': 464.0}, 'STAND': {'precision': 0.7768595041322314, 'recall': 0.7943661971830986, 'f1-score': 0.7855153203342619, 'support': 355.0}, 'WALK': {'precision': 0.9721669980119284, 'recall': 0.9683168316831683, 'f1-score': 0.9702380952380952, 'support': 505.0}, 'accuracy': 0.8918918918918919, 'macro avg': {'precision': 0.8906185220867529, 'recall': 0.8860531007670138, 'f1-score': 0.8879457312110507, 'support': 1702.0}, 'weighted avg': {'precision': 0.8947708673020318, 'recall': 0.8918918918918919, 'f1-score': 0.8929688178258325, 'support': 1702.0}}
+ F1: 0.8879457312110507
+ Confusion Matrix:
+ [[350   9  18   1]
+ [  3 397  51  13]
+ [  0  73 282   0]
+ [  0   4  12 489]]
+TRAINING STARTING AT: 2026-06-10 15:44:59.646831
+Model: SSL_models_pt/model_PTC_lr3e4_PAM_fold4_seed92.pt | SEED: 92
+Epoch: 1/40 | tr_loss: 0.6399 | tr_acc: 0.8082 | val_loss: 0.2917 | val_acc: 0.9276 | epoch_time: 2.81s
+Epoch: 2/40 | tr_loss: 0.1928 | tr_acc: 0.9484 | val_loss: 0.3093 | val_acc: 0.9091 | epoch_time: 2.66s
+Epoch: 3/40 | tr_loss: 0.1257 | tr_acc: 0.9617 | val_loss: 0.3548 | val_acc: 0.9049 | epoch_time: 2.65s
+Epoch: 4/40 | tr_loss: 0.1011 | tr_acc: 0.9689 | val_loss: 0.3389 | val_acc: 0.9115 | epoch_time: 2.66s
+Epoch: 5/40 | tr_loss: 0.0867 | tr_acc: 0.9720 | val_loss: 0.3881 | val_acc: 0.9007 | epoch_time: 2.65s
+Epoch: 6/40 | tr_loss: 0.0730 | tr_acc: 0.9771 | val_loss: 0.3678 | val_acc: 0.9097 | epoch_time: 2.65s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+         LIE       1.00      0.94      0.97       384
+         SIT       0.85      0.96      0.90       403
+       STAND       0.88      0.83      0.86       409
+        WALK       0.99      0.97      0.98       476
+
+    accuracy                           0.93      1672
+   macro avg       0.93      0.93      0.93      1672
+weighted avg       0.93      0.93      0.93      1672
+TRAINING ENDING AT: 2026-06-10 15:45:16.181320
+
+Test Results:
+ Accuracy: 0.8877790834312573
+ Report:
+ {'LIE': {'precision': 0.9667590027700831, 'recall': 0.9232804232804233, 'f1-score': 0.9445196211096076, 'support': 378.0}, 'SIT': {'precision': 0.8161157024793388, 'recall': 0.8512931034482759, 'f1-score': 0.8333333333333334, 'support': 464.0}, 'STAND': {'precision': 0.7796610169491526, 'recall': 0.7774647887323943, 'f1-score': 0.7785613540197461, 'support': 355.0}, 'WALK': {'precision': 0.9761431411530815, 'recall': 0.9722772277227723, 'f1-score': 0.9742063492063492, 'support': 505.0}, 'accuracy': 0.8877790834312573, 'macro avg': {'precision': 0.8846697158379141, 'recall': 0.8810788857959664, 'f1-score': 0.8826551644172591, 'support': 1702.0}, 'weighted avg': {'precision': 0.8894503738523855, 'recall': 0.8877790834312573, 'f1-score': 0.8884010402305021, 'support': 1702.0}}
+ F1: 0.8826551644172591
+ Confusion Matrix:
+ [[349   8  20   1]
+ [ 12 395  50   7]
+ [  0  75 276   4]
+ [  0   6   8 491]]

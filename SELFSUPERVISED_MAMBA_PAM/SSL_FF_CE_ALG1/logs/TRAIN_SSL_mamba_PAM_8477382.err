@@ -1,0 +1,39 @@
+Epoch 1/40:   0%|          | 0/53 [00:00<?, ?it/s]Epoch 1/40:   0%|          | 0/53 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/kmercad/mamba_har/SELFSUPERVISED_MAMBA_PAM/train_downstream_PAM_mamba.py", line 135, in <module>
+    logits_ = model(x_batch)                                          # forward pass
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kmercad/mamba_har/SELFSUPERVISED_MAMBA_PAM/MambaSSLModel.py", line 148, in forward
+    hidden_states = self.encoder(x) # [B, L, d_model]
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kmercad/mamba_har/SELFSUPERVISED_MAMBA_PAM/MambaSSLModel.py", line 78, in forward
+    hidden_states = self.backbone(x, inference_params=inference_params, **mixer_kwargs) # [B, L, d_model]
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kmercad/mamba_har/SELFSUPERVISED_MAMBA_PAM/Mamba_blocks.py", line 116, in forward
+    hidden_states, residual = layer(
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/modules/block.py", line 57, in forward
+    hidden_states, residual = layer_norm_fn(
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/ops/triton/layer_norm.py", line 904, in layer_norm_fn
+    return LayerNormFn.apply(
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/autograd/function.py", line 575, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/ops/triton/layer_norm.py", line 777, in forward
+    y, y1, mean, rstd, residual_out, seeds, dropout_mask, dropout_mask1 = _layer_norm_fwd(
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/ops/triton/layer_norm.py", line 370, in _layer_norm_fwd
+    with torch.cuda.device(x.device.index):
+  File "/home/kmercad/myenv/lib/python3.10/site-packages/torch/cuda/__init__.py", line 444, in __enter__
+    self.prev_idx = torch.cuda._exchange_device(self.idx)
+RuntimeError: invalid argument to exchangeDevice
