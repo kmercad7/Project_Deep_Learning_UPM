@@ -21,29 +21,12 @@
   wearable-sensor datasets. Training is designed to run on a SLURM GPU cluster (A100 or H100).
 
 
-
-
-
-
-
   ---
 
 
 
 
-
-
-
   ## Repository structure
-
-
-
-
-
-
-
-  | Folder | What it does |
-
 
 
   |--------|--------------|
