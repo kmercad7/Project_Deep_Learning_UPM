@@ -1,0 +1,112 @@
+-----------------------------------------------------------------------------------------------
+Parameter assignment for the hybrid Muon + AdamW optimizer
+-----------------------------------------------------------------------------------------------
+NAME                                                         SHAPE                     OPTIMIZER CANDIDATE
+-----------------------------------------------------------------------------------------------
+convolutional_input.weight                                   [384, 45, 9]              AdamW
+convolutional_input.bias                                     [384]                     AdamW
+batch_layer.weight                                           [384]                     AdamW
+batch_layer.bias                                             [384]                     AdamW
+backbone.input_proj.weight                                   [384, 384]                MUON
+backbone.input_proj.bias                                     [384]                     AdamW
+backbone.layers.0.norm.weight                                [384]                     AdamW
+backbone.layers.0.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.0.mixer.A_log                                [96]                      AdamW
+backbone.layers.0.mixer.D                                    [96]                      AdamW
+backbone.layers.0.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.0.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.0.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.0.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.0.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.0.norm2.weight                               [384]                     AdamW
+backbone.layers.0.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.0.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.1.norm.weight                                [384]                     AdamW
+backbone.layers.1.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.1.mixer.A_log                                [96]                      AdamW
+backbone.layers.1.mixer.D                                    [96]                      AdamW
+backbone.layers.1.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.1.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.1.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.1.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.1.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.1.norm2.weight                               [384]                     AdamW
+backbone.layers.1.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.1.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.2.norm.weight                                [384]                     AdamW
+backbone.layers.2.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.2.mixer.A_log                                [96]                      AdamW
+backbone.layers.2.mixer.D                                    [96]                      AdamW
+backbone.layers.2.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.2.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.2.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.2.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.2.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.2.norm2.weight                               [384]                     AdamW
+backbone.layers.2.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.2.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.3.norm.weight                                [384]                     AdamW
+backbone.layers.3.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.3.mixer.A_log                                [96]                      AdamW
+backbone.layers.3.mixer.D                                    [96]                      AdamW
+backbone.layers.3.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.3.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.3.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.3.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.3.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.3.norm2.weight                               [384]                     AdamW
+backbone.layers.3.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.3.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.4.norm.weight                                [384]                     AdamW
+backbone.layers.4.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.4.mixer.A_log                                [96]                      AdamW
+backbone.layers.4.mixer.D                                    [96]                      AdamW
+backbone.layers.4.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.4.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.4.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.4.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.4.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.4.norm2.weight                               [384]                     AdamW
+backbone.layers.4.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.4.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.5.norm.weight                                [384]                     AdamW
+backbone.layers.5.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.5.mixer.A_log                                [96]                      AdamW
+backbone.layers.5.mixer.D                                    [96]                      AdamW
+backbone.layers.5.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.5.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.5.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.5.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.5.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.5.norm2.weight                               [384]                     AdamW
+backbone.layers.5.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.5.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.6.norm.weight                                [384]                     AdamW
+backbone.layers.6.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.6.mixer.A_log                                [96]                      AdamW
+backbone.layers.6.mixer.D                                    [96]                      AdamW
+backbone.layers.6.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.6.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.6.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.6.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.6.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.6.norm2.weight                               [384]                     AdamW
+backbone.layers.6.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.6.mlp.fc2.weight                             [384, 512]                MUON
+backbone.layers.7.norm.weight                                [384]                     AdamW
+backbone.layers.7.mixer.dt_bias                              [96]                      AdamW
+backbone.layers.7.mixer.A_log                                [96]                      AdamW
+backbone.layers.7.mixer.D                                    [96]                      AdamW
+backbone.layers.7.mixer.in_proj.weight                       [3424, 384]               MUON
+backbone.layers.7.mixer.conv1d.weight                        [1024, 1, 4]              AdamW
+backbone.layers.7.mixer.conv1d.bias                          [1024]                    AdamW
+backbone.layers.7.mixer.norm.weight                          [768]                     AdamW
+backbone.layers.7.mixer.out_proj.weight                      [384, 1536]               MUON
+backbone.layers.7.norm2.weight                               [384]                     AdamW
+backbone.layers.7.mlp.fc1.weight                             [1024, 384]               MUON
+backbone.layers.7.mlp.fc2.weight                             [384, 512]                MUON
+backbone.norm_f.weight                                       [384]                     AdamW
+classifier.0.weight                                          [384, 384]                MUON
+classifier.0.bias                                            [384]                     AdamW
+classifier.3.weight                                          [4, 384]                  MUON
+classifier.3.bias                                            [4]                       AdamW

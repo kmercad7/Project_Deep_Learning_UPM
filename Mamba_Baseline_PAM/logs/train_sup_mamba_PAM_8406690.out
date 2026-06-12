@@ -1,0 +1,772 @@
+Job started on gpu011.orc.gmu.edu
+CUDA_VISIBLE_DEVICES=0
+Mon Jun  8 14:08:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.05              Driver Version: 560.35.05      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:01:00.0 Off |                    0 |
+| N/A   28C    P0             89W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Mamba version: 2.3.0
+Path: /home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/modules/mamba2.py
+------------------------------------------------------------------------------------------
+Sensor subset training shape: (404072, 29)
+Sensor Validation training shape: (201145, 29)
+Sensor Test training shape: (201186, 29)
+----------------------------------------------------------------------
+Rows containing NaNs - training: 5274
+Rows containing NaNs - validation: 2887
+Rows containing NaNs - test: 2614
+------------------------------------------------------------------------------------------
+Reindexed training shape: (404072, 29)
+Reindexed validation shape: (201145, 29)
+Reindexed test shape: (201186, 29)
+------------------------------------------------------------------------------------------
+After Interpolation. Training shape: (404072, 29)
+After Interpolation. Validation shape: (201145, 29)
+After Interpolation. Test shape: (201024, 29)
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  404072.000000  404072.000000  404072.000000
+mean       -3.719779       3.886247       3.886179
+std         6.812279       3.029291       3.327028
+min       -70.948402     -37.467999     -27.224800
+25%        -8.933675       2.087543       1.743608
+50%        -4.295160       3.616210       3.854380
+75%         1.103790       5.866250       6.462483
+max        62.859600      85.716904     108.996002
+
+Descriptive statistics for GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  404072.000000  404072.000000  404072.000000
+mean       -0.011332      -0.005252      -0.018213
+std         1.207984       0.805546       1.494404
+min       -19.690500      -7.609010      -9.727150
+25%        -0.060488      -0.039935      -0.040675
+50%        -0.002558       0.004984      -0.004898
+75%         0.057448       0.044918       0.034770
+max        16.295200      10.014400       9.010740
+
+Descriptive statistics for MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  404072.000000  404072.000000  404072.000000
+mean       18.069128     -12.280622     -23.015095
+std        23.319464      20.873131      20.247181
+min       -59.360699    -102.775002     -99.330200
+25%         4.421630     -25.338699     -40.237499
+50%        18.247750     -15.285800     -23.418950
+75%        33.934325       2.029910      -8.638377
+max       123.511002      94.127403      71.691299
+------------------------------------------------------------------------------------------
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  404072.000000  404072.000000  404072.000000
+mean       -0.379182       0.396152       0.396145
+std         0.694422       0.308796       0.339147
+min        -7.232253      -3.819368      -2.775209
+25%        -0.910670       0.212797       0.177738
+50%        -0.437835       0.368625       0.392903
+75%         0.112517       0.597987       0.658765
+max         6.407706       8.737706      11.110703
+
+Descriptive statistics for scaled GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  404072.000000  404072.000000  404072.000000
+mean       -0.011332      -0.005252      -0.018213
+std         1.207984       0.805546       1.494404
+min       -19.690500      -7.609010      -9.727150
+25%        -0.060488      -0.039935      -0.040675
+50%        -0.002558       0.004984      -0.004898
+75%         0.057448       0.044918       0.034770
+max        16.295200      10.014400       9.010740
+
+Descriptive statistics for MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  404072.000000  404072.000000  404072.000000
+mean        0.385323      -0.294208      -0.495063
+std         0.432548       0.423068       0.392170
+min        -0.996575      -0.999826      -0.999983
+25%         0.119051      -0.651942      -0.834610
+50%         0.347501      -0.357997      -0.572230
+75%         0.773056       0.044261      -0.211933
+max         0.999999       0.993044       0.947581
+--------------------STRATIY VAL/TEST--------------------
+Validation GROUPS
+group_id
+105    104690
+107     97364
+Name: count, dtype: int64
+Test GROUPS
+group_id
+106     96334
+108    103781
+Name: count, dtype: int64 
+
+
+ Validation Split Label Proportion
+27
+1.0    0.244044
+2.0    0.193552
+3.0    0.236981
+4.0    0.325423
+Name: proportion, dtype: float64
+Test Split Label Proportion
+27
+1.0    0.237389
+2.0    0.229243
+3.0    0.247263
+4.0    0.286105
+Name: proportion, dtype: float64
+
+------------------------------ TRAIN ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.000000
+global std : 1.000000
+max |channel mean| : 0.000000
+median |channel mean| : 0.000000
+channel std range : [1.000000, 1.000000]
+
+------------------------------ VAL ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.022187
+global std : 0.938970
+max |channel mean| : 0.486766
+median |channel mean| : 0.030445
+channel std range : [0.468557, 1.271052]
+
+------------------------------ TEST ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.079368
+global std : 1.039674
+max |channel mean| : 1.295869
+median |channel mean| : 0.039287
+channel std range : [0.700483, 1.532305]
+
+TRAIN top channels by |mean|:
+channel 0 | mean=-0.000000 | std=1.000000
+channel 5 | mean=-0.000000 | std=1.000000
+channel 2 | mean=-0.000000 | std=1.000000
+channel 11 | mean=0.000000 | std=1.000000
+channel 23 | mean=0.000000 | std=1.000000
+channel 1 | mean=0.000000 | std=1.000000
+channel 10 | mean=-0.000000 | std=1.000000
+channel 22 | mean=-0.000000 | std=1.000000
+channel 20 | mean=0.000000 | std=1.000000
+channel 3 | mean=0.000000 | std=1.000000
+
+TRAIN top channels by std deviation from 1:
+channel 23 | mean=0.000000 | std=1.000000
+channel 2 | mean=-0.000000 | std=1.000000
+channel 20 | mean=0.000000 | std=1.000000
+channel 11 | mean=0.000000 | std=1.000000
+channel 0 | mean=-0.000000 | std=1.000000
+channel 3 | mean=0.000000 | std=1.000000
+channel 9 | mean=0.000000 | std=1.000000
+channel 10 | mean=-0.000000 | std=1.000000
+channel 22 | mean=-0.000000 | std=1.000000
+channel 18 | mean=-0.000000 | std=1.000000
+
+VAL top channels by |mean|:
+channel 20 | mean=-0.486766 | std=0.816224
+channel 11 | mean=0.256673 | std=0.863698
+channel 0 | mean=-0.186851 | std=0.775744
+channel 1 | mean=0.094652 | std=0.950258
+channel 19 | mean=-0.056333 | std=1.034659
+channel 18 | mean=-0.047835 | std=1.098205
+channel 22 | mean=-0.040406 | std=1.271052
+channel 10 | mean=0.038580 | std=1.005458
+channel 9 | mean=-0.037386 | std=0.742750
+channel 4 | mean=0.023503 | std=0.468557
+
+VAL top channels by std deviation from 1:
+channel 4 | mean=0.023503 | std=0.468557
+channel 3 | mean=-0.006394 | std=0.678394
+channel 14 | mean=0.004366 | std=0.717391
+channel 22 | mean=-0.040406 | std=1.271052
+channel 5 | mean=0.008466 | std=0.734460
+channel 9 | mean=-0.037386 | std=0.742750
+channel 0 | mean=-0.186851 | std=0.775744
+channel 21 | mean=0.014655 | std=1.208291
+channel 20 | mean=-0.486766 | std=0.816224
+channel 11 | mean=0.256673 | std=0.863698
+
+TEST top channels by |mean|:
+channel 1 | mean=-1.295869 | std=1.532305
+channel 20 | mean=-0.399812 | std=0.781708
+channel 11 | mean=0.272316 | std=0.825927
+channel 19 | mean=0.161113 | std=0.976926
+channel 9 | mean=-0.125406 | std=0.700483
+channel 10 | mean=-0.104516 | std=1.282046
+channel 18 | mean=-0.082430 | std=1.018805
+channel 22 | mean=0.061053 | std=1.135858
+channel 13 | mean=0.044645 | std=0.874943
+channel 4 | mean=0.033928 | std=0.976334
+
+TEST top channels by std deviation from 1:
+channel 1 | mean=-1.295869 | std=1.532305
+channel 9 | mean=-0.125406 | std=0.700483
+channel 10 | mean=-0.104516 | std=1.282046
+channel 3 | mean=-0.005559 | std=0.766459
+channel 14 | mean=-0.008973 | std=0.770376
+channel 20 | mean=-0.399812 | std=0.781708
+channel 5 | mean=0.007249 | std=0.811274
+channel 11 | mean=0.272316 | std=0.825927
+channel 22 | mean=0.061053 | std=1.135858
+channel 13 | mean=0.044645 | std=0.874943
+
+TRAIN outlier rates |z|>5.0:
+channel 9 | rate=0.011320
+channel 12 | rate=0.005526
+channel 3 | rate=0.004598
+channel 19 | rate=0.004415
+channel 21 | rate=0.003341
+channel 13 | rate=0.003173
+channel 20 | rate=0.002683
+channel 4 | rate=0.002576
+channel 14 | rate=0.002250
+channel 22 | rate=0.001349
+
+VAL outlier rates |z|>5.0:
+channel 22 | rate=0.015080
+channel 21 | rate=0.008305
+channel 19 | rate=0.007211
+channel 12 | rate=0.005583
+channel 13 | rate=0.004147
+channel 20 | rate=0.003158
+channel 18 | rate=0.000723
+channel 3 | rate=0.000718
+channel 1 | rate=0.000351
+channel 5 | rate=0.000030
+
+TEST outlier rates |z|>5.0:
+channel 22 | rate=0.011254
+channel 12 | rate=0.005332
+channel 19 | rate=0.004752
+channel 13 | rate=0.003763
+channel 21 | rate=0.002424
+channel 1 | rate=0.001889
+channel 3 | rate=0.001324
+channel 4 | rate=0.000620
+channel 20 | rate=0.000560
+channel 14 | rate=0.000135
+
+------------------------------ TRAIN MAG after window demeaning ------------------------------
+max |window mean|  : 1.568347e-07
+mean |window mean| : 1.854261e-08
+channel global mean range : [-2.129626e-09, 3.110890e-10]
+channel std range         : [0.056178, 0.189549]
+
+------------------------------ VAL MAG after window demeaning ------------------------------
+max |window mean|  : 1.486391e-07
+mean |window mean| : 1.879800e-08
+channel global mean range : [-1.737580e-09, 1.475011e-09]
+channel std range         : [0.050823, 0.204676]
+
+------------------------------ TEST MAG after window demeaning ------------------------------
+max |window mean|  : 1.460314e-07
+mean |window mean| : 1.906676e-08
+channel global mean range : [-8.249498e-10, 6.139996e-10]
+channel std range         : [0.051650, 0.183439]
+
+TRAIN window label distribution
+label 1: 792 (0.2362)
+label 2: 834 (0.2487)
+label 3: 771 (0.2299)
+label 4: 956 (0.2851)
+
+VAL window label distribution
+label 1: 408 (0.2433)
+label 2: 326 (0.1944)
+label 3: 399 (0.2379)
+label 4: 544 (0.3244)
+
+TEST window label distribution
+label 1: 393 (0.2367)
+label 2: 382 (0.2301)
+label 3: 413 (0.2488)
+label 4: 472 (0.2843)
+------------------------------------------------------------------------------------------
+Training (windows): (3353, 160, 27). Training Labels (3353,)
+Validation (windows): (1677, 160, 27). Validation Labels (1677,)
+Test (windows): (1660, 160, 27). Test Labels (1660,)
+------------------------------------------------------------------------------------------
+Training set class distribution:--
+{'LIE': 792, 'SIT': 834, 'STAND': 771, 'WALK': 956}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/30 | tr_Loss: 1.0279 | tr_acc: 0.7426 | val_loss: 0.8520 | val_acc: 0.8831 | epoch_time: 30.04s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        26.28%      20.770ms        40.88%      32.301ms       4.614ms      11.991ms        36.10%      14.985ms       2.141ms           0 b           0 b     253.13 Mb      -1.53 Gb             7  
+                                               aten::mm         2.07%       1.638ms         3.30%       2.608ms      31.417us      10.744ms        32.34%      10.744ms     129.443us           0 b           0 b     846.75 Mb     846.75 Mb            83  
+                         MambaSplitConv1dScanCombinedFn         9.12%       7.203ms        13.42%      10.606ms       1.515ms       4.135ms        12.45%       5.106ms     729.442us           0 b           0 b      97.02 Mb    -480.36 Mb             7  
+                              Optimizer.step#AdamW.step         0.00%       0.000us         0.00%       0.000us       0.000us       4.062ms        12.23%       4.062ms       4.062ms           0 b           0 b           0 b           0 b             1  
+                                 ampere_sgemm_32x128_nn         0.00%       0.000us         0.00%       0.000us       0.000us       3.075ms         9.26%       3.075ms     139.769us           0 b           0 b           0 b           0 b            22  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.733ms         8.23%       2.733ms     390.483us           0 b           0 b           0 b           0 b             7  
+                                _chunk_state_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.720ms         8.19%       2.720ms     194.297us           0 b           0 b           0 b           0 b            14  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us       2.592ms         7.80%       2.592ms     123.418us           0 b           0 b           0 b           0 b            21  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.334ms         7.03%       2.334ms     333.446us           0 b           0 b           0 b           0 b             7  
+                        ampere_sgemm_32x32_sliced1x4_nt         0.00%       0.000us         0.00%       0.000us       0.000us       2.310ms         6.95%       2.310ms      96.250us           0 b           0 b           0 b           0 b            24  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 79.019ms
+Self CUDA time total: 33.220ms
+
+
+Epoch: 2/30 | tr_Loss: 0.5848 | tr_acc: 0.9245 | val_loss: 0.5905 | val_acc: 0.8825 | epoch_time: 2.93s
+
+Epoch: 3/30 | tr_Loss: 0.3841 | tr_acc: 0.9466 | val_loss: 0.4837 | val_acc: 0.8801 | epoch_time: 2.93s
+
+Epoch: 4/30 | tr_Loss: 0.2816 | tr_acc: 0.9568 | val_loss: 0.4312 | val_acc: 0.8748 | epoch_time: 2.93s
+
+Epoch: 5/30 | tr_Loss: 0.2223 | tr_acc: 0.9639 | val_loss: 0.3888 | val_acc: 0.8867 | epoch_time: 2.94s
+
+Epoch: 6/30 | tr_Loss: 0.1892 | tr_acc: 0.9651 | val_loss: 0.3826 | val_acc: 0.8795 | epoch_time: 2.92s
+
+Epoch: 7/30 | tr_Loss: 0.1643 | tr_acc: 0.9711 | val_loss: 0.3597 | val_acc: 0.8879 | epoch_time: 2.92s
+
+Epoch: 8/30 | tr_Loss: 0.1457 | tr_acc: 0.9738 | val_loss: 0.3506 | val_acc: 0.8921 | epoch_time: 2.92s
+
+Epoch: 9/30 | tr_Loss: 0.1291 | tr_acc: 0.9749 | val_loss: 0.3345 | val_acc: 0.8980 | epoch_time: 2.93s
+
+Epoch: 10/30 | tr_Loss: 0.1130 | tr_acc: 0.9776 | val_loss: 0.3243 | val_acc: 0.9028 | epoch_time: 2.92s
+
+Epoch: 11/30 | tr_Loss: 0.1089 | tr_acc: 0.9797 | val_loss: 0.3246 | val_acc: 0.9040 | epoch_time: 2.94s
+
+Epoch: 12/30 | tr_Loss: 0.0944 | tr_acc: 0.9833 | val_loss: 0.3216 | val_acc: 0.9022 | epoch_time: 2.90s
+
+Epoch: 13/30 | tr_Loss: 0.0869 | tr_acc: 0.9842 | val_loss: 0.3183 | val_acc: 0.9058 | epoch_time: 2.90s
+
+Epoch: 14/30 | tr_Loss: 0.0761 | tr_acc: 0.9872 | val_loss: 0.3111 | val_acc: 0.9070 | epoch_time: 2.91s
+
+Epoch: 15/30 | tr_Loss: 0.0685 | tr_acc: 0.9878 | val_loss: 0.3125 | val_acc: 0.9088 | epoch_time: 2.91s
+
+Epoch: 16/30 | tr_Loss: 0.0666 | tr_acc: 0.9890 | val_loss: 0.3046 | val_acc: 0.9129 | epoch_time: 2.91s
+
+Epoch: 17/30 | tr_Loss: 0.0614 | tr_acc: 0.9911 | val_loss: 0.3146 | val_acc: 0.9100 | epoch_time: 2.91s
+
+Epoch: 18/30 | tr_Loss: 0.0523 | tr_acc: 0.9925 | val_loss: 0.3123 | val_acc: 0.9100 | epoch_time: 2.91s
+
+Epoch: 19/30 | tr_Loss: 0.0520 | tr_acc: 0.9916 | val_loss: 0.3034 | val_acc: 0.9094 | epoch_time: 2.91s
+
+Epoch: 20/30 | tr_Loss: 0.0429 | tr_acc: 0.9925 | val_loss: 0.3020 | val_acc: 0.9123 | epoch_time: 2.90s
+
+Epoch: 21/30 | tr_Loss: 0.0376 | tr_acc: 0.9949 | val_loss: 0.3029 | val_acc: 0.9129 | epoch_time: 2.90s
+
+Epoch: 22/30 | tr_Loss: 0.0344 | tr_acc: 0.9952 | val_loss: 0.2979 | val_acc: 0.9141 | epoch_time: 2.90s
+
+Epoch: 23/30 | tr_Loss: 0.0413 | tr_acc: 0.9940 | val_loss: 0.3113 | val_acc: 0.9100 | epoch_time: 2.90s
+
+Epoch: 24/30 | tr_Loss: 0.0349 | tr_acc: 0.9946 | val_loss: 0.3178 | val_acc: 0.9117 | epoch_time: 2.90s
+
+Epoch: 25/30 | tr_Loss: 0.0273 | tr_acc: 0.9961 | val_loss: 0.3052 | val_acc: 0.9159 | epoch_time: 2.90s
+
+Epoch: 26/30 | tr_Loss: 0.0285 | tr_acc: 0.9952 | val_loss: 0.3048 | val_acc: 0.9123 | epoch_time: 2.90s
+
+Epoch: 27/30 | tr_Loss: 0.0274 | tr_acc: 0.9955 | val_loss: 0.3213 | val_acc: 0.9106 | epoch_time: 2.90s
+
+Early stopping at epoch 27 | Best Validation Loss: 0.2979
+              precision    recall  f1-score   support
+
+         LIE       0.94      0.95      0.95       408
+         SIT       0.91      0.78      0.84       326
+       STAND       0.83      0.89      0.86       399
+        WALK       0.96      0.98      0.97       544
+
+    accuracy                           0.91      1677
+   macro avg       0.91      0.90      0.90      1677
+weighted avg       0.92      0.91      0.91      1677
+
+Peak GPU memory allocatated: 1.29GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.8186746987951807
+ Report:
+ {'LIE': {'precision': 0.8857808857808858, 'recall': 0.9669211195928753, 'f1-score': 0.9245742092457421, 'support': 393.0}, 'SIT': {'precision': 0.6133567662565905, 'recall': 0.9136125654450262, 'f1-score': 0.7339642481598317, 'support': 382.0}, 'STAND': {'precision': 0.8666666666666667, 'recall': 0.4092009685230024, 'f1-score': 0.555921052631579, 'support': 413.0}, 'WALK': {'precision': 0.987152034261242, 'recall': 0.9766949152542372, 'f1-score': 0.9818956336528222, 'support': 472.0}, 'accuracy': 0.8186746987951807, 'macro avg': {'precision': 0.8382390882413462, 'recall': 0.8166073922037853, 'f1-score': 0.7990887859224938, 'support': 1660.0}, 'weighted avg': {'precision': 0.8471585941726176, 'recall': 0.8186746987951807, 'f1-score': 0.8052904462961485, 'support': 1660.0}}
+ F1: 0.7990887859224938
+ Confusion Matrix:
+ [[380   8   5   0]
+ [ 15 349  16   2]
+ [ 34 206 169   4]
+ [  0   6   5 461]]
+------------------------------------------------------------------------------------------
+Training set class distribution:--
+{'LIE': 792, 'SIT': 834, 'STAND': 771, 'WALK': 956}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/30 | tr_Loss: 0.9775 | tr_acc: 0.7775 | val_loss: 0.8091 | val_acc: 0.9016 | epoch_time: 3.84s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        32.09%      18.588ms        51.20%      29.656ms       4.237ms      11.977ms        36.06%      14.980ms       2.140ms           0 b           0 b     253.13 Mb      -1.53 Gb             7  
+                                               aten::mm         2.70%       1.564ms         4.32%       2.502ms      30.146us      10.746ms        32.35%      10.746ms     129.468us           0 b           0 b     846.75 Mb     846.75 Mb            83  
+                         MambaSplitConv1dScanCombinedFn        11.56%       6.694ms        16.80%       9.732ms       1.390ms       4.124ms        12.42%       5.098ms     728.342us           0 b           0 b      97.02 Mb    -480.36 Mb             7  
+                                 ampere_sgemm_32x128_nn         0.00%       0.000us         0.00%       0.000us       0.000us       3.076ms         9.26%       3.076ms     139.797us           0 b           0 b           0 b           0 b            22  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.726ms         8.21%       2.726ms     389.446us           0 b           0 b           0 b           0 b             7  
+                                _chunk_state_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.714ms         8.17%       2.714ms     193.850us           0 b           0 b           0 b           0 b            14  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us       2.593ms         7.81%       2.593ms     123.484us           0 b           0 b           0 b           0 b            21  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.330ms         7.02%       2.330ms     332.889us           0 b           0 b           0 b           0 b             7  
+                        ampere_sgemm_32x32_sliced1x4_nt         0.00%       0.000us         0.00%       0.000us       0.000us       2.311ms         6.96%       2.311ms      96.295us           0 b           0 b           0 b           0 b            24  
+                              Optimizer.step#AdamW.step         0.00%       0.000us         0.00%       0.000us       0.000us       1.653ms         4.98%       1.653ms       1.653ms           0 b           0 b           0 b           0 b             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 57.926ms
+Self CUDA time total: 33.215ms
+
+
+Epoch: 2/30 | tr_Loss: 0.5437 | tr_acc: 0.9207 | val_loss: 0.5566 | val_acc: 0.8986 | epoch_time: 2.93s
+
+Epoch: 3/30 | tr_Loss: 0.3724 | tr_acc: 0.9448 | val_loss: 0.4549 | val_acc: 0.8951 | epoch_time: 2.90s
+
+Epoch: 4/30 | tr_Loss: 0.2823 | tr_acc: 0.9574 | val_loss: 0.4056 | val_acc: 0.8962 | epoch_time: 2.98s
+
+Epoch: 5/30 | tr_Loss: 0.2266 | tr_acc: 0.9633 | val_loss: 0.3668 | val_acc: 0.8962 | epoch_time: 2.97s
+
+Epoch: 6/30 | tr_Loss: 0.1899 | tr_acc: 0.9678 | val_loss: 0.3416 | val_acc: 0.8974 | epoch_time: 2.97s
+
+Epoch: 7/30 | tr_Loss: 0.1623 | tr_acc: 0.9720 | val_loss: 0.3378 | val_acc: 0.8974 | epoch_time: 2.98s
+
+Epoch: 8/30 | tr_Loss: 0.1415 | tr_acc: 0.9744 | val_loss: 0.3222 | val_acc: 0.9082 | epoch_time: 2.98s
+
+Epoch: 9/30 | tr_Loss: 0.1275 | tr_acc: 0.9764 | val_loss: 0.3082 | val_acc: 0.9117 | epoch_time: 2.98s
+
+Epoch: 10/30 | tr_Loss: 0.1126 | tr_acc: 0.9803 | val_loss: 0.2957 | val_acc: 0.9213 | epoch_time: 2.97s
+
+Epoch: 11/30 | tr_Loss: 0.0996 | tr_acc: 0.9842 | val_loss: 0.2967 | val_acc: 0.9165 | epoch_time: 3.00s
+
+Epoch: 12/30 | tr_Loss: 0.0891 | tr_acc: 0.9869 | val_loss: 0.3090 | val_acc: 0.9147 | epoch_time: 2.97s
+
+Epoch: 13/30 | tr_Loss: 0.0797 | tr_acc: 0.9878 | val_loss: 0.3025 | val_acc: 0.9183 | epoch_time: 2.96s
+
+Epoch: 14/30 | tr_Loss: 0.0710 | tr_acc: 0.9899 | val_loss: 0.3133 | val_acc: 0.9070 | epoch_time: 2.97s
+
+Epoch: 15/30 | tr_Loss: 0.0639 | tr_acc: 0.9916 | val_loss: 0.3396 | val_acc: 0.8968 | epoch_time: 2.97s
+
+Early stopping at epoch 15 | Best Validation Loss: 0.2957
+              precision    recall  f1-score   support
+
+         LIE       0.95      0.95      0.95       408
+         SIT       0.91      0.79      0.85       326
+       STAND       0.83      0.91      0.87       399
+        WALK       0.98      0.98      0.98       544
+
+    accuracy                           0.92      1677
+   macro avg       0.92      0.91      0.91      1677
+weighted avg       0.92      0.92      0.92      1677
+
+Peak GPU memory allocatated: 1.09GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.8873493975903615
+ Report:
+ {'LIE': {'precision': 1.0, 'recall': 0.9567430025445293, 'f1-score': 0.9778933680104032, 'support': 393.0}, 'SIT': {'precision': 0.7655601659751037, 'recall': 0.9659685863874345, 'f1-score': 0.8541666666666666, 'support': 382.0}, 'STAND': {'precision': 0.8979591836734694, 'recall': 0.639225181598063, 'f1-score': 0.7468175388967468, 'support': 413.0}, 'WALK': {'precision': 0.9133858267716536, 'recall': 0.9830508474576272, 'f1-score': 0.9469387755102041, 'support': 472.0}, 'accuracy': 0.8873493975903615, 'macro avg': {'precision': 0.8942262941050567, 'recall': 0.8862469044969135, 'f1-score': 0.8814540872710053, 'support': 1660.0}, 'weighted avg': {'precision': 0.8960356846360559, 'recall': 0.8873493975903615, 'f1-score': 0.8831292204216433, 'support': 1660.0}}
+ F1: 0.8814540872710053
+ Confusion Matrix:
+ [[376   0  13   4]
+ [  0 369  11   2]
+ [  0 111 264  38]
+ [  0   2   6 464]]
+------------------------------------------------------------------------------------------
+Training set class distribution:--
+{'LIE': 792, 'SIT': 834, 'STAND': 771, 'WALK': 956}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/30 | tr_Loss: 1.0191 | tr_acc: 0.7650 | val_loss: 0.8937 | val_acc: 0.8670 | epoch_time: 3.66s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        31.21%      18.348ms        50.07%      29.438ms       4.205ms      11.975ms        36.07%      14.976ms       2.139ms           0 b           0 b     253.13 Mb      -1.53 Gb             7  
+                                               aten::mm         2.75%       1.618ms         4.40%       2.585ms      31.150us      10.741ms        32.35%      10.741ms     129.406us           0 b           0 b     846.75 Mb     846.75 Mb            83  
+                         MambaSplitConv1dScanCombinedFn        11.30%       6.646ms        17.00%       9.993ms       1.428ms       4.131ms        12.44%       5.103ms     728.982us           0 b           0 b      97.02 Mb    -480.36 Mb             7  
+                                 ampere_sgemm_32x128_nn         0.00%       0.000us         0.00%       0.000us       0.000us       3.074ms         9.26%       3.074ms     139.739us           0 b           0 b           0 b           0 b            22  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.724ms         8.20%       2.724ms     389.149us           0 b           0 b           0 b           0 b             7  
+                                _chunk_state_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.717ms         8.18%       2.717ms     194.090us           0 b           0 b           0 b           0 b            14  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us       2.592ms         7.81%       2.592ms     123.417us           0 b           0 b           0 b           0 b            21  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.334ms         7.03%       2.334ms     333.429us           0 b           0 b           0 b           0 b             7  
+                        ampere_sgemm_32x32_sliced1x4_nt         0.00%       0.000us         0.00%       0.000us       0.000us       2.311ms         6.96%       2.311ms      96.310us           0 b           0 b           0 b           0 b            24  
+                              Optimizer.step#AdamW.step         0.00%       0.000us         0.00%       0.000us       0.000us       1.642ms         4.95%       1.642ms       1.642ms           0 b           0 b           0 b           0 b             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 58.798ms
+Self CUDA time total: 33.204ms
+
+
+Epoch: 2/30 | tr_Loss: 0.5945 | tr_acc: 0.9254 | val_loss: 0.6241 | val_acc: 0.8634 | epoch_time: 2.93s
+
+Epoch: 3/30 | tr_Loss: 0.3970 | tr_acc: 0.9445 | val_loss: 0.5000 | val_acc: 0.8670 | epoch_time: 2.90s
+
+Epoch: 4/30 | tr_Loss: 0.2845 | tr_acc: 0.9576 | val_loss: 0.4380 | val_acc: 0.8754 | epoch_time: 2.93s
+
+Epoch: 5/30 | tr_Loss: 0.2273 | tr_acc: 0.9645 | val_loss: 0.3939 | val_acc: 0.8790 | epoch_time: 2.91s
+
+Epoch: 6/30 | tr_Loss: 0.1860 | tr_acc: 0.9669 | val_loss: 0.3660 | val_acc: 0.8885 | epoch_time: 2.91s
+
+Epoch: 7/30 | tr_Loss: 0.1610 | tr_acc: 0.9714 | val_loss: 0.3511 | val_acc: 0.8915 | epoch_time: 2.90s
+
+Epoch: 8/30 | tr_Loss: 0.1400 | tr_acc: 0.9726 | val_loss: 0.3389 | val_acc: 0.8980 | epoch_time: 2.91s
+
+Epoch: 9/30 | tr_Loss: 0.1213 | tr_acc: 0.9776 | val_loss: 0.3263 | val_acc: 0.9088 | epoch_time: 2.91s
+
+Epoch: 10/30 | tr_Loss: 0.1144 | tr_acc: 0.9755 | val_loss: 0.3171 | val_acc: 0.9046 | epoch_time: 2.91s
+
+Epoch: 11/30 | tr_Loss: 0.0986 | tr_acc: 0.9818 | val_loss: 0.3147 | val_acc: 0.9064 | epoch_time: 2.92s
+
+Epoch: 12/30 | tr_Loss: 0.0899 | tr_acc: 0.9836 | val_loss: 0.3106 | val_acc: 0.9112 | epoch_time: 2.92s
+
+Epoch: 13/30 | tr_Loss: 0.0837 | tr_acc: 0.9860 | val_loss: 0.3078 | val_acc: 0.9088 | epoch_time: 2.92s
+
+Epoch: 14/30 | tr_Loss: 0.0756 | tr_acc: 0.9857 | val_loss: 0.3091 | val_acc: 0.9088 | epoch_time: 2.95s
+
+Epoch: 15/30 | tr_Loss: 0.0688 | tr_acc: 0.9875 | val_loss: 0.3030 | val_acc: 0.9153 | epoch_time: 2.90s
+
+Epoch: 16/30 | tr_Loss: 0.0589 | tr_acc: 0.9911 | val_loss: 0.3008 | val_acc: 0.9141 | epoch_time: 2.92s
+
+Epoch: 17/30 | tr_Loss: 0.0557 | tr_acc: 0.9911 | val_loss: 0.3077 | val_acc: 0.9141 | epoch_time: 2.92s
+
+Epoch: 18/30 | tr_Loss: 0.0499 | tr_acc: 0.9928 | val_loss: 0.2963 | val_acc: 0.9177 | epoch_time: 2.92s
+
+Epoch: 19/30 | tr_Loss: 0.0459 | tr_acc: 0.9925 | val_loss: 0.3051 | val_acc: 0.9165 | epoch_time: 2.91s
+
+Epoch: 20/30 | tr_Loss: 0.0437 | tr_acc: 0.9922 | val_loss: 0.2947 | val_acc: 0.9195 | epoch_time: 2.91s
+
+Epoch: 21/30 | tr_Loss: 0.0386 | tr_acc: 0.9943 | val_loss: 0.3016 | val_acc: 0.9171 | epoch_time: 2.91s
+
+Epoch: 22/30 | tr_Loss: 0.0334 | tr_acc: 0.9958 | val_loss: 0.2976 | val_acc: 0.9219 | epoch_time: 2.91s
+
+Epoch: 23/30 | tr_Loss: 0.0341 | tr_acc: 0.9952 | val_loss: 0.3045 | val_acc: 0.9213 | epoch_time: 2.92s
+
+Epoch: 24/30 | tr_Loss: 0.0292 | tr_acc: 0.9955 | val_loss: 0.3201 | val_acc: 0.9123 | epoch_time: 2.91s
+
+Epoch: 25/30 | tr_Loss: 0.0249 | tr_acc: 0.9970 | val_loss: 0.3045 | val_acc: 0.9207 | epoch_time: 2.93s
+
+Early stopping at epoch 25 | Best Validation Loss: 0.2947
+              precision    recall  f1-score   support
+
+         LIE       0.94      0.96      0.95       408
+         SIT       0.87      0.79      0.83       326
+       STAND       0.86      0.90      0.88       399
+        WALK       0.98      0.98      0.98       544
+
+    accuracy                           0.92      1677
+   macro avg       0.91      0.91      0.91      1677
+weighted avg       0.92      0.92      0.92      1677
+
+Peak GPU memory allocatated: 1.09GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.8596385542168675
+ Report:
+ {'LIE': {'precision': 0.9895287958115183, 'recall': 0.9618320610687023, 'f1-score': 0.9754838709677419, 'support': 393.0}, 'SIT': {'precision': 0.6698292220113852, 'recall': 0.9240837696335078, 'f1-score': 0.7766776677667767, 'support': 382.0}, 'STAND': {'precision': 0.8422939068100358, 'recall': 0.5690072639225182, 'f1-score': 0.6791907514450867, 'support': 413.0}, 'WALK': {'precision': 0.9766949152542372, 'recall': 0.9766949152542372, 'f1-score': 0.9766949152542372, 'support': 472.0}, 'accuracy': 0.8596385542168675, 'macro avg': {'precision': 0.8695867099717942, 'recall': 0.8579045024697414, 'f1-score': 0.8520118013584606, 'support': 1660.0}, 'weighted avg': {'precision': 0.8756788934185666, 'recall': 0.8596385542168675, 'f1-score': 0.8563625365807542, 'support': 1660.0}}
+ F1: 0.8520118013584606
+ Confusion Matrix:
+ [[378   0  13   2]
+ [  4 353  24   1]
+ [  0 170 235   8]
+ [  0   4   7 461]]
+------------------------------------------------------------------------------------------
+Training set class distribution:--
+{'LIE': 792, 'SIT': 834, 'STAND': 771, 'WALK': 956}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/30 | tr_Loss: 0.9747 | tr_acc: 0.7715 | val_loss: 0.8221 | val_acc: 0.8933 | epoch_time: 3.91s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        30.56%      18.564ms        49.22%      29.901ms       4.272ms      11.992ms        36.13%      14.986ms       2.141ms           0 b           0 b     253.13 Mb      -1.53 Gb             7  
+                                               aten::mm         2.61%       1.586ms         4.15%       2.523ms      30.400us      10.739ms        32.35%      10.739ms     129.382us           0 b           0 b     846.75 Mb     846.75 Mb            83  
+                         MambaSplitConv1dScanCombinedFn        11.12%       6.755ms        16.35%       9.936ms       1.419ms       4.129ms        12.44%       5.102ms     728.840us           0 b           0 b      97.02 Mb    -480.36 Mb             7  
+                                 ampere_sgemm_32x128_nn         0.00%       0.000us         0.00%       0.000us       0.000us       3.070ms         9.25%       3.070ms     139.559us           0 b           0 b           0 b           0 b            22  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.728ms         8.22%       2.728ms     389.733us           0 b           0 b           0 b           0 b             7  
+                                _chunk_state_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.722ms         8.20%       2.722ms     194.410us           0 b           0 b           0 b           0 b            14  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us       2.591ms         7.81%       2.591ms     123.382us           0 b           0 b           0 b           0 b            21  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.333ms         7.03%       2.333ms     333.282us           0 b           0 b           0 b           0 b             7  
+                        ampere_sgemm_32x32_sliced1x4_nt         0.00%       0.000us         0.00%       0.000us       0.000us       2.312ms         6.97%       2.312ms      96.337us           0 b           0 b           0 b           0 b            24  
+                              Optimizer.step#AdamW.step         0.00%       0.000us         0.00%       0.000us       0.000us       1.604ms         4.83%       1.604ms       1.604ms           0 b           0 b           0 b           0 b             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 60.752ms
+Self CUDA time total: 33.192ms
+
+
+Epoch: 2/30 | tr_Loss: 0.5287 | tr_acc: 0.9329 | val_loss: 0.5547 | val_acc: 0.8915 | epoch_time: 2.92s
+
+Epoch: 3/30 | tr_Loss: 0.3512 | tr_acc: 0.9475 | val_loss: 0.4490 | val_acc: 0.8825 | epoch_time: 2.91s
+
+Epoch: 4/30 | tr_Loss: 0.2698 | tr_acc: 0.9544 | val_loss: 0.4020 | val_acc: 0.8795 | epoch_time: 2.91s
+
+Epoch: 5/30 | tr_Loss: 0.2185 | tr_acc: 0.9618 | val_loss: 0.3893 | val_acc: 0.8706 | epoch_time: 2.91s
+
+Epoch: 6/30 | tr_Loss: 0.1836 | tr_acc: 0.9672 | val_loss: 0.3744 | val_acc: 0.8760 | epoch_time: 2.91s
+
+Epoch: 7/30 | tr_Loss: 0.1591 | tr_acc: 0.9702 | val_loss: 0.4257 | val_acc: 0.8497 | epoch_time: 2.91s
+
+Epoch: 8/30 | tr_Loss: 0.1401 | tr_acc: 0.9729 | val_loss: 0.3686 | val_acc: 0.8784 | epoch_time: 2.91s
+
+Epoch: 9/30 | tr_Loss: 0.1221 | tr_acc: 0.9779 | val_loss: 0.3361 | val_acc: 0.8945 | epoch_time: 2.91s
+
+Epoch: 10/30 | tr_Loss: 0.1102 | tr_acc: 0.9815 | val_loss: 0.3402 | val_acc: 0.8903 | epoch_time: 2.91s
+
+Epoch: 11/30 | tr_Loss: 0.0966 | tr_acc: 0.9854 | val_loss: 0.3322 | val_acc: 0.9004 | epoch_time: 2.90s
+
+Epoch: 12/30 | tr_Loss: 0.0903 | tr_acc: 0.9866 | val_loss: 0.2924 | val_acc: 0.9207 | epoch_time: 2.90s
+
+Epoch: 13/30 | tr_Loss: 0.0818 | tr_acc: 0.9875 | val_loss: 0.3218 | val_acc: 0.9064 | epoch_time: 2.91s
+
+Epoch: 14/30 | tr_Loss: 0.0709 | tr_acc: 0.9893 | val_loss: 0.2945 | val_acc: 0.9249 | epoch_time: 2.89s
+
+Epoch: 15/30 | tr_Loss: 0.0670 | tr_acc: 0.9908 | val_loss: 0.2970 | val_acc: 0.9213 | epoch_time: 2.91s
+
+Epoch: 16/30 | tr_Loss: 0.0593 | tr_acc: 0.9919 | val_loss: 0.3526 | val_acc: 0.8945 | epoch_time: 2.90s
+
+Epoch: 17/30 | tr_Loss: 0.0506 | tr_acc: 0.9943 | val_loss: 0.3418 | val_acc: 0.9004 | epoch_time: 2.90s
+
+Early stopping at epoch 17 | Best Validation Loss: 0.2924
+              precision    recall  f1-score   support
+
+         LIE       0.99      0.95      0.97       408
+         SIT       0.87      0.83      0.85       326
+       STAND       0.82      0.89      0.85       399
+        WALK       0.98      0.98      0.98       544
+
+    accuracy                           0.92      1677
+   macro avg       0.91      0.91      0.91      1677
+weighted avg       0.92      0.92      0.92      1677
+
+Peak GPU memory allocatated: 1.09GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.8457831325301205
+ Report:
+ {'LIE': {'precision': 1.0, 'recall': 0.9541984732824428, 'f1-score': 0.9765625, 'support': 393.0}, 'SIT': {'precision': 0.6714542190305206, 'recall': 0.9790575916230366, 'f1-score': 0.7965921192758253, 'support': 382.0}, 'STAND': {'precision': 0.8847926267281107, 'recall': 0.4648910411622276, 'f1-score': 0.6095238095238096, 'support': 413.0}, 'WALK': {'precision': 0.9060665362035225, 'recall': 0.9809322033898306, 'f1-score': 0.9420142421159715, 'support': 472.0}, 'accuracy': 0.8457831325301205, 'macro avg': {'precision': 0.8655783454905385, 'recall': 0.8447698273643843, 'f1-score': 0.8311731677289016, 'support': 1660.0}, 'weighted avg': {'precision': 0.8690230551785729, 'recall': 0.8457831325301205, 'f1-score': 0.834006811852673, 'support': 1660.0}}
+ F1: 0.8311731677289016
+ Confusion Matrix:
+ [[375   1  12   5]
+ [  0 374   7   1]
+ [  0 179 192  42]
+ [  0   3   6 463]]
+------------------------------------------------------------------------------------------
+Training set class distribution:--
+{'LIE': 792, 'SIT': 834, 'STAND': 771, 'WALK': 956}
+------------------------------------------------------------------------------------------
+
+Epoch: 1/30 | tr_Loss: 0.9288 | tr_acc: 0.8461 | val_loss: 0.7534 | val_acc: 0.8736 | epoch_time: 3.87s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        30.68%      18.528ms        49.36%      29.804ms       4.258ms      11.975ms        36.06%      14.971ms       2.139ms           0 b           0 b     253.13 Mb      -1.53 Gb             7  
+                                               aten::mm         2.60%       1.570ms         4.14%       2.498ms      30.093us      10.738ms        32.33%      10.738ms     129.378us           0 b           0 b     846.75 Mb     846.75 Mb            83  
+                         MambaSplitConv1dScanCombinedFn        11.05%       6.674ms        16.15%       9.750ms       1.393ms       4.132ms        12.44%       5.103ms     729.014us           0 b           0 b      97.02 Mb    -480.36 Mb             7  
+                                 ampere_sgemm_32x128_nn         0.00%       0.000us         0.00%       0.000us       0.000us       3.072ms         9.25%       3.072ms     139.653us           0 b           0 b           0 b           0 b            22  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.729ms         8.22%       2.729ms     389.908us           0 b           0 b           0 b           0 b             7  
+                                _chunk_state_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.714ms         8.17%       2.714ms     193.886us           0 b           0 b           0 b           0 b            14  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us       2.591ms         7.80%       2.591ms     123.361us           0 b           0 b           0 b           0 b            21  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       2.334ms         7.03%       2.334ms     333.415us           0 b           0 b           0 b           0 b             7  
+                        ampere_sgemm_32x32_sliced1x4_nt         0.00%       0.000us         0.00%       0.000us       0.000us       2.313ms         6.96%       2.313ms      96.362us           0 b           0 b           0 b           0 b            24  
+                              Optimizer.step#AdamW.step         0.00%       0.000us         0.00%       0.000us       0.000us       1.627ms         4.90%       1.627ms       1.627ms           0 b           0 b           0 b           0 b             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 60.383ms
+Self CUDA time total: 33.212ms
+
+
+Epoch: 2/30 | tr_Loss: 0.5171 | tr_acc: 0.9204 | val_loss: 0.5319 | val_acc: 0.8778 | epoch_time: 3.00s
+
+Epoch: 3/30 | tr_Loss: 0.3499 | tr_acc: 0.9433 | val_loss: 0.4422 | val_acc: 0.8831 | epoch_time: 2.98s
+
+Epoch: 4/30 | tr_Loss: 0.2637 | tr_acc: 0.9588 | val_loss: 0.3975 | val_acc: 0.8927 | epoch_time: 2.99s
+
+Epoch: 5/30 | tr_Loss: 0.2091 | tr_acc: 0.9642 | val_loss: 0.3637 | val_acc: 0.8992 | epoch_time: 2.99s
+
+Epoch: 6/30 | tr_Loss: 0.1774 | tr_acc: 0.9687 | val_loss: 0.3502 | val_acc: 0.8933 | epoch_time: 3.02s
+
+Epoch: 7/30 | tr_Loss: 0.1507 | tr_acc: 0.9729 | val_loss: 0.3248 | val_acc: 0.9064 | epoch_time: 3.00s
+
+Epoch: 8/30 | tr_Loss: 0.1302 | tr_acc: 0.9755 | val_loss: 0.3134 | val_acc: 0.9112 | epoch_time: 2.99s
+
+Epoch: 9/30 | tr_Loss: 0.1120 | tr_acc: 0.9800 | val_loss: 0.3077 | val_acc: 0.9106 | epoch_time: 2.99s
+
+Epoch: 10/30 | tr_Loss: 0.1036 | tr_acc: 0.9815 | val_loss: 0.3012 | val_acc: 0.9123 | epoch_time: 2.98s
+
+Epoch: 11/30 | tr_Loss: 0.0917 | tr_acc: 0.9830 | val_loss: 0.3019 | val_acc: 0.9135 | epoch_time: 2.92s
+
+Epoch: 12/30 | tr_Loss: 0.0841 | tr_acc: 0.9845 | val_loss: 0.3021 | val_acc: 0.9129 | epoch_time: 2.92s
+
+Epoch: 13/30 | tr_Loss: 0.0725 | tr_acc: 0.9878 | val_loss: 0.3084 | val_acc: 0.9159 | epoch_time: 2.91s
+
+Epoch: 14/30 | tr_Loss: 0.0649 | tr_acc: 0.9890 | val_loss: 0.2979 | val_acc: 0.9219 | epoch_time: 2.93s
+
+Epoch: 15/30 | tr_Loss: 0.0604 | tr_acc: 0.9911 | val_loss: 0.2964 | val_acc: 0.9165 | epoch_time: 2.92s
+
+Epoch: 16/30 | tr_Loss: 0.0526 | tr_acc: 0.9925 | val_loss: 0.2986 | val_acc: 0.9225 | epoch_time: 2.92s
+
+Epoch: 17/30 | tr_Loss: 0.0468 | tr_acc: 0.9943 | val_loss: 0.2957 | val_acc: 0.9219 | epoch_time: 2.91s
+
+Epoch: 18/30 | tr_Loss: 0.0527 | tr_acc: 0.9928 | val_loss: 0.2883 | val_acc: 0.9249 | epoch_time: 2.92s
+
+Epoch: 19/30 | tr_Loss: 0.0407 | tr_acc: 0.9946 | val_loss: 0.2919 | val_acc: 0.9207 | epoch_time: 2.91s
+
+Epoch: 20/30 | tr_Loss: 0.0386 | tr_acc: 0.9934 | val_loss: 0.2837 | val_acc: 0.9237 | epoch_time: 2.91s
+
+Epoch: 21/30 | tr_Loss: 0.0325 | tr_acc: 0.9958 | val_loss: 0.2868 | val_acc: 0.9249 | epoch_time: 2.91s
+
+Epoch: 22/30 | tr_Loss: 0.0322 | tr_acc: 0.9958 | val_loss: 0.2758 | val_acc: 0.9284 | epoch_time: 2.90s
+
+Epoch: 23/30 | tr_Loss: 0.0280 | tr_acc: 0.9955 | val_loss: 0.2751 | val_acc: 0.9278 | epoch_time: 2.92s
+
+Epoch: 24/30 | tr_Loss: 0.0252 | tr_acc: 0.9958 | val_loss: 0.2820 | val_acc: 0.9249 | epoch_time: 2.92s
+
+Epoch: 25/30 | tr_Loss: 0.0218 | tr_acc: 0.9961 | val_loss: 0.2823 | val_acc: 0.9290 | epoch_time: 2.92s
+
+Epoch: 26/30 | tr_Loss: 0.0237 | tr_acc: 0.9961 | val_loss: 0.2730 | val_acc: 0.9380 | epoch_time: 2.91s
+
+Epoch: 27/30 | tr_Loss: 0.0206 | tr_acc: 0.9970 | val_loss: 0.2625 | val_acc: 0.9362 | epoch_time: 2.92s
+
+Epoch: 28/30 | tr_Loss: 0.0197 | tr_acc: 0.9967 | val_loss: 0.2736 | val_acc: 0.9338 | epoch_time: 2.91s
+
+Epoch: 29/30 | tr_Loss: 0.0192 | tr_acc: 0.9970 | val_loss: 0.2754 | val_acc: 0.9326 | epoch_time: 2.91s
+
+Epoch: 30/30 | tr_Loss: 0.0165 | tr_acc: 0.9976 | val_loss: 0.2871 | val_acc: 0.9338 | epoch_time: 2.91s
+              precision    recall  f1-score   support
+
+         LIE       0.98      0.96      0.97       408
+         SIT       0.92      0.85      0.89       326
+       STAND       0.84      0.92      0.88       399
+        WALK       0.99      0.98      0.98       544
+
+    accuracy                           0.94      1677
+   macro avg       0.93      0.93      0.93      1677
+weighted avg       0.94      0.94      0.94      1677
+
+Peak GPU memory allocatated: 1.09GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.8475903614457831
+ Report:
+ {'LIE': {'precision': 0.9315403422982885, 'recall': 0.9694656488549618, 'f1-score': 0.9501246882793017, 'support': 393.0}, 'SIT': {'precision': 0.6380597014925373, 'recall': 0.8952879581151832, 'f1-score': 0.7450980392156863, 'support': 382.0}, 'STAND': {'precision': 0.8818897637795275, 'recall': 0.5423728813559322, 'f1-score': 0.671664167916042, 'support': 413.0}, 'WALK': {'precision': 0.9978308026030369, 'recall': 0.9745762711864406, 'f1-score': 0.9860664523043944, 'support': 472.0}, 'accuracy': 0.8475903614457831, 'macro avg': {'precision': 0.8623301525433476, 'recall': 0.8454256898781295, 'f1-score': 0.8382383369288561, 'support': 1660.0}, 'weighted avg': {'precision': 0.8705004649174427, 'recall': 0.8475903614457831, 'f1-score': 0.8438838074163597, 'support': 1660.0}}
+ F1: 0.8382383369288561
+ Confusion Matrix:
+ [[381   2  10   0]
+ [ 27 342  12   1]
+ [  1 188 224   0]
+ [  0   4   8 460]]
+Total wall time:11min 7s

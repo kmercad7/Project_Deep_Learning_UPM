@@ -1,0 +1,176 @@
+
+TRAINING STARTING AT: 2026-05-27 14:14:35.415238
+Model: models_pt/model_OPP_fold2_seed42.pt | SEED: 42
+Epoch: 1/30 | tr_loss: 0.3523 | tr_acc: 0.8573 | val_loss: 0.5930 | val_acc: 0.8065 | epoch_time: 38.08s
+Epoch: 2/30 | tr_loss: 0.2166 | tr_acc: 0.9129 | val_loss: 0.4284 | val_acc: 0.8795 | epoch_time: 8.41s
+Epoch: 3/30 | tr_loss: 0.1907 | tr_acc: 0.9225 | val_loss: 0.4192 | val_acc: 0.8774 | epoch_time: 8.41s
+Epoch: 4/30 | tr_loss: 0.1707 | tr_acc: 0.9312 | val_loss: 0.4237 | val_acc: 0.8789 | epoch_time: 8.39s
+Epoch: 5/30 | tr_loss: 0.1581 | tr_acc: 0.9354 | val_loss: 0.4509 | val_acc: 0.8729 | epoch_time: 8.39s
+Epoch: 6/30 | tr_loss: 0.1486 | tr_acc: 0.9401 | val_loss: 0.3937 | val_acc: 0.8893 | epoch_time: 8.39s
+Epoch: 7/30 | tr_loss: 0.1396 | tr_acc: 0.9432 | val_loss: 0.4838 | val_acc: 0.8688 | epoch_time: 8.40s
+Epoch: 8/30 | tr_loss: 0.1369 | tr_acc: 0.9450 | val_loss: 0.4836 | val_acc: 0.8804 | epoch_time: 8.39s
+Epoch: 9/30 | tr_loss: 0.1292 | tr_acc: 0.9472 | val_loss: 0.4131 | val_acc: 0.8807 | epoch_time: 8.42s
+Epoch: 10/30 | tr_loss: 0.1210 | tr_acc: 0.9514 | val_loss: 0.3124 | val_acc: 0.8940 | epoch_time: 8.40s
+Epoch: 11/30 | tr_loss: 0.1221 | tr_acc: 0.9507 | val_loss: 0.5575 | val_acc: 0.8774 | epoch_time: 8.40s
+Epoch: 12/30 | tr_loss: 0.1178 | tr_acc: 0.9509 | val_loss: 0.3332 | val_acc: 0.9006 | epoch_time: 8.40s
+Epoch: 13/30 | tr_loss: 0.1055 | tr_acc: 0.9578 | val_loss: 0.4626 | val_acc: 0.8771 | epoch_time: 8.40s
+Epoch: 14/30 | tr_loss: 0.1090 | tr_acc: 0.9576 | val_loss: 0.5016 | val_acc: 0.8836 | epoch_time: 8.41s
+Epoch: 15/30 | tr_loss: 0.0976 | tr_acc: 0.9603 | val_loss: 0.3515 | val_acc: 0.8911 | epoch_time: 8.40s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+       STAND       0.86      0.91      0.88      1440
+        WALK       0.89      0.84      0.86       932
+         SIT       0.95      0.91      0.93       847
+         LIE       0.99      0.99      0.99       141
+
+    accuracy                           0.89      3360
+   macro avg       0.92      0.91      0.92      3360
+weighted avg       0.90      0.89      0.89      3360
+TRAINING ENDING AT: 2026-05-27 14:17:12.018151
+
+Test Results:
+ Accuracy: 0.91456
+ Report:
+ {'STAND': {'precision': 0.8939779474130619, 'recall': 0.8985507246376812, 'f1-score': 0.8962585034013606, 'support': 1173.0}, 'WALK': {'precision': 0.8798076923076923, 'recall': 0.8632075471698113, 'f1-score': 0.8714285714285714, 'support': 848.0}, 'SIT': {'precision': 0.9643221202854231, 'recall': 0.9732510288065843, 'f1-score': 0.9687660010240655, 'support': 972.0}, 'LIE': {'precision': 0.9473684210526315, 'recall': 0.9545454545454546, 'f1-score': 0.9509433962264151, 'support': 132.0}, 'accuracy': 0.91456, 'macro avg': {'precision': 0.9213690452647022, 'recall': 0.9223886887898828, 'f1-score': 0.9218491180201032, 'support': 3125.0}, 'weighted avg': {'precision': 0.9142677721244235, 'recall': 0.91456, 'f1-score': 0.9143832749947208, 'support': 3125.0}}
+ F1: 0.9218491180201032
+ Confusion Matrix:
+ [[1054   91   27    1]
+ [ 109  732    7    0]
+ [  16    4  946    6]
+ [   0    5    1  126]]
+TRAINING STARTING AT: 2026-05-27 14:17:13.074855
+Model: models_pt/model_OPP_fold2_seed58.pt | SEED: 58
+Epoch: 1/30 | tr_loss: 0.3581 | tr_acc: 0.8484 | val_loss: 0.6007 | val_acc: 0.8009 | epoch_time: 9.15s
+Epoch: 2/30 | tr_loss: 0.2263 | tr_acc: 0.9094 | val_loss: 0.4381 | val_acc: 0.8750 | epoch_time: 8.40s
+Epoch: 3/30 | tr_loss: 0.1825 | tr_acc: 0.9280 | val_loss: 0.4804 | val_acc: 0.8646 | epoch_time: 8.41s
+Epoch: 4/30 | tr_loss: 0.1648 | tr_acc: 0.9336 | val_loss: 0.5528 | val_acc: 0.8512 | epoch_time: 8.40s
+Epoch: 5/30 | tr_loss: 0.1471 | tr_acc: 0.9390 | val_loss: 0.4907 | val_acc: 0.8857 | epoch_time: 8.41s
+Epoch: 6/30 | tr_loss: 0.1425 | tr_acc: 0.9438 | val_loss: 0.5426 | val_acc: 0.8628 | epoch_time: 8.41s
+Epoch: 7/30 | tr_loss: 0.1323 | tr_acc: 0.9462 | val_loss: 0.5428 | val_acc: 0.8780 | epoch_time: 8.41s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+       STAND       0.87      0.86      0.86      1440
+        WALK       0.87      0.88      0.87       932
+         SIT       0.88      0.88      0.88       847
+         LIE       0.99      0.95      0.97       141
+
+    accuracy                           0.88      3360
+   macro avg       0.90      0.89      0.90      3360
+weighted avg       0.88      0.88      0.88      3360
+TRAINING ENDING AT: 2026-05-27 14:18:13.621029
+
+Test Results:
+ Accuracy: 0.8976
+ Report:
+ {'STAND': {'precision': 0.9283639883833494, 'recall': 0.8175618073316283, 'f1-score': 0.8694469628286491, 'support': 1173.0}, 'WALK': {'precision': 0.8161530286928799, 'recall': 0.9056603773584906, 'f1-score': 0.8585802124091672, 'support': 848.0}, 'SIT': {'precision': 0.9331366764995084, 'recall': 0.9763374485596708, 'f1-score': 0.954248366013072, 'support': 972.0}, 'LIE': {'precision': 0.9626865671641791, 'recall': 0.9772727272727273, 'f1-score': 0.9699248120300752, 'support': 132.0}, 'accuracy': 0.8976, 'macro avg': {'precision': 0.9100850651849792, 'recall': 0.9192080901306292, 'f1-score': 0.9130500883202408, 'support': 3125.0}, 'weighted avg': {'precision': 0.9008487050010962, 'recall': 0.8976, 'f1-score': 0.8971189742315696, 'support': 3125.0}}
+ F1: 0.9130500883202408
+ Confusion Matrix:
+ [[959 163  50   1]
+ [ 62 768  18   0]
+ [ 12   7 949   4]
+ [  0   3   0 129]]
+TRAINING STARTING AT: 2026-05-27 14:18:14.686471
+Model: models_pt/model_OPP_fold2_seed7.pt | SEED: 7
+Epoch: 1/30 | tr_loss: 0.3522 | tr_acc: 0.8578 | val_loss: 0.3476 | val_acc: 0.8723 | epoch_time: 9.13s
+Epoch: 2/30 | tr_loss: 0.2122 | tr_acc: 0.9130 | val_loss: 0.4753 | val_acc: 0.8423 | epoch_time: 8.42s
+Epoch: 3/30 | tr_loss: 0.1974 | tr_acc: 0.9218 | val_loss: 0.4860 | val_acc: 0.8554 | epoch_time: 8.40s
+Epoch: 4/30 | tr_loss: 0.1794 | tr_acc: 0.9283 | val_loss: 0.4054 | val_acc: 0.8759 | epoch_time: 8.40s
+Epoch: 5/30 | tr_loss: 0.1528 | tr_acc: 0.9410 | val_loss: 0.4086 | val_acc: 0.8848 | epoch_time: 8.40s
+Epoch: 6/30 | tr_loss: 0.1407 | tr_acc: 0.9422 | val_loss: 0.3740 | val_acc: 0.8875 | epoch_time: 8.42s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+       STAND       0.83      0.89      0.86      1440
+        WALK       0.86      0.80      0.83       932
+         SIT       0.94      0.90      0.92       847
+         LIE       1.00      1.00      1.00       141
+
+    accuracy                           0.87      3360
+   macro avg       0.91      0.90      0.90      3360
+weighted avg       0.87      0.87      0.87      3360
+TRAINING ENDING AT: 2026-05-27 14:19:06.766157
+
+Test Results:
+ Accuracy: 0.88736
+ Report:
+ {'STAND': {'precision': 0.8647469458987783, 'recall': 0.8448422847399829, 'f1-score': 0.8546787408365675, 'support': 1173.0}, 'WALK': {'precision': 0.8278301886792453, 'recall': 0.8278301886792453, 'f1-score': 0.8278301886792453, 'support': 848.0}, 'SIT': {'precision': 0.9557788944723619, 'recall': 0.9783950617283951, 'f1-score': 0.9669547534316217, 'support': 972.0}, 'LIE': {'precision': 0.9485294117647058, 'recall': 0.9772727272727273, 'f1-score': 0.9626865671641791, 'support': 132.0}, 'accuracy': 0.88736, 'macro avg': {'precision': 0.8992213602037729, 'recall': 0.9070850656050877, 'f1-score': 0.9030375625279035, 'support': 3125.0}, 'weighted avg': {'precision': 0.88658276330219, 'recall': 0.88736, 'f1-score': 0.8868776992648006, 'support': 3125.0}}
+ F1: 0.9030375625279035
+ Confusion Matrix:
+ [[991 141  36   5]
+ [140 702   6   0]
+ [ 15   4 951   2]
+ [  0   1   2 129]]
+TRAINING STARTING AT: 2026-05-27 14:19:07.833397
+Model: models_pt/model_OPP_fold2_seed128.pt | SEED: 128
+Epoch: 1/30 | tr_loss: 0.3591 | tr_acc: 0.8470 | val_loss: 0.4201 | val_acc: 0.8435 | epoch_time: 9.17s
+Epoch: 2/30 | tr_loss: 0.2343 | tr_acc: 0.9070 | val_loss: 0.5096 | val_acc: 0.8554 | epoch_time: 8.41s
+Epoch: 3/30 | tr_loss: 0.1962 | tr_acc: 0.9231 | val_loss: 0.2918 | val_acc: 0.8866 | epoch_time: 8.40s
+Epoch: 4/30 | tr_loss: 0.1735 | tr_acc: 0.9298 | val_loss: 0.4763 | val_acc: 0.8702 | epoch_time: 8.40s
+Epoch: 5/30 | tr_loss: 0.1493 | tr_acc: 0.9396 | val_loss: 0.5352 | val_acc: 0.8696 | epoch_time: 8.41s
+Epoch: 6/30 | tr_loss: 0.1453 | tr_acc: 0.9376 | val_loss: 0.5249 | val_acc: 0.8795 | epoch_time: 8.44s
+Epoch: 7/30 | tr_loss: 0.1359 | tr_acc: 0.9437 | val_loss: 0.5677 | val_acc: 0.8470 | epoch_time: 8.41s
+Epoch: 8/30 | tr_loss: 0.1317 | tr_acc: 0.9483 | val_loss: 0.4080 | val_acc: 0.8667 | epoch_time: 8.41s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+       STAND       0.84      0.92      0.88      1440
+        WALK       0.91      0.80      0.85       932
+         SIT       0.93      0.91      0.92       847
+         LIE       0.93      1.00      0.97       141
+
+    accuracy                           0.89      3360
+   macro avg       0.91      0.91      0.91      3360
+weighted avg       0.89      0.89      0.89      3360
+TRAINING ENDING AT: 2026-05-27 14:20:16.941140
+
+Test Results:
+ Accuracy: 0.90368
+ Report:
+ {'STAND': {'precision': 0.8670520231213873, 'recall': 0.8951406649616368, 'f1-score': 0.8808724832214765, 'support': 1173.0}, 'WALK': {'precision': 0.8833124215809285, 'recall': 0.8301886792452831, 'f1-score': 0.8559270516717326, 'support': 848.0}, 'SIT': {'precision': 0.9620901639344263, 'recall': 0.9660493827160493, 'f1-score': 0.9640657084188912, 'support': 972.0}, 'LIE': {'precision': 0.9290780141843972, 'recall': 0.9924242424242424, 'f1-score': 0.9597069597069597, 'support': 132.0}, 'accuracy': 0.90368, 'macro avg': {'precision': 0.9103831557052848, 'recall': 0.9209507423368029, 'f1-score': 0.915143050754765, 'support': 3125.0}, 'weighted avg': {'precision': 0.9036450860283576, 'recall': 0.90368, 'f1-score': 0.9033096799682887, 'support': 3125.0}}
+ F1: 0.915143050754765
+ Confusion Matrix:
+ [[1050   90   30    3]
+ [ 137  704    6    1]
+ [  24    3  939    6]
+ [   0    0    1  131]]
+TRAINING STARTING AT: 2026-05-27 14:20:18.007686
+Model: models_pt/model_OPP_fold2_seed92.pt | SEED: 92
+Epoch: 1/30 | tr_loss: 0.3638 | tr_acc: 0.8406 | val_loss: 0.4802 | val_acc: 0.8351 | epoch_time: 9.20s
+Epoch: 2/30 | tr_loss: 0.2568 | tr_acc: 0.9022 | val_loss: 0.4494 | val_acc: 0.8551 | epoch_time: 8.41s
+Epoch: 3/30 | tr_loss: 0.2005 | tr_acc: 0.9212 | val_loss: 0.4568 | val_acc: 0.8607 | epoch_time: 8.41s
+Epoch: 4/30 | tr_loss: 0.1854 | tr_acc: 0.9279 | val_loss: 0.3713 | val_acc: 0.8789 | epoch_time: 8.43s
+Epoch: 5/30 | tr_loss: 0.1695 | tr_acc: 0.9314 | val_loss: 0.4180 | val_acc: 0.8893 | epoch_time: 8.40s
+Epoch: 6/30 | tr_loss: 0.1496 | tr_acc: 0.9397 | val_loss: 0.5221 | val_acc: 0.8476 | epoch_time: 8.41s
+Epoch: 7/30 | tr_loss: 0.1646 | tr_acc: 0.9349 | val_loss: 0.3846 | val_acc: 0.8786 | epoch_time: 8.41s
+Epoch: 8/30 | tr_loss: 0.1545 | tr_acc: 0.9389 | val_loss: 0.3876 | val_acc: 0.8804 | epoch_time: 8.40s
+Epoch: 9/30 | tr_loss: 0.1381 | tr_acc: 0.9467 | val_loss: 0.4868 | val_acc: 0.8902 | epoch_time: 8.40s
+
+Best Model Validation Report: 
+              precision    recall  f1-score   support
+
+       STAND       0.82      0.93      0.87      1440
+        WALK       0.92      0.77      0.84       932
+         SIT       0.94      0.90      0.92       847
+         LIE       0.96      1.00      0.98       141
+
+    accuracy                           0.88      3360
+   macro avg       0.91      0.90      0.90      3360
+weighted avg       0.88      0.88      0.88      3360
+TRAINING ENDING AT: 2026-05-27 14:21:35.465181
+
+Test Results:
+ Accuracy: 0.91104
+ Report:
+ {'STAND': {'precision': 0.8733552631578947, 'recall': 0.9053708439897699, 'f1-score': 0.8890749267475931, 'support': 1173.0}, 'WALK': {'precision': 0.9127604166666666, 'recall': 0.8266509433962265, 'f1-score': 0.8675742574257426, 'support': 848.0}, 'SIT': {'precision': 0.9539078156312625, 'recall': 0.9794238683127572, 'f1-score': 0.966497461928934, 'support': 972.0}, 'LIE': {'precision': 0.9230769230769231, 'recall': 1.0, 'f1-score': 0.96, 'support': 132.0}, 'accuracy': 0.91104, 'macro avg': {'precision': 0.9157751046331868, 'recall': 0.9278614139246883, 'f1-score': 0.9207866615255674, 'support': 3125.0}, 'weighted avg': {'precision': 0.911203554450331, 'recall': 0.91104, 'f1-score': 0.9103178855574016, 'support': 3125.0}}
+ F1: 0.9207866615255674
+ Confusion Matrix:
+ [[1062   66   40    5]
+ [ 140  701    6    1]
+ [  14    1  952    5]
+ [   0    0    0  132]]

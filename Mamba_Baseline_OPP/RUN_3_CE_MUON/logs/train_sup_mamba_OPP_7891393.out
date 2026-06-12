@@ -1,0 +1,1067 @@
+Job started on gpu032.orc.gmu.edu
+CUDA_VISIBLE_DEVICES=0
+Sat May 30 20:15:41 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.48.01              Driver Version: 590.48.01      CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:4E:00.0 Off |                    0 |
+| N/A   22C    P0             67W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Mamba version: 2.3.0
+Path: /home/kmercad/myenv/lib/python3.10/site-packages/mamba_ssm/modules/mamba2.py
+------------------------------------------------------------------------------------------
+Raw training set shape: (376092, 251)
+Validation training set shape: (88848, 251)
+Raw test set shape: (179695, 251)
+------------------------------------------------------------------------------------------
+Sensor subset training shape: (295149, 47)
+Sensor Validation training shape: (67434, 47)
+Sensor Test training shape: (134613, 47)
+----------------------------------------------------------------------
+Rows containing NaNs - training: 4953
+Rows containing NaNs - validation: 0
+Rows containing NaNs - test: 0
+------------------------------------------------------------------------------------------
+Training shape after NaN removal: (290196, 47)
+Validation shape after NaN removal: (67434, 47)
+Test shape after NaN removal: (134613, 47)
+------------------------------------------------------------------------------------------
+Reindexed training shape: (290196, 47)
+Reindexed validation shape: (67434, 47)
+Reindexed test shape: (134613, 47)
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0              1              2
+count  290196.000000  290196.000000  290196.000000
+mean     -823.016179    -119.869698     304.485627
+std       270.438157     249.979563     314.402613
+min     -1896.000000   -1271.000000   -1198.000000
+25%      -974.000000    -228.000000     116.000000
+50%      -923.000000    -122.000000     279.000000
+75%      -795.000000     -14.000000     466.000000
+max       614.000000    1815.000000    1417.000000
+
+Descriptive statistics for GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  290196.000000  290196.000000  290196.000000
+mean      -43.163207     -16.201064       8.669899
+std       599.759777     322.772360     266.831851
+min     -4502.000000   -3092.000000   -2293.000000
+25%      -237.000000    -105.000000     -79.000000
+50%       -18.000000      -7.000000       1.000000
+75%       146.000000      75.000000      94.000000
+max      4504.000000    3370.000000    2231.000000
+
+Descriptive statistics for MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  290196.000000  290196.000000  290196.000000
+mean      388.133306      70.751351      45.451071
+std       344.236008     327.662515     496.886415
+min      -929.000000   -1038.000000   -1246.000000
+25%       318.000000    -166.000000    -446.000000
+50%       469.000000     101.000000     147.000000
+75%       560.000000     268.000000     500.000000
+max      1531.000000    1047.000000    1225.000000
+------------------------------------------------------------------------------------------
+
+
+Descriptive statistics for ACC channels (DEVICE_1) - training set
+                   0             1              2
+count  290196.000000  290196.00000  290196.000000
+mean       -0.823016      -0.11987       0.304486
+std         0.270438       0.24998       0.314403
+min        -1.896000      -1.27100      -1.198000
+25%        -0.974000      -0.22800       0.116000
+50%        -0.923000      -0.12200       0.279000
+75%        -0.795000      -0.01400       0.466000
+max         0.614000       1.81500       1.417000
+
+Descriptive statistics for scaled GYRO channels (DEVICE_1) - training set
+                   3              4              5
+count  290196.000000  290196.000000  290196.000000
+mean       -0.043163      -0.016201       0.008670
+std         0.599760       0.322772       0.266832
+min        -4.502000      -3.092000      -2.293000
+25%        -0.237000      -0.105000      -0.079000
+50%        -0.018000      -0.007000       0.001000
+75%         0.146000       0.075000       0.094000
+max         4.504000       3.370000       2.231000
+
+Descriptive statistics for normalized MAG channels (DEVICE_1) - training set
+                   6              7              8
+count  290196.000000  290196.000000  290196.000000
+mean        0.512513       0.078772       0.061891
+std         0.401707       0.415946       0.626831
+min        -0.941527      -0.991281      -0.999993
+25%         0.425456      -0.224111      -0.565882
+50%         0.639552       0.129886       0.198900
+75%         0.765385       0.330236       0.654344
+max         0.999999       0.990997       0.999770
+--------------------STRATIY VAL/TEST--------------------
+Validation GROUPS
+group_id
+S1-ADL4    24851
+S2-ADL5    22969
+S3-ADL5    20648
+S4-ADL5    23817
+Name: count, dtype: int64
+Test GROUPS
+group_id
+S1-ADL1    37507
+S1-ADL2    24510
+S1-ADL3    25305
+S1-ADL5    22440
+Name: count, dtype: int64 
+
+
+ Validation Split Label Proportion
+45
+1    0.435575
+2    0.285561
+4    0.229149
+5    0.049716
+Name: proportion, dtype: float64
+Test Split Label Proportion
+45
+1    0.476476
+2    0.221643
+4    0.256008
+5    0.045872
+Name: proportion, dtype: float64
+
+------------------------------ TRAIN ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.000000
+global std : 1.000000
+max |channel mean| : 0.000000
+median |channel mean| : 0.000000
+channel std range : [1.000000, 1.000000]
+
+------------------------------ VAL ACC/GYRO after StandardScaler ------------------------------
+global mean: -0.004966
+global std : 1.020127
+max |channel mean| : 0.261901
+median |channel mean| : 0.021645
+channel std range : [0.918437, 1.136469]
+
+------------------------------ TEST ACC/GYRO after StandardScaler ------------------------------
+global mean: 0.015366
+global std : 0.964757
+max |channel mean| : 0.900994
+median |channel mean| : 0.025740
+channel std range : [0.678974, 1.129884]
+------------------------------------------------------------------------------------------
+Training features: (290196, 46) | Training labels: (290196,)
+Validation features: (92285, 46) | Validation labels: (92285,)
+Test features: (109762, 46), Test labels: (109762,)
+
+------------------------------ TRAIN MAG after window demeaning ------------------------------
+max |window mean|  : 2.072917e-07
+mean |window mean| : 2.316569e-08
+channel global mean range : [-4.493903e-10, 3.340211e-10]
+channel std range         : [0.131286, 0.230231]
+
+------------------------------ VAL MAG after window demeaning ------------------------------
+max |window mean|  : 2.112654e-07
+mean |window mean| : 2.296102e-08
+channel global mean range : [-1.295171e-09, 1.012635e-09]
+channel std range         : [0.135073, 0.241445]
+
+------------------------------ TEST MAG after window demeaning ------------------------------
+max |window mean|  : 1.947085e-07
+mean |window mean| : 2.323360e-08
+channel global mean range : [-5.950485e-10, 4.664948e-10]
+channel std range         : [0.109610, 0.227086]
+
+TRAIN window label distribution
+label 1: 4195 (0.4350)
+label 2: 2640 (0.2737)
+label 4: 2295 (0.2380)
+label 5: 514 (0.0533)
+
+VAL window label distribution
+label 1: 1304 (0.4253)
+label 2: 906 (0.2955)
+label 4: 704 (0.2296)
+label 5: 152 (0.0496)
+
+TEST window label distribution
+label 1: 1744 (0.4778)
+label 2: 797 (0.2184)
+label 4: 940 (0.2575)
+label 5: 169 (0.0463)
+------------------------------------------------------------------------------------------
+Training (windows): (9644, 90, 45). Training Labels: (9644,)
+Validation (windows): (3066, 90, 45). Validation Labels: (3066,)
+Test (windows): (3650, 90, 45). Test Labels: (3650,)
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4195, 'WALK': 2640, 'SIT': 2295, 'LIE': 514}
+------------------------------------------------------------------------------------------
+AdamW: convolutional_input.weight (384, 45, 9)
+AdamW: convolutional_input.bias (384,)
+AdamW: batch_layer.weight (384,)
+AdamW: batch_layer.bias (384,)
+Muon : backbone.input_proj.weight (384, 384)
+AdamW: backbone.input_proj.bias (384,)
+AdamW: backbone.layers.0.norm.weight (384,)
+AdamW: backbone.layers.0.mixer.dt_bias (96,)
+AdamW: backbone.layers.0.mixer.A_log (96,)
+AdamW: backbone.layers.0.mixer.D (96,)
+Muon : backbone.layers.0.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.0.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.0.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.0.mixer.norm.weight (768,)
+Muon : backbone.layers.0.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.0.norm2.weight (384,)
+Muon : backbone.layers.0.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.0.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.1.norm.weight (384,)
+AdamW: backbone.layers.1.mixer.dt_bias (96,)
+AdamW: backbone.layers.1.mixer.A_log (96,)
+AdamW: backbone.layers.1.mixer.D (96,)
+Muon : backbone.layers.1.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.1.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.1.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.1.mixer.norm.weight (768,)
+Muon : backbone.layers.1.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.1.norm2.weight (384,)
+Muon : backbone.layers.1.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.1.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.2.norm.weight (384,)
+AdamW: backbone.layers.2.mixer.dt_bias (96,)
+AdamW: backbone.layers.2.mixer.A_log (96,)
+AdamW: backbone.layers.2.mixer.D (96,)
+Muon : backbone.layers.2.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.2.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.2.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.2.mixer.norm.weight (768,)
+Muon : backbone.layers.2.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.2.norm2.weight (384,)
+Muon : backbone.layers.2.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.2.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.3.norm.weight (384,)
+AdamW: backbone.layers.3.mixer.dt_bias (96,)
+AdamW: backbone.layers.3.mixer.A_log (96,)
+AdamW: backbone.layers.3.mixer.D (96,)
+Muon : backbone.layers.3.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.3.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.3.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.3.mixer.norm.weight (768,)
+Muon : backbone.layers.3.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.3.norm2.weight (384,)
+Muon : backbone.layers.3.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.3.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.4.norm.weight (384,)
+AdamW: backbone.layers.4.mixer.dt_bias (96,)
+AdamW: backbone.layers.4.mixer.A_log (96,)
+AdamW: backbone.layers.4.mixer.D (96,)
+Muon : backbone.layers.4.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.4.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.4.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.4.mixer.norm.weight (768,)
+Muon : backbone.layers.4.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.4.norm2.weight (384,)
+Muon : backbone.layers.4.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.4.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.5.norm.weight (384,)
+AdamW: backbone.layers.5.mixer.dt_bias (96,)
+AdamW: backbone.layers.5.mixer.A_log (96,)
+AdamW: backbone.layers.5.mixer.D (96,)
+Muon : backbone.layers.5.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.5.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.5.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.5.mixer.norm.weight (768,)
+Muon : backbone.layers.5.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.5.norm2.weight (384,)
+Muon : backbone.layers.5.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.5.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.6.norm.weight (384,)
+AdamW: backbone.layers.6.mixer.dt_bias (96,)
+AdamW: backbone.layers.6.mixer.A_log (96,)
+AdamW: backbone.layers.6.mixer.D (96,)
+Muon : backbone.layers.6.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.6.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.6.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.6.mixer.norm.weight (768,)
+Muon : backbone.layers.6.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.6.norm2.weight (384,)
+Muon : backbone.layers.6.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.6.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.7.norm.weight (384,)
+AdamW: backbone.layers.7.mixer.dt_bias (96,)
+AdamW: backbone.layers.7.mixer.A_log (96,)
+AdamW: backbone.layers.7.mixer.D (96,)
+Muon : backbone.layers.7.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.7.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.7.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.7.mixer.norm.weight (768,)
+Muon : backbone.layers.7.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.7.norm2.weight (384,)
+Muon : backbone.layers.7.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.7.mlp.fc2.weight (384, 512)
+AdamW: backbone.norm_f.weight (384,)
+AdamW: classifier.0.weight (384, 384)
+AdamW: classifier.0.bias (384,)
+AdamW: classifier.3.weight (4, 384)
+AdamW: classifier.3.bias (4,)
+
+Epoch: 1/30 | tr_Loss: 0.2854 | tr_acc: 0.8844 | val_loss: 0.2126 | val_acc: 0.9054 | epoch_time: 38.30s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        15.72%      18.351ms        23.79%      27.768ms       3.471ms      47.196ms        45.19%      54.840ms       6.855ms           0 b           0 b       1.20 Gb      -6.90 Gb             8  
+                                               aten::mm         4.78%       5.576ms        13.15%      15.352ms      26.064us      32.073ms        30.71%      32.073ms      54.454us           0 b           0 b       3.13 Gb       3.13 Gb           589  
+        Optimizer.step#SingleDeviceMuonWithAuxAdam.step         0.00%       0.000us         0.00%       0.000us       0.000us      14.685ms        14.06%      14.685ms      14.685ms           0 b           0 b           0 b           0 b             1  
+                         MambaSplitConv1dScanCombinedFn         4.99%       5.825ms         7.50%       8.751ms       1.094ms      12.042ms        11.53%      15.265ms       1.908ms           0 b           0 b     405.35 Mb      -2.44 Gb             8  
+sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x12...         0.00%       0.000us         0.00%       0.000us       0.000us       9.995ms         9.57%       9.995ms     416.440us           0 b           0 b           0 b           0 b            24  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       9.660ms         9.25%       9.660ms       1.207ms           0 b           0 b           0 b           0 b             8  
+                    _chunk_scan_bwd_ddAcs_stable_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.947ms         8.57%       8.947ms       1.118ms           0 b           0 b           0 b           0 b             8  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.070ms         7.73%       8.070ms       1.009ms           0 b           0 b           0 b           0 b             8  
+                             _chunk_state_bwd_db_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.557ms         7.24%       7.557ms     944.680us           0 b           0 b           0 b           0 b             8  
+                              _chunk_scan_bwd_dc_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       6.868ms         6.58%       6.868ms     858.549us           0 b           0 b           0 b           0 b             8  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 116.710ms
+Self CUDA time total: 104.448ms
+
+
+Epoch: 2/30 | tr_Loss: 0.1788 | tr_acc: 0.9280 | val_loss: 0.2169 | val_acc: 0.9191 | epoch_time: 8.91s
+
+Epoch: 3/30 | tr_Loss: 0.1544 | tr_acc: 0.9406 | val_loss: 0.1843 | val_acc: 0.9201 | epoch_time: 8.92s
+
+Epoch: 4/30 | tr_Loss: 0.1445 | tr_acc: 0.9427 | val_loss: 0.1887 | val_acc: 0.9214 | epoch_time: 8.91s
+
+Epoch: 5/30 | tr_Loss: 0.1358 | tr_acc: 0.9475 | val_loss: 0.1824 | val_acc: 0.9263 | epoch_time: 8.92s
+
+Epoch: 6/30 | tr_Loss: 0.1267 | tr_acc: 0.9512 | val_loss: 0.2307 | val_acc: 0.9168 | epoch_time: 8.95s
+
+Epoch: 7/30 | tr_Loss: 0.1119 | tr_acc: 0.9550 | val_loss: 0.2421 | val_acc: 0.9191 | epoch_time: 8.92s
+
+Epoch: 8/30 | tr_Loss: 0.1062 | tr_acc: 0.9630 | val_loss: 0.2523 | val_acc: 0.9070 | epoch_time: 8.93s
+
+Epoch: 9/30 | tr_Loss: 0.1048 | tr_acc: 0.9582 | val_loss: 0.2094 | val_acc: 0.9168 | epoch_time: 8.91s
+
+Epoch: 10/30 | tr_Loss: 0.0932 | tr_acc: 0.9645 | val_loss: 0.2241 | val_acc: 0.9211 | epoch_time: 8.94s
+
+Early stopping at epoch 10 | Best Validation Loss: 0.1824
+              precision    recall  f1-score   support
+
+       STAND       0.90      0.93      0.92      1304
+        WALK       0.91      0.86      0.88       906
+         SIT       0.98      0.99      0.99       704
+         LIE       0.97      0.99      0.98       152
+
+    accuracy                           0.93      3066
+   macro avg       0.94      0.94      0.94      3066
+weighted avg       0.93      0.93      0.93      3066
+
+Peak GPU memory allocatated: 3.79GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.9317808219178082
+ Report:
+ {'STAND': {'precision': 0.9422510312315852, 'recall': 0.9168577981651376, 'f1-score': 0.9293809938971229, 'support': 1744.0}, 'WALK': {'precision': 0.8663426488456865, 'recall': 0.8946047678795483, 'f1-score': 0.8802469135802469, 'support': 797.0}, 'SIT': {'precision': 0.9583766909469302, 'recall': 0.9797872340425532, 'f1-score': 0.9689637033140452, 'support': 940.0}, 'LIE': {'precision': 0.9940828402366864, 'recall': 0.9940828402366864, 'f1-score': 0.9940828402366864, 'support': 169.0}, 'accuracy': 0.9317808219178082, 'macro avg': {'precision': 0.9402633028152221, 'recall': 0.9463331600809815, 'f1-score': 0.9431686127570253, 'support': 3650.0}, 'weighted avg': {'precision': 0.9322287613939756, 'recall': 0.9317808219178082, 'f1-score': 0.9318419519439018, 'support': 3650.0}}
+ F1: 0.9431686127570253
+ Confusion Matrix:
+ [[1599  107   38    0]
+ [  81  713    2    1]
+ [  17    2  921    0]
+ [   0    1    0  168]]
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4195, 'WALK': 2640, 'SIT': 2295, 'LIE': 514}
+------------------------------------------------------------------------------------------
+AdamW: convolutional_input.weight (384, 45, 9)
+AdamW: convolutional_input.bias (384,)
+AdamW: batch_layer.weight (384,)
+AdamW: batch_layer.bias (384,)
+Muon : backbone.input_proj.weight (384, 384)
+AdamW: backbone.input_proj.bias (384,)
+AdamW: backbone.layers.0.norm.weight (384,)
+AdamW: backbone.layers.0.mixer.dt_bias (96,)
+AdamW: backbone.layers.0.mixer.A_log (96,)
+AdamW: backbone.layers.0.mixer.D (96,)
+Muon : backbone.layers.0.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.0.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.0.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.0.mixer.norm.weight (768,)
+Muon : backbone.layers.0.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.0.norm2.weight (384,)
+Muon : backbone.layers.0.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.0.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.1.norm.weight (384,)
+AdamW: backbone.layers.1.mixer.dt_bias (96,)
+AdamW: backbone.layers.1.mixer.A_log (96,)
+AdamW: backbone.layers.1.mixer.D (96,)
+Muon : backbone.layers.1.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.1.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.1.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.1.mixer.norm.weight (768,)
+Muon : backbone.layers.1.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.1.norm2.weight (384,)
+Muon : backbone.layers.1.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.1.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.2.norm.weight (384,)
+AdamW: backbone.layers.2.mixer.dt_bias (96,)
+AdamW: backbone.layers.2.mixer.A_log (96,)
+AdamW: backbone.layers.2.mixer.D (96,)
+Muon : backbone.layers.2.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.2.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.2.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.2.mixer.norm.weight (768,)
+Muon : backbone.layers.2.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.2.norm2.weight (384,)
+Muon : backbone.layers.2.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.2.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.3.norm.weight (384,)
+AdamW: backbone.layers.3.mixer.dt_bias (96,)
+AdamW: backbone.layers.3.mixer.A_log (96,)
+AdamW: backbone.layers.3.mixer.D (96,)
+Muon : backbone.layers.3.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.3.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.3.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.3.mixer.norm.weight (768,)
+Muon : backbone.layers.3.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.3.norm2.weight (384,)
+Muon : backbone.layers.3.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.3.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.4.norm.weight (384,)
+AdamW: backbone.layers.4.mixer.dt_bias (96,)
+AdamW: backbone.layers.4.mixer.A_log (96,)
+AdamW: backbone.layers.4.mixer.D (96,)
+Muon : backbone.layers.4.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.4.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.4.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.4.mixer.norm.weight (768,)
+Muon : backbone.layers.4.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.4.norm2.weight (384,)
+Muon : backbone.layers.4.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.4.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.5.norm.weight (384,)
+AdamW: backbone.layers.5.mixer.dt_bias (96,)
+AdamW: backbone.layers.5.mixer.A_log (96,)
+AdamW: backbone.layers.5.mixer.D (96,)
+Muon : backbone.layers.5.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.5.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.5.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.5.mixer.norm.weight (768,)
+Muon : backbone.layers.5.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.5.norm2.weight (384,)
+Muon : backbone.layers.5.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.5.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.6.norm.weight (384,)
+AdamW: backbone.layers.6.mixer.dt_bias (96,)
+AdamW: backbone.layers.6.mixer.A_log (96,)
+AdamW: backbone.layers.6.mixer.D (96,)
+Muon : backbone.layers.6.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.6.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.6.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.6.mixer.norm.weight (768,)
+Muon : backbone.layers.6.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.6.norm2.weight (384,)
+Muon : backbone.layers.6.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.6.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.7.norm.weight (384,)
+AdamW: backbone.layers.7.mixer.dt_bias (96,)
+AdamW: backbone.layers.7.mixer.A_log (96,)
+AdamW: backbone.layers.7.mixer.D (96,)
+Muon : backbone.layers.7.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.7.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.7.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.7.mixer.norm.weight (768,)
+Muon : backbone.layers.7.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.7.norm2.weight (384,)
+Muon : backbone.layers.7.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.7.mlp.fc2.weight (384, 512)
+AdamW: backbone.norm_f.weight (384,)
+AdamW: classifier.0.weight (384, 384)
+AdamW: classifier.0.bias (384,)
+AdamW: classifier.3.weight (4, 384)
+AdamW: classifier.3.bias (4,)
+
+Epoch: 1/30 | tr_Loss: 0.2852 | tr_acc: 0.8860 | val_loss: 0.2084 | val_acc: 0.9188 | epoch_time: 10.19s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        13.29%      14.573ms        21.42%      23.495ms       2.937ms      46.558ms        45.25%      54.057ms       6.757ms           0 b           0 b       1.20 Gb      -6.90 Gb             8  
+                                               aten::mm         5.06%       5.549ms        20.48%      22.461ms      38.134us      31.346ms        30.46%      31.346ms      53.219us           0 b           0 b       3.14 Gb       3.14 Gb           589  
+        Optimizer.step#SingleDeviceMuonWithAuxAdam.step         0.00%       0.000us         0.00%       0.000us       0.000us      14.874ms        14.45%      14.874ms      14.874ms           0 b           0 b           0 b           0 b             1  
+                         MambaSplitConv1dScanCombinedFn         4.95%       5.435ms         7.48%       8.210ms       1.026ms      11.912ms        11.58%      15.080ms       1.885ms           0 b           0 b     405.35 Mb      -2.44 Gb             8  
+sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x12...         0.00%       0.000us         0.00%       0.000us       0.000us       9.758ms         9.48%       9.758ms     406.592us           0 b           0 b           0 b           0 b            24  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       9.528ms         9.26%       9.528ms       1.191ms           0 b           0 b           0 b           0 b             8  
+                    _chunk_scan_bwd_ddAcs_stable_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.828ms         8.58%       8.828ms       1.103ms           0 b           0 b           0 b           0 b             8  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.974ms         7.75%       7.974ms     996.784us           0 b           0 b           0 b           0 b             8  
+                             _chunk_state_bwd_db_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.446ms         7.24%       7.446ms     930.759us           0 b           0 b           0 b           0 b             8  
+                              _chunk_scan_bwd_dc_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       6.782ms         6.59%       6.782ms     847.800us           0 b           0 b           0 b           0 b             8  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 109.693ms
+Self CUDA time total: 102.900ms
+
+
+Epoch: 2/30 | tr_Loss: 0.1806 | tr_acc: 0.9267 | val_loss: 0.2365 | val_acc: 0.9119 | epoch_time: 8.91s
+
+Epoch: 3/30 | tr_Loss: 0.1555 | tr_acc: 0.9382 | val_loss: 0.2089 | val_acc: 0.9191 | epoch_time: 8.93s
+
+Epoch: 4/30 | tr_Loss: 0.1469 | tr_acc: 0.9408 | val_loss: 0.2264 | val_acc: 0.9119 | epoch_time: 8.91s
+
+Epoch: 5/30 | tr_Loss: 0.1319 | tr_acc: 0.9485 | val_loss: 0.2166 | val_acc: 0.9204 | epoch_time: 8.92s
+
+Epoch: 6/30 | tr_Loss: 0.1259 | tr_acc: 0.9518 | val_loss: 0.2156 | val_acc: 0.9201 | epoch_time: 8.94s
+
+Early stopping at epoch 6 | Best Validation Loss: 0.2084
+              precision    recall  f1-score   support
+
+       STAND       0.90      0.92      0.91      1304
+        WALK       0.89      0.86      0.88       906
+         SIT       0.98      0.98      0.98       704
+         LIE       0.98      0.99      0.98       152
+
+    accuracy                           0.92      3066
+   macro avg       0.94      0.94      0.94      3066
+weighted avg       0.92      0.92      0.92      3066
+
+Peak GPU memory allocatated: 3.65GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.9183561643835616
+ Report:
+ {'STAND': {'precision': 0.9143835616438356, 'recall': 0.9185779816513762, 'f1-score': 0.9164759725400458, 'support': 1744.0}, 'WALK': {'precision': 0.865265760197775, 'recall': 0.8782936010037641, 'f1-score': 0.8717310087173101, 'support': 797.0}, 'SIT': {'precision': 0.9596949891067538, 'recall': 0.9372340425531915, 'f1-score': 0.9483315392895587, 'support': 940.0}, 'LIE': {'precision': 0.9883040935672515, 'recall': 1.0, 'f1-score': 0.9941176470588236, 'support': 169.0}, 'accuracy': 0.9183561643835616, 'macro avg': {'precision': 0.931912101128904, 'recall': 0.933526406302083, 'f1-score': 0.9326640419014346, 'support': 3650.0}, 'weighted avg': {'precision': 0.9187502531390931, 'recall': 0.9183561643835616, 'f1-score': 0.918504449134976, 'support': 3650.0}}
+ F1: 0.9326640419014346
+ Confusion Matrix:
+ [[1602  106   36    0]
+ [  94  700    1    2]
+ [  56    3  881    0]
+ [   0    0    0  169]]
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4195, 'WALK': 2640, 'SIT': 2295, 'LIE': 514}
+------------------------------------------------------------------------------------------
+AdamW: convolutional_input.weight (384, 45, 9)
+AdamW: convolutional_input.bias (384,)
+AdamW: batch_layer.weight (384,)
+AdamW: batch_layer.bias (384,)
+Muon : backbone.input_proj.weight (384, 384)
+AdamW: backbone.input_proj.bias (384,)
+AdamW: backbone.layers.0.norm.weight (384,)
+AdamW: backbone.layers.0.mixer.dt_bias (96,)
+AdamW: backbone.layers.0.mixer.A_log (96,)
+AdamW: backbone.layers.0.mixer.D (96,)
+Muon : backbone.layers.0.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.0.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.0.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.0.mixer.norm.weight (768,)
+Muon : backbone.layers.0.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.0.norm2.weight (384,)
+Muon : backbone.layers.0.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.0.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.1.norm.weight (384,)
+AdamW: backbone.layers.1.mixer.dt_bias (96,)
+AdamW: backbone.layers.1.mixer.A_log (96,)
+AdamW: backbone.layers.1.mixer.D (96,)
+Muon : backbone.layers.1.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.1.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.1.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.1.mixer.norm.weight (768,)
+Muon : backbone.layers.1.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.1.norm2.weight (384,)
+Muon : backbone.layers.1.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.1.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.2.norm.weight (384,)
+AdamW: backbone.layers.2.mixer.dt_bias (96,)
+AdamW: backbone.layers.2.mixer.A_log (96,)
+AdamW: backbone.layers.2.mixer.D (96,)
+Muon : backbone.layers.2.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.2.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.2.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.2.mixer.norm.weight (768,)
+Muon : backbone.layers.2.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.2.norm2.weight (384,)
+Muon : backbone.layers.2.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.2.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.3.norm.weight (384,)
+AdamW: backbone.layers.3.mixer.dt_bias (96,)
+AdamW: backbone.layers.3.mixer.A_log (96,)
+AdamW: backbone.layers.3.mixer.D (96,)
+Muon : backbone.layers.3.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.3.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.3.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.3.mixer.norm.weight (768,)
+Muon : backbone.layers.3.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.3.norm2.weight (384,)
+Muon : backbone.layers.3.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.3.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.4.norm.weight (384,)
+AdamW: backbone.layers.4.mixer.dt_bias (96,)
+AdamW: backbone.layers.4.mixer.A_log (96,)
+AdamW: backbone.layers.4.mixer.D (96,)
+Muon : backbone.layers.4.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.4.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.4.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.4.mixer.norm.weight (768,)
+Muon : backbone.layers.4.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.4.norm2.weight (384,)
+Muon : backbone.layers.4.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.4.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.5.norm.weight (384,)
+AdamW: backbone.layers.5.mixer.dt_bias (96,)
+AdamW: backbone.layers.5.mixer.A_log (96,)
+AdamW: backbone.layers.5.mixer.D (96,)
+Muon : backbone.layers.5.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.5.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.5.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.5.mixer.norm.weight (768,)
+Muon : backbone.layers.5.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.5.norm2.weight (384,)
+Muon : backbone.layers.5.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.5.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.6.norm.weight (384,)
+AdamW: backbone.layers.6.mixer.dt_bias (96,)
+AdamW: backbone.layers.6.mixer.A_log (96,)
+AdamW: backbone.layers.6.mixer.D (96,)
+Muon : backbone.layers.6.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.6.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.6.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.6.mixer.norm.weight (768,)
+Muon : backbone.layers.6.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.6.norm2.weight (384,)
+Muon : backbone.layers.6.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.6.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.7.norm.weight (384,)
+AdamW: backbone.layers.7.mixer.dt_bias (96,)
+AdamW: backbone.layers.7.mixer.A_log (96,)
+AdamW: backbone.layers.7.mixer.D (96,)
+Muon : backbone.layers.7.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.7.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.7.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.7.mixer.norm.weight (768,)
+Muon : backbone.layers.7.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.7.norm2.weight (384,)
+Muon : backbone.layers.7.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.7.mlp.fc2.weight (384, 512)
+AdamW: backbone.norm_f.weight (384,)
+AdamW: classifier.0.weight (384, 384)
+AdamW: classifier.0.bias (384,)
+AdamW: classifier.3.weight (4, 384)
+AdamW: classifier.3.bias (4,)
+
+Epoch: 1/30 | tr_Loss: 0.2930 | tr_acc: 0.8838 | val_loss: 0.1989 | val_acc: 0.9191 | epoch_time: 10.29s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        13.34%      14.626ms        21.52%      23.600ms       2.950ms      46.579ms        45.30%      54.045ms       6.756ms           0 b           0 b       1.20 Gb      -6.91 Gb             8  
+                                               aten::mm         5.08%       5.570ms        20.38%      22.344ms      37.935us      31.313ms        30.45%      31.313ms      53.163us           0 b           0 b       3.11 Gb       3.11 Gb           589  
+        Optimizer.step#SingleDeviceMuonWithAuxAdam.step         0.00%       0.000us         0.00%       0.000us       0.000us      14.995ms        14.58%      14.995ms      14.995ms           0 b           0 b           0 b           0 b             1  
+                         MambaSplitConv1dScanCombinedFn         4.94%       5.416ms         7.65%       8.393ms       1.049ms      11.930ms        11.60%      15.122ms       1.890ms           0 b           0 b     405.35 Mb      -2.45 Gb             8  
+sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x12...         0.00%       0.000us         0.00%       0.000us       0.000us       9.874ms         9.60%       9.874ms     411.396us           0 b           0 b           0 b           0 b            24  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       9.528ms         9.27%       9.528ms       1.191ms           0 b           0 b           0 b           0 b             8  
+                    _chunk_scan_bwd_ddAcs_stable_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.826ms         8.58%       8.826ms       1.103ms           0 b           0 b           0 b           0 b             8  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.985ms         7.77%       7.985ms     998.144us           0 b           0 b           0 b           0 b             8  
+                             _chunk_state_bwd_db_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.451ms         7.25%       7.451ms     931.328us           0 b           0 b           0 b           0 b             8  
+                              _chunk_scan_bwd_dc_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       6.792ms         6.61%       6.792ms     849.021us           0 b           0 b           0 b           0 b             8  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 109.663ms
+Self CUDA time total: 102.824ms
+
+
+Epoch: 2/30 | tr_Loss: 0.1761 | tr_acc: 0.9298 | val_loss: 0.2145 | val_acc: 0.9175 | epoch_time: 8.92s
+
+Epoch: 3/30 | tr_Loss: 0.1547 | tr_acc: 0.9389 | val_loss: 0.2156 | val_acc: 0.9116 | epoch_time: 8.93s
+
+Epoch: 4/30 | tr_Loss: 0.1435 | tr_acc: 0.9427 | val_loss: 0.2083 | val_acc: 0.9181 | epoch_time: 8.91s
+
+Epoch: 5/30 | tr_Loss: 0.1196 | tr_acc: 0.9514 | val_loss: 0.2200 | val_acc: 0.9230 | epoch_time: 8.92s
+
+Epoch: 6/30 | tr_Loss: 0.1107 | tr_acc: 0.9570 | val_loss: 0.2091 | val_acc: 0.9234 | epoch_time: 8.91s
+
+Early stopping at epoch 6 | Best Validation Loss: 0.1989
+              precision    recall  f1-score   support
+
+       STAND       0.90      0.92      0.91      1304
+        WALK       0.89      0.85      0.87       906
+         SIT       0.98      0.98      0.98       704
+         LIE       0.98      0.99      0.99       152
+
+    accuracy                           0.92      3066
+   macro avg       0.94      0.94      0.94      3066
+weighted avg       0.92      0.92      0.92      3066
+
+Peak GPU memory allocatated: 3.64GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.9210958904109589
+ Report:
+ {'STAND': {'precision': 0.9146757679180887, 'recall': 0.9220183486238532, 'f1-score': 0.9183323814962878, 'support': 1744.0}, 'WALK': {'precision': 0.8628640776699029, 'recall': 0.8920953575909661, 'f1-score': 0.8772362739049969, 'support': 797.0}, 'SIT': {'precision': 0.9732739420935412, 'recall': 0.9297872340425531, 'f1-score': 0.9510337323177367, 'support': 940.0}, 'LIE': {'precision': 0.9941176470588236, 'recall': 1.0, 'f1-score': 0.9970501474926253, 'support': 169.0}, 'accuracy': 0.9210958904109589, 'macro avg': {'precision': 0.9362328586850891, 'recall': 0.9359752350643431, 'f1-score': 0.9359131338029117, 'support': 3650.0}, 'weighted avg': {'precision': 0.9221316704309395, 'recall': 0.9210958904109589, 'f1-score': 0.9214252512155439, 'support': 3650.0}}
+ F1: 0.9359131338029117
+ Confusion Matrix:
+ [[1608  112   24    0]
+ [  85  711    0    1]
+ [  65    1  874    0]
+ [   0    0    0  169]]
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4195, 'WALK': 2640, 'SIT': 2295, 'LIE': 514}
+------------------------------------------------------------------------------------------
+AdamW: convolutional_input.weight (384, 45, 9)
+AdamW: convolutional_input.bias (384,)
+AdamW: batch_layer.weight (384,)
+AdamW: batch_layer.bias (384,)
+Muon : backbone.input_proj.weight (384, 384)
+AdamW: backbone.input_proj.bias (384,)
+AdamW: backbone.layers.0.norm.weight (384,)
+AdamW: backbone.layers.0.mixer.dt_bias (96,)
+AdamW: backbone.layers.0.mixer.A_log (96,)
+AdamW: backbone.layers.0.mixer.D (96,)
+Muon : backbone.layers.0.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.0.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.0.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.0.mixer.norm.weight (768,)
+Muon : backbone.layers.0.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.0.norm2.weight (384,)
+Muon : backbone.layers.0.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.0.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.1.norm.weight (384,)
+AdamW: backbone.layers.1.mixer.dt_bias (96,)
+AdamW: backbone.layers.1.mixer.A_log (96,)
+AdamW: backbone.layers.1.mixer.D (96,)
+Muon : backbone.layers.1.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.1.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.1.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.1.mixer.norm.weight (768,)
+Muon : backbone.layers.1.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.1.norm2.weight (384,)
+Muon : backbone.layers.1.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.1.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.2.norm.weight (384,)
+AdamW: backbone.layers.2.mixer.dt_bias (96,)
+AdamW: backbone.layers.2.mixer.A_log (96,)
+AdamW: backbone.layers.2.mixer.D (96,)
+Muon : backbone.layers.2.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.2.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.2.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.2.mixer.norm.weight (768,)
+Muon : backbone.layers.2.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.2.norm2.weight (384,)
+Muon : backbone.layers.2.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.2.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.3.norm.weight (384,)
+AdamW: backbone.layers.3.mixer.dt_bias (96,)
+AdamW: backbone.layers.3.mixer.A_log (96,)
+AdamW: backbone.layers.3.mixer.D (96,)
+Muon : backbone.layers.3.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.3.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.3.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.3.mixer.norm.weight (768,)
+Muon : backbone.layers.3.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.3.norm2.weight (384,)
+Muon : backbone.layers.3.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.3.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.4.norm.weight (384,)
+AdamW: backbone.layers.4.mixer.dt_bias (96,)
+AdamW: backbone.layers.4.mixer.A_log (96,)
+AdamW: backbone.layers.4.mixer.D (96,)
+Muon : backbone.layers.4.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.4.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.4.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.4.mixer.norm.weight (768,)
+Muon : backbone.layers.4.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.4.norm2.weight (384,)
+Muon : backbone.layers.4.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.4.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.5.norm.weight (384,)
+AdamW: backbone.layers.5.mixer.dt_bias (96,)
+AdamW: backbone.layers.5.mixer.A_log (96,)
+AdamW: backbone.layers.5.mixer.D (96,)
+Muon : backbone.layers.5.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.5.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.5.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.5.mixer.norm.weight (768,)
+Muon : backbone.layers.5.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.5.norm2.weight (384,)
+Muon : backbone.layers.5.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.5.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.6.norm.weight (384,)
+AdamW: backbone.layers.6.mixer.dt_bias (96,)
+AdamW: backbone.layers.6.mixer.A_log (96,)
+AdamW: backbone.layers.6.mixer.D (96,)
+Muon : backbone.layers.6.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.6.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.6.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.6.mixer.norm.weight (768,)
+Muon : backbone.layers.6.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.6.norm2.weight (384,)
+Muon : backbone.layers.6.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.6.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.7.norm.weight (384,)
+AdamW: backbone.layers.7.mixer.dt_bias (96,)
+AdamW: backbone.layers.7.mixer.A_log (96,)
+AdamW: backbone.layers.7.mixer.D (96,)
+Muon : backbone.layers.7.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.7.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.7.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.7.mixer.norm.weight (768,)
+Muon : backbone.layers.7.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.7.norm2.weight (384,)
+Muon : backbone.layers.7.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.7.mlp.fc2.weight (384, 512)
+AdamW: backbone.norm_f.weight (384,)
+AdamW: classifier.0.weight (384, 384)
+AdamW: classifier.0.bias (384,)
+AdamW: classifier.3.weight (4, 384)
+AdamW: classifier.3.bias (4,)
+
+Epoch: 1/30 | tr_Loss: 0.2825 | tr_acc: 0.8846 | val_loss: 0.2769 | val_acc: 0.8885 | epoch_time: 10.32s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        13.14%      14.760ms        21.24%      23.845ms       2.981ms      46.597ms        45.26%      54.095ms       6.762ms           0 b           0 b       1.20 Gb      -6.91 Gb             8  
+                                               aten::mm         5.02%       5.642ms        20.04%      22.504ms      38.207us      31.390ms        30.49%      31.390ms      53.294us           0 b           0 b       3.14 Gb       3.14 Gb           589  
+        Optimizer.step#SingleDeviceMuonWithAuxAdam.step         0.00%       0.000us         0.00%       0.000us       0.000us      15.179ms        14.74%      15.179ms      15.179ms           0 b           0 b           0 b           0 b             1  
+                         MambaSplitConv1dScanCombinedFn         4.82%       5.417ms         7.57%       8.505ms       1.063ms      11.918ms        11.58%      15.111ms       1.889ms           0 b           0 b     405.35 Mb      -2.44 Gb             8  
+sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x12...         0.00%       0.000us         0.00%       0.000us       0.000us       9.863ms         9.58%       9.863ms     410.964us           0 b           0 b           0 b           0 b            24  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       9.531ms         9.26%       9.531ms       1.191ms           0 b           0 b           0 b           0 b             8  
+                    _chunk_scan_bwd_ddAcs_stable_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.827ms         8.57%       8.827ms       1.103ms           0 b           0 b           0 b           0 b             8  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.974ms         7.75%       7.974ms     996.793us           0 b           0 b           0 b           0 b             8  
+                             _chunk_state_bwd_db_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.459ms         7.25%       7.459ms     932.416us           0 b           0 b           0 b           0 b             8  
+                              _chunk_scan_bwd_dc_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       6.794ms         6.60%       6.794ms     849.288us           0 b           0 b           0 b           0 b             8  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 112.285ms
+Self CUDA time total: 102.952ms
+
+
+Epoch: 2/30 | tr_Loss: 0.1749 | tr_acc: 0.9286 | val_loss: 0.2090 | val_acc: 0.9132 | epoch_time: 8.93s
+
+Epoch: 3/30 | tr_Loss: 0.1675 | tr_acc: 0.9347 | val_loss: 0.3121 | val_acc: 0.9022 | epoch_time: 8.95s
+
+Epoch: 4/30 | tr_Loss: 0.1436 | tr_acc: 0.9432 | val_loss: 0.2088 | val_acc: 0.9247 | epoch_time: 8.92s
+
+Epoch: 5/30 | tr_Loss: 0.1315 | tr_acc: 0.9461 | val_loss: 0.2001 | val_acc: 0.9227 | epoch_time: 8.93s
+
+Epoch: 6/30 | tr_Loss: 0.1144 | tr_acc: 0.9562 | val_loss: 0.1985 | val_acc: 0.9234 | epoch_time: 8.95s
+
+Epoch: 7/30 | tr_Loss: 0.1071 | tr_acc: 0.9573 | val_loss: 0.2713 | val_acc: 0.9005 | epoch_time: 8.94s
+
+Epoch: 8/30 | tr_Loss: 0.0983 | tr_acc: 0.9609 | val_loss: 0.2123 | val_acc: 0.9260 | epoch_time: 8.92s
+
+Epoch: 9/30 | tr_Loss: 0.0987 | tr_acc: 0.9628 | val_loss: 0.2354 | val_acc: 0.9204 | epoch_time: 8.93s
+
+Epoch: 10/30 | tr_Loss: 0.0938 | tr_acc: 0.9644 | val_loss: 0.2937 | val_acc: 0.9077 | epoch_time: 8.93s
+
+Epoch: 11/30 | tr_Loss: 0.0946 | tr_acc: 0.9626 | val_loss: 0.3258 | val_acc: 0.9008 | epoch_time: 8.94s
+
+Early stopping at epoch 11 | Best Validation Loss: 0.1985
+              precision    recall  f1-score   support
+
+       STAND       0.93      0.89      0.91      1304
+        WALK       0.87      0.92      0.89       906
+         SIT       0.98      0.97      0.98       704
+         LIE       0.97      0.99      0.98       152
+
+    accuracy                           0.92      3066
+   macro avg       0.94      0.94      0.94      3066
+weighted avg       0.92      0.92      0.92      3066
+
+Peak GPU memory allocatated: 3.65GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.9246575342465754
+ Report:
+ {'STAND': {'precision': 0.9300699300699301, 'recall': 0.9151376146788991, 'f1-score': 0.922543352601156, 'support': 1744.0}, 'WALK': {'precision': 0.8485915492957746, 'recall': 0.9071518193224593, 'f1-score': 0.87689508793208, 'support': 797.0}, 'SIT': {'precision': 0.973655323819978, 'recall': 0.9436170212765957, 'f1-score': 0.958400864397623, 'support': 940.0}, 'LIE': {'precision': 0.9883040935672515, 'recall': 1.0, 'f1-score': 0.9941176470588236, 'support': 169.0}, 'accuracy': 0.9246575342465754, 'macro avg': {'precision': 0.9351552241882336, 'recall': 0.9414766138194886, 'f1-score': 0.9379892379974206, 'support': 3650.0}, 'weighted avg': {'precision': 0.9261996764477631, 'recall': 0.9246575342465754, 'f1-score': 0.9251242977821892, 'support': 3650.0}}
+ F1: 0.9379892379974206
+ Confusion Matrix:
+ [[1596  125   23    0]
+ [  71  723    1    2]
+ [  49    4  887    0]
+ [   0    0    0  169]]
+------------------------------------------------------------------------------------------
+Training set class distribution:
+{'STAND': 4195, 'WALK': 2640, 'SIT': 2295, 'LIE': 514}
+------------------------------------------------------------------------------------------
+AdamW: convolutional_input.weight (384, 45, 9)
+AdamW: convolutional_input.bias (384,)
+AdamW: batch_layer.weight (384,)
+AdamW: batch_layer.bias (384,)
+Muon : backbone.input_proj.weight (384, 384)
+AdamW: backbone.input_proj.bias (384,)
+AdamW: backbone.layers.0.norm.weight (384,)
+AdamW: backbone.layers.0.mixer.dt_bias (96,)
+AdamW: backbone.layers.0.mixer.A_log (96,)
+AdamW: backbone.layers.0.mixer.D (96,)
+Muon : backbone.layers.0.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.0.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.0.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.0.mixer.norm.weight (768,)
+Muon : backbone.layers.0.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.0.norm2.weight (384,)
+Muon : backbone.layers.0.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.0.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.1.norm.weight (384,)
+AdamW: backbone.layers.1.mixer.dt_bias (96,)
+AdamW: backbone.layers.1.mixer.A_log (96,)
+AdamW: backbone.layers.1.mixer.D (96,)
+Muon : backbone.layers.1.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.1.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.1.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.1.mixer.norm.weight (768,)
+Muon : backbone.layers.1.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.1.norm2.weight (384,)
+Muon : backbone.layers.1.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.1.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.2.norm.weight (384,)
+AdamW: backbone.layers.2.mixer.dt_bias (96,)
+AdamW: backbone.layers.2.mixer.A_log (96,)
+AdamW: backbone.layers.2.mixer.D (96,)
+Muon : backbone.layers.2.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.2.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.2.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.2.mixer.norm.weight (768,)
+Muon : backbone.layers.2.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.2.norm2.weight (384,)
+Muon : backbone.layers.2.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.2.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.3.norm.weight (384,)
+AdamW: backbone.layers.3.mixer.dt_bias (96,)
+AdamW: backbone.layers.3.mixer.A_log (96,)
+AdamW: backbone.layers.3.mixer.D (96,)
+Muon : backbone.layers.3.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.3.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.3.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.3.mixer.norm.weight (768,)
+Muon : backbone.layers.3.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.3.norm2.weight (384,)
+Muon : backbone.layers.3.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.3.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.4.norm.weight (384,)
+AdamW: backbone.layers.4.mixer.dt_bias (96,)
+AdamW: backbone.layers.4.mixer.A_log (96,)
+AdamW: backbone.layers.4.mixer.D (96,)
+Muon : backbone.layers.4.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.4.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.4.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.4.mixer.norm.weight (768,)
+Muon : backbone.layers.4.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.4.norm2.weight (384,)
+Muon : backbone.layers.4.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.4.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.5.norm.weight (384,)
+AdamW: backbone.layers.5.mixer.dt_bias (96,)
+AdamW: backbone.layers.5.mixer.A_log (96,)
+AdamW: backbone.layers.5.mixer.D (96,)
+Muon : backbone.layers.5.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.5.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.5.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.5.mixer.norm.weight (768,)
+Muon : backbone.layers.5.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.5.norm2.weight (384,)
+Muon : backbone.layers.5.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.5.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.6.norm.weight (384,)
+AdamW: backbone.layers.6.mixer.dt_bias (96,)
+AdamW: backbone.layers.6.mixer.A_log (96,)
+AdamW: backbone.layers.6.mixer.D (96,)
+Muon : backbone.layers.6.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.6.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.6.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.6.mixer.norm.weight (768,)
+Muon : backbone.layers.6.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.6.norm2.weight (384,)
+Muon : backbone.layers.6.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.6.mlp.fc2.weight (384, 512)
+AdamW: backbone.layers.7.norm.weight (384,)
+AdamW: backbone.layers.7.mixer.dt_bias (96,)
+AdamW: backbone.layers.7.mixer.A_log (96,)
+AdamW: backbone.layers.7.mixer.D (96,)
+Muon : backbone.layers.7.mixer.in_proj.weight (3424, 384)
+AdamW: backbone.layers.7.mixer.conv1d.weight (1024, 1, 4)
+AdamW: backbone.layers.7.mixer.conv1d.bias (1024,)
+AdamW: backbone.layers.7.mixer.norm.weight (768,)
+Muon : backbone.layers.7.mixer.out_proj.weight (384, 1536)
+AdamW: backbone.layers.7.norm2.weight (384,)
+Muon : backbone.layers.7.mlp.fc1.weight (1024, 384)
+Muon : backbone.layers.7.mlp.fc2.weight (384, 512)
+AdamW: backbone.norm_f.weight (384,)
+AdamW: classifier.0.weight (384, 384)
+AdamW: classifier.0.bias (384,)
+AdamW: classifier.3.weight (4, 384)
+AdamW: classifier.3.bias (4,)
+
+Epoch: 1/30 | tr_Loss: 0.2818 | tr_acc: 0.8852 | val_loss: 0.1861 | val_acc: 0.9273 | epoch_time: 10.38s
+--- CUDA PROFILE --- (epoch 1, batch 2)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg       CPU Mem  Self CPU Mem      CUDA Mem  Self CUDA Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 MambaSplitConv1dScanCombinedFnBackward        12.93%      14.511ms        20.99%      23.559ms       2.945ms      46.609ms        45.34%      54.076ms       6.760ms           0 b           0 b       1.20 Gb      -6.91 Gb             8  
+                                               aten::mm         5.47%       6.136ms        19.66%      22.066ms      37.463us      31.280ms        30.43%      31.280ms      53.107us           0 b           0 b       3.13 Gb       3.13 Gb           589  
+        Optimizer.step#SingleDeviceMuonWithAuxAdam.step         0.00%       0.000us         0.00%       0.000us       0.000us      15.281ms        14.86%      15.281ms      15.281ms           0 b           0 b           0 b           0 b             1  
+                         MambaSplitConv1dScanCombinedFn         4.88%       5.478ms         7.69%       8.629ms       1.079ms      11.912ms        11.59%      15.103ms       1.888ms           0 b           0 b     405.35 Mb      -2.44 Gb             8  
+sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x12...         0.00%       0.000us         0.00%       0.000us       0.000us       9.859ms         9.59%       9.859ms     410.787us           0 b           0 b           0 b           0 b            24  
+                  _chunk_scan_chunk_state_bwd_dx_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       9.527ms         9.27%       9.527ms       1.191ms           0 b           0 b           0 b           0 b             8  
+                    _chunk_scan_bwd_ddAcs_stable_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.829ms         8.59%       8.829ms       1.104ms           0 b           0 b           0 b           0 b             8  
+                                 _chunk_scan_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.970ms         7.75%       7.970ms     996.281us           0 b           0 b           0 b           0 b             8  
+                             _chunk_state_bwd_db_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.459ms         7.26%       7.459ms     932.389us           0 b           0 b           0 b           0 b             8  
+                              _chunk_scan_bwd_dc_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       6.806ms         6.62%       6.806ms     850.809us           0 b           0 b           0 b           0 b             8  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 112.221ms
+Self CUDA time total: 102.807ms
+
+
+Epoch: 2/30 | tr_Loss: 0.1803 | tr_acc: 0.9248 | val_loss: 0.2037 | val_acc: 0.9185 | epoch_time: 8.95s
+
+Epoch: 3/30 | tr_Loss: 0.1609 | tr_acc: 0.9356 | val_loss: 0.1791 | val_acc: 0.9217 | epoch_time: 8.93s
+
+Epoch: 4/30 | tr_Loss: 0.1382 | tr_acc: 0.9438 | val_loss: 0.1792 | val_acc: 0.9247 | epoch_time: 8.93s
+
+Epoch: 5/30 | tr_Loss: 0.1272 | tr_acc: 0.9503 | val_loss: 0.2009 | val_acc: 0.9201 | epoch_time: 8.93s
+
+Epoch: 6/30 | tr_Loss: 0.1195 | tr_acc: 0.9516 | val_loss: 0.1972 | val_acc: 0.9243 | epoch_time: 8.92s
+
+Epoch: 7/30 | tr_Loss: 0.1098 | tr_acc: 0.9592 | val_loss: 0.2047 | val_acc: 0.9211 | epoch_time: 8.95s
+
+Epoch: 8/30 | tr_Loss: 0.1012 | tr_acc: 0.9611 | val_loss: 0.2334 | val_acc: 0.9181 | epoch_time: 8.92s
+
+Early stopping at epoch 8 | Best Validation Loss: 0.1791
+              precision    recall  f1-score   support
+
+       STAND       0.93      0.89      0.91      1304
+        WALK       0.87      0.90      0.88       906
+         SIT       0.97      0.99      0.98       704
+         LIE       0.97      1.00      0.98       152
+
+    accuracy                           0.92      3066
+   macro avg       0.93      0.95      0.94      3066
+weighted avg       0.92      0.92      0.92      3066
+
+Peak GPU memory allocatated: 3.64GB
+
+------------------------------------------------------------------------------------------
+Test Results:
+ Accuracy: 0.9224657534246575
+ Report:
+ {'STAND': {'precision': 0.9481391092129348, 'recall': 0.8910550458715596, 'f1-score': 0.9187112030741945, 'support': 1744.0}, 'WALK': {'precision': 0.8262331838565022, 'recall': 0.9247176913425345, 'f1-score': 0.8727057430432208, 'support': 797.0}, 'SIT': {'precision': 0.9567510548523207, 'recall': 0.9648936170212766, 'f1-score': 0.9608050847457628, 'support': 940.0}, 'LIE': {'precision': 0.9883040935672515, 'recall': 1.0, 'f1-score': 0.9941176470588236, 'support': 169.0}, 'accuracy': 0.9224657534246575, 'macro avg': {'precision': 0.9298568603722523, 'recall': 0.9451665885588427, 'f1-score': 0.9365849194805005, 'support': 3650.0}, 'weighted avg': {'precision': 0.9255977636643938, 'recall': 0.9224657534246575, 'f1-score': 0.9229976650358358, 'support': 3650.0}}
+ F1: 0.9365849194805005
+ Confusion Matrix:
+ [[1554  150   40    0]
+ [  57  737    1    2]
+ [  28    5  907    0]
+ [   0    0    0  169]]
+Total wall time:9min 52s
