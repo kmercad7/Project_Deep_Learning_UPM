@@ -149,57 +149,24 @@
 
 
   ├── PAMAP2_Dataset/
-
-
-
   │   └── Protocol/
-
-
-
   │       ├── subject101.dat ... subject108.dat
-
-
-
   └── OpportunityUCIDataset/
-
-
-
       └── dataset/
-
-
-
           ├── S1-ADL1.dat ... S4-ADL5.dat
-
-
-
           └── S1-Drill.dat ...
-
-
 
   ```
 
 
 
-
-
-
-
   - **PAMAP2** — Physical Activity Monitoring (UCI). Uses the `Protocol/` `.dat` files for
-
-
 
     subjects **101–108**. Folds split subjects 2/2/4 (test/val/train).
 
-
-
   - **Opportunity** — Opportunity Activity Recognition (UCI). Uses `S{1-4}-ADL{1-5}.dat`.
 
-
-
     Leave-One-Subject-Out 4-fold (ADL1–4 train, ADL5 val, held-out subject test).
-
-
-
 
   > Datasets are **not** committed.
 
@@ -218,18 +185,7 @@
 
 
 
-
-
-
-  The models depend on the official `mamba_ssm` package (CUDA GPU required — needs `nvcc`
-
-
-
-  and a matching PyTorch CUDA build). On the cluster, inside your venv:
-
-
-
-
+  The models depend on the official `mamba_ssm` package (CUDA GPU required — needs `nvcc`nand a matching PyTorch CUDA build). On the cluster, inside your venv:
 
 
 
@@ -238,63 +194,19 @@
 
 
   # 1. PyTorch with CUDA (match your cluster's CUDA, e.g. cu121)
-
-
-
-  
-
-
-
   # 2. Fast CUDA conv kernel + Mamba-2 SSM kernels
-
-
-
   pip install packaging ninja
-
-
-
   pip install causal-conv1d>=1.4.0
-
-
-
   pip install mamba-ssm            # provides mamba_ssm.modules.mamba2.Mamba2
-
-
-
-  
-
-
-
   # (Triton is pulled in for the fused RMSNorm path used in Mamba_blocks.py)
 
 
 
   ```
 
-
-
-  
-
-
-
   If you hit build errors, install with `pip install mamba-ssm --no-build-isolation`
-
-
-
   after loading the cluster's CUDA module (`module load cuda`).
-
-
-
-  
-
-
-
   ---
-
-
-
-  
-
 
 
   ## How to run
@@ -313,49 +225,24 @@
 
 
 
-  
 
 
 
   ### Supervised baseline (single fold)
 
-
-
-  
-
-
-
   ```bash
-
-
 
   cd Mamba_Baseline_PAM
 
-
-
   sbatch train_sup_mamba_pam.slurm PAM 1      # <DATASET> <FOLD 1-4>
-
-
 
   # Opportunity:
 
-
-
   cd ../Mamba_Baseline_OPP
-
-
 
   sbatch train_sup_mamba.slurm OPP 1
 
-
-
   ```
-
-
-
-  
-
-
 
   Or directly (on a GPU node): `python train_sup_mamba_pam.py --dataset PAM --fold 1`
 
@@ -369,45 +256,20 @@
 
 
 
-  
-
-
-
   ```bash
-
 
 
   cd SELFSUPERVISED_MAMBA/SSL_RUN1_ENCODER_CE_ALG1
 
-
-
   bash launch_pretrain_downstream_V1.sh       # submits pretrain + dependent downstream per fold
-
 
 
   ```
 
 
-
-  
-
-
-
   Each run loops folds 1–4 and ~5 seeds; metrics land in `results_json/`, checkpoints in
-
-
-
   `models_pt/` (or `SSL_models_pt/`), and logs in `logs/`. Use the `Results_*.ipynb`
-
-
-
   notebooks to aggregate folds and reproduce the confusion-matrix / per-class-F1 figures.
-
-
-
-  
-
-
 
   ---
 
@@ -421,16 +283,6 @@
 
 
 
-  
-
-
-
   - `models_pt/model_<DS>_fold<F>_seed<S>.pt` — trained weights.
-
-
-
   - `results_json/<DS>_fold<F>_results.json` — per-seed metrics (accuracy, macro-F1, …).
-
-
-
   - `logs/training_<DS>_fold<F>.txt` and SLURM `%x_%j.out/.err` — training curves & job logs.
